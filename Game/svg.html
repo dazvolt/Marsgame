@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=1040" />
+  <title>Симулятор колонизации Марса</title>
+  <link rel="stylesheet" type="text/css" href="css/core.css"/>
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.11.1.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/d3.js"></script>
+  <script type="text/javascript" src="js/mapgen.js"></script>
+  <script type="text/javascript" src="js/global-handler.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+	<main class="content">
+		
+		
+		
+		<div class="map">
+			<div class="box-title">Карта</div>
+			<svg style="width:100%; height: 100%"></svg>
+
+		</div>
+		
+	
+	</main>
+</div>
+<div class="j-diag">
+	<div class="text"></div>
+</div>
+<div class="intro">
+	<div class="box-title">Приветствие<div class="close-window close-intro"></div></div>
+	<h2>Добро пожаловать в игру "Колонизация Марса"!</h2>
+	<div class="text">
+		В этой игре вам предстоит колонизировать планету Марс (как неожиданно). Цель: достигнуть численности колонистов в 1000 человек.
+		Каждый ход проматывает цикл жизни колонии на один год вперед. Происходит это по нажатию кнопки "след. год".
+		Каждый ход на жизнь колонии будут влиять различные факторы и происходить разные события. Раз в год - их можно распределить случайным образом, по нажатию кнопки "случайный".
+		Развивать колонию можно двумя способами, строить инфраструктуру и развивать базу, и проводить исследования.
+		Лог предназначен для более четкого отображения информации о жизни вашей колонии.
+		<br /><br />
+		P.S. Игра порой бывает подлой в самых разных местах, не отчаивайтесь и развлекайтесь! Сбросить игру всегда можно кнопкой "начать заново".
+	</div><br />
+	<button class="btp close-intro">Ок</button>
+</div>
+<footer><span class="copyright">Игра "Колонизация Марса" v 0.8.1 Разработчик - Dazvolt</span></footer>
+</body>
+
+</html>

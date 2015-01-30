@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=1040" />
+  <title>Симулятор колонизации Марса</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="css/core.css"/>
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.11.1.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/mapgen.js"></script>
+  <script type="text/javascript" src="js/global-handler.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+	<main class="content">
+
+        <div id="top-panel" class="window no-footer-title">
+            <div class="body">
+                <div id="ilmenite" class="resource"><span data-locale="name"></span><span data-resource="amount"></span><span data-locale="unit"></span></div>
+                <div id="titan" class="resource"><span data-locale="name"></span><span data-resource="amount"></span><span data-locale="unit"></span></div>
+                <div id="energy" class="resource"><span data-locale="name"></span><span data-resource="amount"></span><span data-locale="unit"></span></div>
+                <button id="population" class="button"><span data-locale="population"></span></button>
+                <button id="build" class="button"><span data-locale="build"></span></button>
+                <button id="research" class="button"><span data-locale="research"></span></button>
+            </div>
+        </div>
+		
+		<div id="window-population" class="window no-footer">
+            <div class="close"></div>
+            <div class="title"><span class="j-locale-population"></span></div>
+            <div class="body">
+                <div class="sidebar left">
+                    <div class="sidebar-title"><span class="j-locale-woman"></span></div>
+                    <div id="woman-container" class="sidebar-body"></div>
+                </div>
+                <div class="sidebar right">
+                    <div class="sidebar-title"><span class="j-locale-man"></span></div>
+                    <div id="man-container" class="sidebar-body"></div>
+                </div>
+            </div>
+		</div>
+
+        <div id="map" class="window no-footer">
+            <div class="title"><span class="j-locale-map"></span></div>
+            <div class="body">
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+            </div>
+            <div id="power-bar">
+                <div class="value"></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+
+		<div id="graphs" class="window no-footer">
+            <div class="title"><span class="j-locale-graphs"></div>
+            <div class="body">
+                <div class="item"><span class="j-locale-population"></span><span class="j-win-population"></span></div>
+                <div class="item"><span class="j-locale-cur-year"></span><span class="j-cur-year"></span><button id="year-b" class="button"><span class="j-locale-cur-year-b"></span></button></div>
+                <div class="item"><span class="j-locale-child-die"></span><span class="j-child-die"></span><button id="child-die-b" class="button"><span class="j-locale-random"></span></button></div>
+                <div class="item"><span class="j-locale-child-born"></span><span class="j-child-born"></span><button id="child-born-b" class="button"><span class="j-locale-random"></span></button></div>
+                <div class="item"><span class="j-locale-sudden-death"></span><span class="j-sudden-death"></span><button id="sudden-death-b" class="button"><span class="j-locale-random"></span></button></div>
+                <div class="item"><span class="j-locale-apocalypse"></span><span class="j-apocalypse"></span><button id="apocalypse-b" class="button"><span class="j-locale-random"></span></button></div>
+                <div class="item"><span class="j-locale-expedition"></span><button id="expedition-b" class="button"><span class="j-locale-expedition-b"></span></button></div>
+                <div class="item"><span class="j-locale-reset"></span><button id="reset-b" class="button"><span class="j-locale-reset-b"></span></button></div>
+            </div>
+		</div>
+
+        <div id="log" class="window no-footer">
+            <div class="title"><span class="j-locale-log"></span></div>
+            <div id="log-output" class="body"></div>
+        </div>
+
+		<div id="filter" class="window no-footer">
+            <div class="title"><span class="j-locale-filter"></span></div>
+            <div class="body">
+                <div class="item"><label><span class="j-locale-children-born"></span><input id="f-children-born" type="checkbox" checked /></label></div>
+                <div class="item"><label><span class="j-locale-children-died"></span><input id="f-children-died" type="checkbox" checked /></label></div>
+                <div class="item"><label><span class="j-locale-colonist-died"></span><input id="f-colonist-died" type="checkbox" checked /></label></div>
+            </div>
+		</div>
+
+
+		<div class="buildings" style="display: none">
+			<div class="navbar">Инфраструктура<div class="close"></div></div>
+			<div class="options">
+				<div class="opt power-plant">Солнечная электростанция. <div class="cost">Титан: <span class="value">10</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+				<div class="opt livingroom">Жилой корпус. <div class="cost">Титан: <span class="value">25</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+				<div class="opt miner">Шахта. <div class="cost">Титан: <span class="value">40</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+				<div class="opt refinery">Завод переработки руд. <div class="cost">Титан: <span class="value">200</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+				<div class="opt medicalcenter">Медицинский центр. <div class="cost">Титан: <span class="value">10000</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+				<div class="opt logistics">Завод техники. <div class="cost">Титан: <span class="value">12000</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+				<div class="opt laboratory">Лаборатория. <div class="cost">Титан: <span class="value">25000</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+				<div class="opt defend-perimeter" style="display:none">Защита колонии. <div class="cost">Титан: <span class="value">50000</span> кг.</div><div class="energy">Мощность: <span class="value">+100 </span> Вт.</div><p class="b-cancel" style="display:none">x</p></div>
+			</div>
+		</div>
+		<div class="research" style="display: none">
+			<div class="navbar">Исследования<div class="close"></div></div>
+			<div class="active-research">
+				<span class="name">Текущее исследование: <span class="current-research">Нет активных исследований.</span></span>
+				<div class="progress-research"><div class="percent-progress"></div><div class="percent-text">0%</div></div>
+				<button class="btp j-cancel-research j-locked">Отменить</button>
+			</div>
+			<div class="options">
+				<div class="opt power-research power j-power">
+					<div class="name">Энергетика. <div class="level">Уровень <span class="r-level">0</span></div></div>
+					
+					<div class="time">Время на изучение: <span class="timevalue">2 </span> лет.</div>
+					<p class="b-cancel" style="display:none">x</p>
+				</div>
+				<div class="opt refinery-research refinery j-refinery">
+					<div class="name">Выработка ресурсов. <div class="level">Уровень <span class="r-level">0</span></div></div>
+					
+					<div class="time">Время на изучение: <span class="timevalue">5 </span> лет.</div>
+					<p class="b-cancel" style="display:none">x</p>
+				</div>
+				<div class="opt science-research science j-science">
+					<div class="name">Наука. <div class="level">Уровень <span class="r-level">0</span></div></div>
+					
+					<div class="time">Время на изучение: <span class="timevalue">10 </span> лет.</div>
+					<p class="b-cancel" style="display:none">x</p>
+				</div>
+				<div class="opt expedition-research expedition j-expedition">
+					<div class="name">Экспедиции. <div class="level">Уровень <span class="r-level">0</span></div></div>
+					
+					<div class="time">Время на изучение: <span class="timevalue">2 </span> лет.</div>
+					<p class="b-cancel" style="display:none">x</p>
+				</div>
+				<div class="opt life-research life j-life">
+					<div class="name">Жизнь бурлит. <div class="level">Уровень <span class="r-level">0</span></div></div>
+					
+					<div class="time">Время на изучение: <span class="timevalue">2 </span> лет.</div>
+					<p class="b-cancel" style="display:none">x</p>
+				</div>
+			</div>
+		</div>
+		<div class="expedition dialog-window" style="display: none">
+			<div class="navbar">Отправить экспедицию<div class="close-window"></div></div>
+			<div class="expedition-image"></div>
+			<div class="expedition-description">
+				Экспедиция - опасное и предприимчивое мероприятие, которое занимает <span class="lblue expedition-length">10 </span> лет. Отправляя колонистов в экспедицию, вы никогда не знаете с чем они столкнутся. Ваши колонисты могут погибнуть, найти недружелюбных представителей планеты или обогатиться необычными ресурсами. 
+				<br /><br />
+				Вы хотите отправить экспедицию?
+			</div>
+			<button class="btp push-expedition">Да</button>
+			<button class="btp cancel-expedition">Нет</button>
+			
+		</div>
+	</main>
+</div>
+<div class="j-diag">
+	<div class="text"></div>
+</div>
+<div class="intro">
+	<div class="box-title">Приветствие<div class="close-window close-intro"></div></div>
+	<h2>Добро пожаловать в игру "Колонизация Марса"!</h2>
+	<div class="text">
+		В этой игре вам предстоит колонизировать планету Марс (как неожиданно). Цель: достигнуть численности колонистов в 1000 человек.
+		Каждый ход проматывает цикл жизни колонии на один год вперед. Происходит это по нажатию кнопки "след. год".
+		Каждый ход на жизнь колонии будут влиять различные факторы и происходить разные события. Раз в год - их можно распределить случайным образом, по нажатию кнопки "случайный".
+		Развивать колонию можно двумя способами, строить инфраструктуру и развивать базу, и проводить исследования.
+		Лог предназначен для более четкого отображения информации о жизни вашей колонии.
+		<br /><br />
+		P.S. Игра порой бывает подлой в самых разных местах, не отчаивайтесь и развлекайтесь! Сбросить игру всегда можно кнопкой "начать заново".
+	</div><br />
+	<button class="btp close-intro">Ок</button>
+</div>
+<footer><span class="copyright">Игра "Колонизация Марса" v 0.8.1 Разработчик - Dazvolt</span></footer>
+</body>
+
+</html>
