@@ -496,6 +496,13 @@ $.widget("ui.gameMars", {
             $(this).parent().draggable().draggable('enable');
         });
 
+        this.element.find('.win-free .title').mousedown(function () {
+            $(this).parent().draggable().draggable('enable');
+        });
+        this.element.find('.win-free .title').mouseup(function () {
+            $(this).parent().draggable().draggable('disable');
+        });
+
         this.$build.find('.navbar').mouseup(function () {
             $(this).parent().draggable().draggable('disable');
         });
@@ -897,8 +904,10 @@ $.widget("ui.gameMars", {
             this.$man.find('p').remove();
             var womanyear = Math.floor((Math.random() * 20) + 15);
             var manyear = Math.floor((Math.random() * 20) + 15);
-            this.$woman.append('<p class="pink j-gen">Ж/Колонист0 | возраст: <span class="j-age">' + womanyear + '</span></p>');
-            this.$man.append('<p class="lightblue j-gen">M/Колонист0 | возраст: <span class="j-age">' + manyear + '</span></p>');
+            var man_name = this._rollarray(malename);
+            var woman_name = this._rollarray(femalename);
+            this.$woman.append('<p class="pink j-gen">'+woman_name+' | возраст: <span class="j-age">' + womanyear + '</span></p>');
+            this.$man.append('<p class="lightblue j-gen">'+man_name+' | возраст: <span class="j-age">' + manyear + '</span></p>');
             this.$woman.find('.j-gen').data('age', womanyear).removeClass('j-gen');
             this.$man.find('.j-gen').data('age', manyear).removeClass('j-gen');
             this.$population.text(this.population);
@@ -925,22 +934,24 @@ $.widget("ui.gameMars", {
                         if (boy) {
                             this.mancol += 1;
                             this.population += 1;
-                            this.$man.append('<p class="lightblue j-gen">M/Колонист' + this.mancol + ' | возраст: <span class="j-age">0</span></p>');
+                            var thisname = this._rollarray(malename);
+                            this.$man.append('<p class="lightblue j-gen">' + thisname + ' | возраст: <span class="j-age">0</span></p>');
                             this.$man.find('.j-gen').data('age', 0).removeClass('j-gen');
                             if (this._filters.childborn) {
-                                this.$log.append('<p class="f-baby-born"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="lightblue">M/Колонист' + this.mancol + '</span>!</p>');
+                                this.$log.append('<p class="f-baby-born"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="lightblue">' + thisname + '</span>!</p>');
                             } else {
-                                this.$log.append('<p class="f-baby-born" style="display:none"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="lightblue">M/Колонист' + this.mancol + '</span>!</p>');
+                                this.$log.append('<p class="f-baby-born" style="display:none"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="lightblue">'  + thisname + '</span>!</p>');
                             }
                         } else {
                             this.womancol += 1;
                             this.population += 1;
-                            this.$woman.append('<p class="pink j-gen">Ж/Колонист' + this.womancol + ' | возраст: <span class="j-age">0</span></p>');
+                            var thisname = this._rollarray(femalename);
+                            this.$woman.append('<p class="pink j-gen">' + thisname + ' | возраст: <span class="j-age">0</span></p>');
                             this.$woman.find('.j-gen').data('age', 0).removeClass('j-gen');
                             if (this._filters.childborn) {
-                                this.$log.append('<p class="f-baby-born"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="pink">Ж/Колонист' + this.womancol + '</span>!</p>');
+                                this.$log.append('<p class="f-baby-born"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="pink">'  + thisname + '</span>!</p>');
                             } else {
-                                this.$log.append('<p class="f-baby-born" style="display:none"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="pink">Ж/Колонист' + this.womancol + '</span>!</p>');
+                                this.$log.append('<p class="f-baby-born" style="display:none"><span class="bisque">Год ' + this.currentyear + ':</span><span class="pink"> ' + currentWoman.text() + '</span> рожает нового ребенка, <span class="pink">' + thisname + '</span>!</p>');
                             }
                         }
                     }

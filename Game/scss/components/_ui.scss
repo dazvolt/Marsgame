@@ -32,7 +32,7 @@
 }
 
 .button {
-  @include transition(0.5ms);
+  @include transition(0.5s);
 
   border: 1px solid rgb(35, 52, 76);
   background: rgba(25, 45, 66, 0.8);
@@ -66,5 +66,12 @@
     border: 1px solid rgb(35, 52, 76);
     background: rgba(25, 45, 66, 0.5);
     color: rgba(236, 245, 255, 0.5);
+  }
+
+  &.accept {
+    float: right;
+  }
+  &.decline {
+    float: left;
   }
 }

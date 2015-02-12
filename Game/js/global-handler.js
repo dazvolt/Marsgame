@@ -12,4 +12,6 @@
     });
     
     $('.map svg').mapGen();
+
+    DoLocale('ru');
 });

@@ -1,0 +1,28 @@
+var arr = []; 
+$('#mw-pages > div > table > tbody > tr td').each( function () { 
+	$(this).find('li a').each(function(){  
+		if ($(this).text().indexOf("имя") == -1 && $(this).text().indexOf("святой") == -1 && $(this).text().indexOf("значения") == -1 && $(this).text().indexOf("Имя") == -1 ) {
+			arr.push($(this).text());
+		}		
+	})  
+}); 
+$('body').append('<div class="container-text"></div>'); 
+
+
+var store = ''; 
+
+for (var i = 0; i<arr.length; i++) {
+	
+	if (i == 0) {
+		store += "['" + arr[i] + "',";
+	} else 
+	if (i == arr.length - 1) {
+		store += "'" + arr[i] + "']";
+	} else
+	if (i != 1 && i != arr.length - 1) {
+		store += "'" + arr[i] + "',";
+	}
+}
+
+$('.container-text').text(store);
+	

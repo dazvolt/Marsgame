@@ -98,6 +98,16 @@ body {
   margin-top: 10px;
 }
 
+/* line 25, ../scss/components/_common.scss */
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
 /* line 2, ../scss/components/_ui.scss */
 .msg.error {
   color: #FF4700;
@@ -141,9 +151,10 @@ body {
 
 /* line 34, ../scss/components/_ui.scss */
 .button {
-  -moz-transition: all 0.5ms;
-  -webkit-transition: all 0.5ms;
-  -o-transition: all 0.5ms;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   border: 1px solid #23344c;
   background: rgba(25, 45, 66, 0.8);
   height: 30px;
@@ -175,9 +186,18 @@ body {
   -moz-transition: all 0ms;
   -webkit-transition: all 0ms;
   -o-transition: all 0ms;
+  transition: all 0ms;
   border: 1px solid #23344c;
   background: rgba(25, 45, 66, 0.5);
   color: rgba(236, 245, 255, 0.5);
+}
+/* line 71, ../scss/components/_ui.scss */
+.button.accept {
+  float: right;
+}
+/* line 74, ../scss/components/_ui.scss */
+.button.decline {
+  float: left;
 }
 
 /* line 1, ../scss/components/_window.scss */
@@ -190,7 +210,7 @@ body {
   z-index: 20;
   position: relative;
 }
-/* line 11, ../scss/components/_window.scss */
+/* line 9, ../scss/components/_window.scss */
 .window .title {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -199,20 +219,21 @@ body {
   background: rgba(12, 17, 23, 0.9);
   border-bottom: 1px solid #2a313b;
   z-index: 26;
+  font: 13px "Play";
   color: #9DBFDA;
   padding: 4px 5px 5px 10px;
-  font: 13px 'Play';
   font-weight: bold;
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 27, ../scss/components/_window.scss */
+/* line 25, ../scss/components/_window.scss */
 .window .close {
   z-index: 27;
   -moz-transition: all 0.5ms;
   -webkit-transition: all 0.5ms;
   -o-transition: all 0.5ms;
+  transition: all 0.5ms;
   position: absolute;
   right: 5px;
   top: 5px;
@@ -221,66 +242,213 @@ body {
   background: url(../img/close-window.png);
   cursor: pointer;
 }
-/* line 39, ../scss/components/_window.scss */
+/* line 37, ../scss/components/_window.scss */
 .window .close:hover {
   background: url(../img/close-window_a.png);
 }
-/* line 44, ../scss/components/_window.scss */
+/* line 42, ../scss/components/_window.scss */
 .window .body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  padding: 35px 10px 45px 10px;
+  padding: 35px 10px 65px 10px;
   z-index: 25;
-  font: 14px 'Play';
+  font: 14px "Play";
   position: relative;
   line-height: 1.4em;
   font-weight: normal;
   color: #fff;
   height: 100%;
 }
-/* line 57, ../scss/components/_window.scss */
+/* line 54, ../scss/components/_window.scss */
+.window .body.no_pad {
+  padding: 25px 0 55px 0;
+}
+/* line 59, ../scss/components/_window.scss */
 .window .footer {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   padding: 10px;
-  height: 35px;
+  height: 55px;
   background: rgba(12, 17, 23, 0.17);
   border-top: 1px solid #2A313B;
   z-index: 26;
-  font: 12px 'Play';
+  font: 12px "Play";
   width: 100%;
   color: #C2C2C2;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-/* line 74, ../scss/components/_window.scss */
+/* line 76, ../scss/components/_window.scss */
 .window.static .close {
   display: none;
 }
-/* line 79, ../scss/components/_window.scss */
+/* line 81, ../scss/components/_window.scss */
 .window.no-footer .footer {
   display: none;
 }
-/* line 82, ../scss/components/_window.scss */
+/* line 84, ../scss/components/_window.scss */
 .window.no-footer .body {
   padding: 35px 10px 10px 10px;
 }
 /* line 87, ../scss/components/_window.scss */
+.window.no-footer .body.no_pad {
+  padding: 25px 0 0 0;
+}
+/* line 93, ../scss/components/_window.scss */
 .window.no-title .title {
   display: none;
 }
-/* line 90, ../scss/components/_window.scss */
+/* line 96, ../scss/components/_window.scss */
 .window.no-title .body {
-  padding: 10px 10px 45px 10px;
+  padding: 10px 10px 65px 10px;
 }
-/* line 95, ../scss/components/_window.scss */
+/* line 99, ../scss/components/_window.scss */
+.window.no-title .body.no_pad {
+  padding: 0 0 55px 0;
+}
+/* line 105, ../scss/components/_window.scss */
 .window.no-footer-title .title, .window.no-footer-title .footer {
   display: none;
 }
-/* line 98, ../scss/components/_window.scss */
+/* line 108, ../scss/components/_window.scss */
 .window.no-footer-title .body {
   padding: 10px;
+}
+/* line 111, ../scss/components/_window.scss */
+.window.no-footer-title .body.no_pad {
+  padding: 0;
+}
+/* line 117, ../scss/components/_window.scss */
+.window.win-free {
+  width: 400px;
+  position: absolute;
+  height: auto;
+}
+/* line 123, ../scss/components/_window.scss */
+.window:not(.win-free) {
+  margin: 6px 0;
+}
+
+/* line 1, ../scss/components/blocks/_top-panel.scss */
+#top-panel {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+/* line 6, ../scss/components/blocks/_top-panel.scss */
+#top-panel #resource {
+  width: 100%;
+  height: 45px;
+}
+/* line 10, ../scss/components/blocks/_top-panel.scss */
+#top-panel #resource .resource {
+  font: 14px "Play";
+  color: #9DBFDA;
+  min-width: 180px;
+  height: 25px;
+  float: left;
+  margin: 5px 10px 0px 5px;
+  padding: 3px 7px 7px 7px;
+  background: rgba(24, 33, 42, 0.8);
+  border: 1px solid #2a313b;
+  position: relative;
+}
+/* line 25, ../scss/components/blocks/_top-panel.scss */
+#top-panel #win-buttons {
+  width: 100%;
+  height: 34px;
+}
+/* line 29, ../scss/components/blocks/_top-panel.scss */
+#top-panel #win-buttons button {
+  float: left;
+  margin: 0px 10px 5px 5px;
+}
+
+/* line 3, ../scss/components/blocks/_graphs.scss */
+#graphs .body .item {
+  height: 33px;
+  margin: 10px 0;
+}
+/* line 7, ../scss/components/blocks/_graphs.scss */
+#graphs .body button {
+  float: right;
+}
+
+/* line 1, ../scss/components/blocks/_map.scss */
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+/* line 2, ../scss/components/windows/_population.scss */
+#population.window .body {
+  height: 550px;
+}
+/* line 6, ../scss/components/windows/_population.scss */
+#population.window .sidebar {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+}
+/* line 12, ../scss/components/windows/_population.scss */
+#population.window .sidebar.left {
+  float: left;
+}
+/* line 16, ../scss/components/windows/_population.scss */
+#population.window .sidebar.right {
+  float: right;
+  border-left: 1px solid #2a313b;
+}
+/* line 21, ../scss/components/windows/_population.scss */
+#population.window .sidebar .sidebar-title {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 25px;
+  background: rgba(12, 17, 23, 0.9);
+  border-bottom: 1px solid #2a313b;
+  z-index: 26;
+  font: 12px "Play";
+  color: #9DBFDA;
+  padding: 4px 5px 5px 10px;
+  font-weight: bold;
+}
+/* line 34, ../scss/components/windows/_population.scss */
+#population.window .sidebar .sidebar-body {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 10px 20px 10px 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+}
+
+/* line 1, ../scss/components/windows/_build.scss */
+#buildings.window {
+  top: 35%;
+  left: 20%;
+}
+
+/* line 1, ../scss/components/windows/_tech.scss */
+#tech.window {
+  top: 65%;
+  left: 20%;
+}
+
+/* line 1, ../scss/components/windows/_expedition.scss */
+#expedition.window {
+  top: 20%;
+  left: 62%;
+}
+
+/* line 1, ../scss/components/windows/_research.scss */
+#research.window {
+  top: 45%;
+  left: 20%;
 }

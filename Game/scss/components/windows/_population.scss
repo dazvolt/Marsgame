@@ -1,0 +1,43 @@
+#population.window {
+  .body {
+    height: $win-height;
+  }
+
+  .sidebar {
+    @include box-border;
+
+    width: 50%;
+    height: 100%;
+
+    &.left {
+      float: left;
+    }
+
+    &.right {
+      float: right;
+      border-left: $win-b;
+    }
+
+    .sidebar-title {
+      @include box-border;
+      height: $win-title-height;
+      background: $win-title-bg;
+      border-bottom: $win-title-b;
+      z-index: $wz + 6;
+      font: $win-default-font-size - 2 $default-font;
+
+      color: #9DBFDA;
+      padding: 4px 5px 5px 10px;
+      font-weight: bold;
+    }
+
+    .sidebar-body {
+      @include box-border;
+      padding: $win-padding $win-padding + $win-padding $win-padding $win-padding;
+
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 500px;
+    }
+  }
+}

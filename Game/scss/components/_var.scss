@@ -1,6 +1,7 @@
 /* Common default */
 
 $default-font: 'Play';
+$default-color: #9DBFDA;
 
 /* Default elements section */
 
@@ -13,12 +14,15 @@ $win-title-bg: rgba(12, 17, 23, 0.9);
 $win-title-b: 1px solid rgb(42, 49, 59);
 
 $win-padding: 10px;
+$win-default-font-size: 14px;
 $win-bg: rgba(24, 33, 42, 0.8);
 $win-b: 1px solid rgb(42, 49, 59);
 $win-b-main: 1px solid #fff;
 $wcorner: 98%;
+$win-free-width: 400px;
+$win-height: 550px;
 
-$win-footer-height: 35px;
+$win-footer-height: 55px;
 $win-footer-bg: rgba(12, 17, 23, 0.17);
 $win-footer-b: 1px solid #2A313B;
 
