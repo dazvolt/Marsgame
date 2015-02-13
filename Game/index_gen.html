@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=1040" />
+  <title>Симулятор колонизации Марса v0.8.5</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+  <link rel="stylesheet" type="text/css" href="css/core.css"/>
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.11.1.js"></script>
+  <script type="text/javascript" src="js/names.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/generate-ui.js"></script>
+  <script type="text/javascript" src="js/mapgen.js"></script>
+  <script type="text/javascript" src="js/locale.js"></script>
+  <script type="text/javascript" src="js/helpers.js"></script>
+  <script type="text/javascript" src="js/global-handler.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+	<main class="content">
+        <div id="top-panel" class="window no-footer-title">
+            <div class="body clearfix">
+                <div id="resource">
+                    <div id="titan" class="resource"><i class="fa fa-cube"></i><span data-locale="name"></span><span data-resource="amount">25 000</span><span data-locale="unit"></span></div>
+                    <div id="uranium" class="resource"><i class="fa fa-cubes"></i><span data-locale="name"></span><span data-resource="amount">45</span><span data-locale="unit"></span></div>
+                    <div id="helium" class="resource"><i class="fa fa-cloud"></i><span data-locale="name"></span><span data-resource="amount">20</span><span data-locale="unit"></span></div>
+                    <div id="power" class="resource"><i class="fa fa-bolt"></i><span data-locale="name"></span><span data-resource="amount">2 500</span><span data-locale="unit"></span></div>
+                </div>
+                <div id="win-buttons">
+                    <button id="population-b" class="button"><i class="fa fa-users"></i></button>
+                    <button id="buildings-b" class="button"><i class="fa fa-gavel"></i></button>
+                    <button id="research-b" class="button disabled"><i class="fa fa-eyedropper"></i></button>
+                    <button id="tech-b" class="button disabled"><i class="fa fa-fighter-jet"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="map" class="window no-footer">
+            <div class="title"><span data-locale="map"></span></div>
+            <div class="body">
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+            </div>
+            <div id="power-bar">
+                <div class="value"></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+
+        <div id="graphs" class="window no-footer">
+            <div class="title"><span data-locale="graphs"></span></div>
+            <div class="body">
+                <div class="item" id="winPopulation-s"><span data-locale="winPopulation"></span><span class="j-win-population"></span></div>
+                <div class="item" id="year-s"><span data-locale="year"></span><span class="j-cur-year"></span><button class="button"><span data-locale="year-b"></span></button></div>
+                <div class="item" id="childDie-s"><span data-locale="childDie"></span><span class="j-child-die"></span><button class="button"><span data-locale="childDie-b"></span></button></div>
+                <div class="item" id="childBorn-s"><span data-locale="childBorn"></span><span class="j-child-born"></span><button class="button"><span data-locale="childBorn-b"></span></button></div>
+                <div class="item" id="suddenDeath-s"><span data-locale="suddenDeath"></span><span class="j-sudden-death"></span><button class="button"><span data-locale="suddenDeath-b"></span></button></div>
+                <div class="item" id="apocalypse-s"><span data-locale="apocalypse"></span><span class="j-apocalypse"></span><button class="button"><span data-locale="apocalypse-b"></span></button></div>
+                <div class="item" id="expedition-s"><span data-locale="expedition"></span><button class="button"><span data-locale="expedition-b"></span></button></div>
+                <div class="item" id="reset-s"><span data-locale="reset"></span><button class="button"><span data-locale="reset-b"></span></button></div>
+            </div>
+        </div>
+
+        <div id="log" class="window no-footer">
+            <div class="title"><span data-locale="log"></span></div>
+            <div id="log-output" class="body"></div>
+        </div>
+
+        <div id="filter" class="window no-footer">
+            <div class="title"><span data-locale="filter"></span></div>
+            <div class="body">
+                <div class="item"><label><span data-locale="childBorn"></span><input id="f-children-born" type="checkbox" checked /></label></div>
+                <div class="item"><label><span data-locale="childDied"></span><input id="f-children-died" type="checkbox" checked /></label></div>
+                <div class="item"><label><span data-locale="colonistDied"></span><input id="f-colonist-died" type="checkbox" checked /></label></div>
+            </div>
+        </div>
+
+        <div id="population" class="window no-footer win-free">
+            <div class="close"></div>
+            <div class="title"><i class="fa fa-users"></i><span data-locale="population"></span></div>
+            <div class="body no_pad clearfix">
+                <div class="sidebar left">
+                    <div class="sidebar-title"><span data-locale="woman"></span></div>
+                    <div id="woman-container" class="sidebar-body"></div>
+                </div>
+                <div class="sidebar right">
+                    <div class="sidebar-title"><span data-locale="man"></span></div>
+                    <div id="man-container" class="sidebar-body"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="buildings" class="window no-footer win-free">
+            <div class="close"></div>
+            <div class="title"><i class="fa fa-gavel"></i><span data-locale="buildings"></span></div>
+            <div class="body">
+            </div>
+        </div>
+
+        <div id="research" class="window no-footer win-free">
+            <div class="close"></div>
+            <div class="title"><i class="fa fa-eyedropper"></i><span data-locale="research"></span></div>
+            <div class="body">
+            </div>
+        </div>
+
+        <div id="expedition" class="window win-free">
+            <div class="close"></div>
+            <div class="title"><span data-locale="expedition"></span></div>
+            <div class="body">
+                <span data-locale="expedition-text-first-part"></span>
+                <span data-length="expedition"></span>
+                <span data-locale="expedition-text-second-part"></span>
+            </div>
+            <div class="footer">
+                <button class="button accept fa fa-check"></button>
+                <button class="button decline fa fa-times"></button>
+            </div>
+        </div>
+
+        <div id="tech" class="window no-footer win-free">
+            <div class="close"></div>
+            <div class="title"><i class="fa fa-fighter-jet"></i><span data-locale="tech"></span></div>
+            <div class="body"></div>
+        </div>
+	</main>
+</div>
+<div class="j-diag">
+	<div class="text"></div>
+</div>
+<footer><span data-locale="copyrights"></span></footer>
+</body>
+
+</html>

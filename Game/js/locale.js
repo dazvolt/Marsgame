@@ -230,7 +230,7 @@ function DoLocale(language){
         //set resources name and units
         if (get_key == 'resource') {
             for (var get_item in parent[get_key]) {
-                $('#' + get_key + ' #' + get_item + ' span[data-locale="name"]').text(parent[get_key][get_item].name);
+                $('#' + get_key + ' #' + get_item + ' span[data-locale="name"]').text(parent[get_key][get_item].name+':');
                 $('#' + get_key + ' #' + get_item + ' span[data-locale="unit"]').text(parent[get_key][get_item].unit);
             }
         }

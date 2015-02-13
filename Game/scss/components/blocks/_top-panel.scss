@@ -4,14 +4,15 @@
   position: relative;
 
   #resource {
-    width: 100%;
-    height: 45px;
+    width: auto;
+    float: left;
+    height: 34px;
 
     .resource {
       font: $win-default-font-size $element-font;
       color: $default-color;
 
-      min-width: 180px;
+      min-width: 155px;
       height: 25px;
       float: left;
       margin: 5px 10px 0px 5px;
@@ -20,15 +21,29 @@
       border: 1px solid rgb(42, 49, 59);
       position: relative;
     }
+
+    #power span[data-resource='amount'] {
+      color: $c-power;
+    }
+    #uranium span[data-resource='amount'] {
+      color: $c-uranium;
+    }
+    #titan span[data-resource='amount'] {
+      color: $c-titan;
+    }
+    #helium span[data-resource='amount'] {
+      color: $c-helium;
+    }
   }
 
   #win-buttons {
-    width: 100%;
+    float: right;
+    width: auto;
     height: 34px;
 
     button {
       float: left;
-      margin: 0px 10px 5px 5px;
+      margin: 0px 5px 5px 10px;
     }
   }
 

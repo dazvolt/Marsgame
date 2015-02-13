@@ -26,7 +26,7 @@
       <file leaf-file-name="game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="937" column="136" selection-start="49188" selection-end="49188" vertical-scroll-proportion="-34.0" vertical-offset="15079" max-vertical-offset="20196">
+            <state line="867" column="6" selection-start="46059" selection-end="46059" vertical-scroll-proportion="-55.76" vertical-offset="13345" max-vertical-offset="20196">
               <folding>
                 <marker date="1423748119853" expanded="false" signature="49719:49731" placeholder="..." />
                 <marker date="1423748119853" expanded="false" signature="50820:50832" placeholder="..." />
@@ -42,46 +42,6 @@
         <entry file="file://$PROJECT_DIR$/scss/components/blocks/_map.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="1" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="153">
-              <folding>
-                <marker date="1423650540610" expanded="true" signature="5:40" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_population.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/components/windows/_population.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="53" selection-start="468" selection-end="468" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="816">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_graphs.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/components/blocks/_graphs.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="272">
-              <folding>
-                <marker date="1423656776432" expanded="true" signature="91:118" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_common.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/components/_common.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="10" selection-start="344" selection-end="344" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_old.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index_old.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="8" selection-start="817" selection-end="817" vertical-scroll-proportion="63.46154" vertical-offset="1973" max-vertical-offset="2856">
               <folding />
             </state>
           </provider>
@@ -90,16 +50,34 @@
       <file leaf-file-name="global-handler.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/global-handler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="19" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="23" column="3" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addText.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="locale.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/locale.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="247" column="80" selection-start="13805" selection-end="13805" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4437">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/helpers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="29" selection-start="258" selection-end="258" vertical-scroll-proportion="0.20281996" vertical-offset="0" max-vertical-offset="922">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addText.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/addText.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="2" selection-start="227" selection-end="227" vertical-scroll-proportion="0.16594361" vertical-offset="0" max-vertical-offset="922">
+            <state line="11" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
@@ -117,7 +95,25 @@
       <file leaf-file-name="names.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/names.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="42" selection-start="5416" selection-end="5416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+            <state line="3" column="3" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate-ui.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/generate-ui.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="0" selection-start="3044" selection-end="3044" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="1139">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_gen.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index_gen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="28" selection-start="1076" selection-end="1076" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -137,7 +133,6 @@
         <option value="$PROJECT_DIR$/scss/components/blocks/_blocks.scss" />
         <option value="$PROJECT_DIR$/scss/styles.scss" />
         <option value="$PROJECT_DIR$/scss/components/_mixin.scss" />
-        <option value="$PROJECT_DIR$/js/global-handler.js" />
         <option value="$PROJECT_DIR$/scss/components/_ui.scss" />
         <option value="$PROJECT_DIR$/scss/components/windows/_build.scss" />
         <option value="$PROJECT_DIR$/scss/components/windows/_windows.scss" />
@@ -156,7 +151,11 @@
         <option value="$PROJECT_DIR$/js/names.js" />
         <option value="$PROJECT_DIR$/index_old.html" />
         <option value="$PROJECT_DIR$/js/game.js" />
+        <option value="$PROJECT_DIR$/js/generate-ui.js" />
         <option value="$PROJECT_DIR$/js/addText.js" />
+        <option value="$PROJECT_DIR$/index_gen.html" />
+        <option value="$PROJECT_DIR$/js/global-handler.js" />
+        <option value="$PROJECT_DIR$/js/helpers.js" />
       </list>
     </option>
   </component>
@@ -322,6 +321,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/OpenServer/OpenServer/domains/magentostore.loc/skin/frontend/dazvolt/default/scss" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -461,22 +461,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_fonts.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_reset.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="289" />
+        <state line="9" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="-3.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/blocks/_blocks.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="14" selection-start="68" selection-end="68" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="170" />
+        <state line="3" column="14" selection-start="68" selection-end="68" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_mixin.scss">
@@ -521,13 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/locale.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="80" selection-start="13805" selection-end="13805" vertical-scroll-proportion="0.0" vertical-offset="3528" max-vertical-offset="4437">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/windows/_windows.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="19" selection-start="96" selection-end="96" vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="170">
@@ -556,22 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/blocks/_map.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="153">
-          <folding>
-            <marker date="1423650540610" expanded="true" signature="5:40" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="42" selection-start="6113" selection-end="6113" vertical-scroll-proportion="-14.384615" vertical-offset="1054" max-vertical-offset="3349">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_var.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="19" selection-start="281" selection-end="281" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="595">
@@ -590,7 +575,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="1" selection-start="124" selection-end="124" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="272">
           <folding>
-            <marker date="1423656776432" expanded="true" signature="91:118" placeholder="{...}" />
+            <marker date="1423656776432" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -602,9 +587,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/global-handler.js">
+    <entry file="file://$PROJECT_DIR$/index_old.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+        <state line="19" column="8" selection-start="817" selection-end="817" vertical-scroll-proportion="63.46154" vertical-offset="1973" max-vertical-offset="2856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/blocks/_map.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="1" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="68" selection-start="2191" selection-end="2247" vertical-scroll-proportion="-24.192308" vertical-offset="0" max-vertical-offset="3349">
           <folding />
         </state>
       </provider>
@@ -616,23 +615,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/names.js">
+    <entry file="file://$PROJECT_DIR$/js/addText.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="42" selection-start="5416" selection-end="5416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+        <state line="11" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index_old.html">
+    <entry file="file://$PROJECT_DIR$/index_gen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="817" selection-end="817" vertical-scroll-proportion="63.46154" vertical-offset="1973" max-vertical-offset="2856">
+        <state line="25" column="28" selection-start="1076" selection-end="1076" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/names.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="3" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/generate-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="0" selection-start="3044" selection-end="3044" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="937" column="136" selection-start="49188" selection-end="49188" vertical-scroll-proportion="-34.0" vertical-offset="15079" max-vertical-offset="20196">
+        <state line="867" column="6" selection-start="46059" selection-end="46059" vertical-scroll-proportion="-55.76" vertical-offset="13345" max-vertical-offset="20196">
           <folding>
             <marker date="1423748119853" expanded="false" signature="49719:49731" placeholder="..." />
             <marker date="1423748119853" expanded="false" signature="50820:50832" placeholder="..." />
@@ -643,9 +656,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/addText.js">
+    <entry file="file://$PROJECT_DIR$/js/locale.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="2" selection-start="227" selection-end="227" vertical-scroll-proportion="0.16594361" vertical-offset="0" max-vertical-offset="922">
+        <state line="247" column="80" selection-start="13805" selection-end="13805" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/global-handler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="3" selection-start="601" selection-end="601" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="29" selection-start="258" selection-end="258" vertical-scroll-proportion="0.20281996" vertical-offset="0" max-vertical-offset="922">
           <folding />
         </state>
       </provider>

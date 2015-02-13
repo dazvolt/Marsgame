@@ -12,6 +12,13 @@
     });
     
     $('.map svg').mapGen();
-
+    $('.content').generateUI();
     DoLocale('ru');
+
+    console.log(roll(50))
+    console.log(roll(50))
+    console.log(roll(50))
+    console.log(roll(50))
+    console.log(roll(50))
+    console.log(roll(50))
 });

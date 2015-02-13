@@ -8,3 +8,6 @@ $.fn.addText = function(text, newrow) {
         this.html( this.html() + text );
     }
 };
+
+
+
