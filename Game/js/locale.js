@@ -25,7 +25,7 @@ var locale = {
 		graphs : {
             title: 'Статистика и состояния',
             winPopulation : {
-                title : 'Кол-во населения для выигрыша:',
+                title : 'Население:',
             },
             year : {
                 title : 'Год:',

@@ -3,21 +3,21 @@
 $.widget("ui.mapGen", {
     options : {
         scale : 1.5,
-        howMuch : 5,
+        howMuch : 7,
         border : {
-            color : 'rgba(0,0,0,0.4)',
+            color : 'rgba(255,255,255,0.6)',
             thick : 1,
         },
         fill : {
             color : 'none',
         },
+        hover : '',
     },
     _init : function() {
         var thisHeight = parseInt(this.element.css('height'));
         var thisWidth = parseInt(this.element.css('width'));
         
         var xside = (((thisWidth / this.options.howMuch) / 6) * 2);
-        console.log(xside);
         var yside = (xside / this.options.scale);
         var sidesize = (xside / 2);
 
@@ -28,11 +28,10 @@ $.widget("ui.mapGen", {
         //understand free space 
         var freeSpace = (thisWidth - (((this.options.howMuch*4) + ((this.options.howMuch-1)*2))*sidesize)).toFixed(0);
         var correction = freeSpace/2;
-
-        console.log('Total polygons: x="'+xRow+'" y="'+yRow+'"' + ' Free Space:'+freeSpace);
         
         for (var iz = 0; iz < yRow; iz++) {
             if (iz%2 == 0) {//четное число, основные строки 0, 2, 4, 6 и тд
+
                 for (var i = 0; i < this.options.howMuch; i++) {
                     var pointOne = [sidesize + (sidesize*6*i) + correction, yside + (yside*iz)/2];
                     var pointTwo = [0 + (sidesize*6*i) + correction, (yside/2) + (yside*iz)/2];
@@ -47,6 +46,7 @@ $.widget("ui.mapGen", {
                 }
             } else { //нечетное число, строки 1, 3, 5, которые идут между основными
                 for (var i = 0; i < (this.options.howMuch-1); i++) {
+
                     var pointOne = [sidesize + (sidesize*6*i) + sidesize*3 + correction, yside + (yside*iz/2)];
                     var pointTwo = [0 + (sidesize*6*i) + sidesize*3 + correction, (yside/2) + (yside*iz)/2];
                     var pointThree = [sidesize + (sidesize*6*i) + sidesize*3 + correction, 0 + (yside*iz)/2];

@@ -31,7 +31,24 @@ function roll_specific (min, max) {
     return (Math.random() * (max - min) + min).toFixed(3);
 };
 
+$.fn.bind_window = function(win) {
+    this.on('click', function () {
+        if (!$(this).hasClass('disabled')) {
+            $(win).is(':visible') ? $(win).hide() : $(win).show();
+        }
+    });
+    $(win).find('.close, .decline').on('click', function(){
+        $(this).parents(win).hide();
+    })
+};
+function init_window (win) {
+    $(win).find('.close, .decline').on('click', function(){
+        $(this).parents(win).hide();
+    });
+}
+
 //Copyright Commodus Voke
 function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 };
+

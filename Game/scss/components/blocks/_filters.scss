@@ -1,0 +1,17 @@
+#filter {
+  width: 200px;
+  left: 762px;
+  position: absolute;
+  top: 505px;
+
+  .item {
+    height: 31px;
+    color: #9DBFDA;
+    padding-top: 3px;
+
+    input {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

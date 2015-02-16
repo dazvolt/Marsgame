@@ -20,23 +20,31 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+
 	}
 	
 	.close {
         z-index: $wz + 7;
-        @include transition(0.5ms);
+        @include transition($default-transition);
 
 		position: absolute;
 		right: 5px;
 		top: 5px;
 		width: 13px;
 		height: 13px;
-		background: url(../img/close-window.png);
+		background: url(../img/close-window_a.png);
+        opacity: 0.6;
 		cursor: pointer;
 
 		&:hover {
-			background: url(../img/close-window_a.png);
+			opacity: 1;
 		}
+
+        &:active {
+            @include transition(0s);
+
+            opacity: 0.4;
+        }
 	}
 	
 	.body {
@@ -119,6 +127,10 @@
 
       position: absolute;
       height: auto;
+
+      .title {
+        cursor: default !important;
+      }
     }
     &:not(.win-free) {
       margin: 6px 0;

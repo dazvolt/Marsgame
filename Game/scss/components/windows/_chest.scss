@@ -1,0 +1,16 @@
+#chest {
+  .chest {
+    width: 140px;
+    height: 140px;
+    background: url(../img/chest.png) center no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 50%;
+    margin-left: -70px;
+  }
+  span.text {
+    text-align: center;
+    display: block;
+    color: #BBDBF5;
+  }
+}

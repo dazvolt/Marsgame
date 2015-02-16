@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/core.css"/>
   <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
   <script type="text/javascript" src="js/jquery-ui-1.11.1.js"></script>
+  <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/names.js"></script>
   <script type="text/javascript" src="js/game.js"></script>
   <script type="text/javascript" src="js/generate-ui.js"></script>
@@ -19,7 +20,7 @@
 
 <body>
 <div class="wrapper">
-	<main class="content">
+	<main class="content clearfix">
         <div id="top-panel" class="window no-footer-title">
             <div class="body clearfix">
                 <div id="resource">
@@ -31,8 +32,8 @@
                 <div id="win-buttons">
                     <button id="population-b" class="button"><i class="fa fa-users"></i></button>
                     <button id="buildings-b" class="button"><i class="fa fa-gavel"></i></button>
-                    <button id="research-b" class="button disabled"><i class="fa fa-eyedropper"></i></button>
-                    <button id="tech-b" class="button disabled"><i class="fa fa-fighter-jet"></i></button>
+                    <button id="research-b" class="button"><i class="fa fa-eyedropper"></i></button>
+                    <button id="tech-b" class="button"><i class="fa fa-cogs"></i></button>
                 </div>
             </div>
         </div>
@@ -40,12 +41,13 @@
         <div id="map" class="window no-footer">
             <div class="title"><span data-locale="map"></span></div>
             <div class="body">
-                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
-                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
-                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
-                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
-                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
-                <div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div><div class="land"></div>
+                <div class="background">
+                    <div class="perspective svg-container">
+                        <svg></svg>
+                        <div class="smoke"></div>
+                    </div>
+                </div>
+
             </div>
             <div id="power-bar">
                 <div class="value"></div>
@@ -56,23 +58,28 @@
         <div id="graphs" class="window no-footer">
             <div class="title"><span data-locale="graphs"></span></div>
             <div class="body">
-                <div class="item" id="winPopulation-s"><span data-locale="winPopulation"></span><span class="j-win-population"></span></div>
-                <div class="item" id="year-s"><span data-locale="year"></span><span class="j-cur-year"></span><button class="button"><span data-locale="year-b"></span></button></div>
-                <div class="item" id="childDie-s"><span data-locale="childDie"></span><span class="j-child-die"></span><button class="button"><span data-locale="childDie-b"></span></button></div>
-                <div class="item" id="childBorn-s"><span data-locale="childBorn"></span><span class="j-child-born"></span><button class="button"><span data-locale="childBorn-b"></span></button></div>
-                <div class="item" id="suddenDeath-s"><span data-locale="suddenDeath"></span><span class="j-sudden-death"></span><button class="button"><span data-locale="suddenDeath-b"></span></button></div>
-                <div class="item" id="apocalypse-s"><span data-locale="apocalypse"></span><span class="j-apocalypse"></span><button class="button"><span data-locale="apocalypse-b"></span></button></div>
-                <div class="item" id="expedition-s"><span data-locale="expedition"></span><button class="button"><span data-locale="expedition-b"></span></button></div>
-                <div class="item" id="reset-s"><span data-locale="reset"></span><button class="button"><span data-locale="reset-b"></span></button></div>
+                <div class="item" id="winPopulation-s"><span data-locale="winPopulation"></span><span data-number="win-population">1000</span></div>
+                <div class="item" id="year-s"><span data-locale="year"></span><span data-number="cur-year">0</span><button class="button"><i class="fa fa-long-arrow-right"></i></button></div>
+                <div class="item" id="childDie-s"><span data-locale="childDie"></span><span data-number="child-die">40%</span><button class="button"><i class="fa fa-random"></i></button></div>
+                <div class="item" id="childBorn-s"><span data-locale="childBorn"></span><span data-number="child-born">60%</span><button class="button"><i class="fa fa-random"></i></button></div>
+                <div class="item" id="suddenDeath-s"><span data-locale="suddenDeath"></span><span data-number="sudden-death">5%</span><button class="button"><i class="fa fa-random"></i></button></div>
+                <div class="item" id="apocalypse-s"><span data-locale="apocalypse"></span><span data-number="apocalypse">0.125%</span><button class="button"><i class="fa fa-random"></i></button></div>
+                <div class="item" id="expedition-s"><span data-locale="expedition"></span><button class="button"><i class="fa fa-external-link-square"></i></button></div>
+                <div class="item" id="reset-s"><span data-locale="reset"></span><button class="button"><i class="fa fa-refresh allowspin"></i></button></div>
             </div>
         </div>
 
         <div id="log" class="window no-footer">
-            <div class="title"><span data-locale="log"></span></div>
-            <div id="log-output" class="body"></div>
+            <div class="title"><span data-locale="log"></span><i class="fa fa-filter"></i></div>
+            <div class="body">
+                <div id="log-output" class="scrollable">
+
+                </div>
+            </div>
         </div>
 
-        <div id="filter" class="window no-footer">
+        <div id="filter" class="window no-footer win-free" style="display:none">
+            <div class="close"></div>
             <div class="title"><span data-locale="filter"></span></div>
             <div class="body">
                 <div class="item"><label><span data-locale="childBorn"></span><input id="f-children-born" type="checkbox" checked /></label></div>
@@ -81,36 +88,36 @@
             </div>
         </div>
 
-        <div id="population" class="window no-footer win-free">
+        <div id="population" class="window no-footer win-free" style="display:none">
             <div class="close"></div>
             <div class="title"><i class="fa fa-users"></i><span data-locale="population"></span></div>
             <div class="body no_pad clearfix">
                 <div class="sidebar left">
                     <div class="sidebar-title"><span data-locale="woman"></span></div>
-                    <div id="woman-container" class="sidebar-body"></div>
+                    <div id="woman-container" class="sidebar-body scrollable"></div>
                 </div>
                 <div class="sidebar right">
                     <div class="sidebar-title"><span data-locale="man"></span></div>
-                    <div id="man-container" class="sidebar-body"></div>
+                    <div id="man-container" class="sidebar-body scrollable"></div>
                 </div>
             </div>
         </div>
 
-        <div id="buildings" class="window no-footer win-free">
+        <div id="buildings" class="window no-footer win-free" style="display:none">
             <div class="close"></div>
             <div class="title"><i class="fa fa-gavel"></i><span data-locale="buildings"></span></div>
             <div class="body">
             </div>
         </div>
 
-        <div id="research" class="window no-footer win-free">
+        <div id="research" class="window no-footer win-free" style="display:none">
             <div class="close"></div>
             <div class="title"><i class="fa fa-eyedropper"></i><span data-locale="research"></span></div>
             <div class="body">
             </div>
         </div>
 
-        <div id="expedition" class="window win-free">
+        <div id="expedition" class="window win-free" style="display:none">
             <div class="close"></div>
             <div class="title"><span data-locale="expedition"></span></div>
             <div class="body">
@@ -124,10 +131,27 @@
             </div>
         </div>
 
-        <div id="tech" class="window no-footer win-free">
+        <div id="tech" class="window no-footer win-free" style="display:none">
             <div class="close"></div>
-            <div class="title"><i class="fa fa-fighter-jet"></i><span data-locale="tech"></span></div>
+            <div class="title"><i class="fa fa-cogs"></i><span data-locale="tech"></span></div>
             <div class="body"></div>
+        </div>
+
+        <div id="chest" class="window win-free">
+            <div class="title">Таинственный сундук</div>
+            <div class="body">
+                <span class="text"><span class="msg error">Неудача!</span><br /> Ваши колонисты не смогли открыть сундук.</span>
+                <div class="chest"></div>
+                <span class="text">Главный инженер говорит, что сундук можно открыть, потратив: <br /><br />
+                    <span class="msg resource"><i class="fa fa-cube"></i></span> <span style="color:#fff">250 000</span> кг <br />
+                </span>
+                <br />
+                <span class="text">Открыть таинственный сундук с невероятными сокровищами и артефактами?</span>
+            </div>
+            <div class="footer">
+                <button class="button accept"><i class="fa fa-check"></i></button>
+                <button class="button decline"><i class="fa fa-times"></i></button>
+            </div>
         </div>
 	</main>
 </div>

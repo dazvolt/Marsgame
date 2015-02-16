@@ -32,7 +32,7 @@
 }
 
 .button {
-  @include transition(0.5s);
+  @include transition($default-transition);
 
   border: 1px solid rgb(35, 52, 76);
   background: rgba(25, 45, 66, 0.8);
@@ -61,7 +61,7 @@
   }
 
   &:not(.disabled):active {
-    @include transition(0ms);
+    @include transition(0s);
 
     border: 1px solid rgb(35, 52, 76);
     background: rgba(25, 45, 66, 0.5);
@@ -79,7 +79,7 @@
     }
 
     &:not(.disabled):active {
-      @include transition(0ms);
+      @include transition(0s);
 
       background: #418200;
     }
@@ -95,7 +95,7 @@
     }
 
     &:not(.disabled):active {
-      @include transition(0ms);
+      @include transition(0s);
 
       background: #862e00;
     }
@@ -119,4 +119,8 @@ span[data-locale="unit"] {
 }
 #resource i.fa {
   padding-right: 5px;
+}
+.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
 }

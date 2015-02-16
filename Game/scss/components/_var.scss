@@ -2,8 +2,9 @@
 
 $default-font: 'Play';
 $default-color: #9DBFDA;
+$default-transition: 0.5s;
 
-/* Default elements section */
+/* Default elements section //currently not used// */
 
 $element-font: 'Play';
 
@@ -18,7 +19,6 @@ $win-default-font-size: 14px;
 $win-bg: rgba(24, 33, 42, 0.8);
 $win-b: 1px solid rgb(42, 49, 59);
 $win-b-main: 1px solid #fff;
-$wcorner: 98%;
 $win-free-width: 400px;
 $win-height: 550px;
 
@@ -28,8 +28,8 @@ $win-footer-b: 1px solid #2A313B;
 
 $wz: 20;
 
-/* msg colors */
-$c-uranium: #e2e2e2;
+/* resource colors */
+$c-uranium: #717171;
 $c-titan: #FFAE00;
-$c-helium: #b8fff8;
-$c-power: #8EFF00;
+$c-helium: #C7B8FF;
+$c-power: rgb(194, 255, 0);

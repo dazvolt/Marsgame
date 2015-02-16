@@ -1,0 +1,31 @@
+#log {
+  float: left;
+  width: 100%;
+  height: 250px;
+
+  .body {
+    padding: 25px 0 0 0;
+  }
+
+  .fa-filter {
+    @include transition($default-transition);
+
+    float: right;
+    padding-right: 2px;
+    padding-top: 1px;
+    cursor: pointer;
+
+    &:hover:not(:active) {
+      color: #fff;
+    }
+    &:active {
+      @include transition(0s);
+
+      opacity: 0.5;
+    }
+  }
+  #log-output {
+    padding: 5px 10px 10px 10px;
+    height: 100%;
+  }
+}

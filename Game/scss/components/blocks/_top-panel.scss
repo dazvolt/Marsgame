@@ -22,17 +22,21 @@
       position: relative;
     }
 
-    #power span[data-resource='amount'] {
+    #power .fa {
       color: $c-power;
     }
-    #uranium span[data-resource='amount'] {
+    #uranium .fa {
       color: $c-uranium;
     }
-    #titan span[data-resource='amount'] {
+    #titan .fa {
       color: $c-titan;
     }
-    #helium span[data-resource='amount'] {
+    #helium .fa {
       color: $c-helium;
+    }
+
+    span[data-resource='amount'] {
+      color: #C9E5FC;
     }
   }
 
