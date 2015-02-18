@@ -496,12 +496,7 @@ $.widget("ui.gameMars", {
             $(this).parent().draggable().draggable('enable');
         });
 
-        this.element.find('.win-free .title').mousedown(function () {
-            $(this).parent().draggable().draggable('enable');
-        });
-        this.element.find('.win-free .title').mouseup(function () {
-            $(this).parent().draggable().draggable('disable');
-        });
+
 
         this.$build.find('.navbar').mouseup(function () {
             $(this).parent().draggable().draggable('disable');

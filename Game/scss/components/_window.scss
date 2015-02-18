@@ -6,7 +6,7 @@
   
 	position: relative;
 
-	.title {
+	> .title {
 		@include box-border;
 		height: $win-title-height;
 		background: $win-title-bg;
@@ -20,10 +20,9 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-
 	}
 	
-	.close {
+	> .close {
         z-index: $wz + 7;
         @include transition($default-transition);
 
@@ -47,7 +46,7 @@
         }
 	}
 	
-	.body {
+	> .body {
 		@include box-border;
 		padding: $win-title-height + $win-padding $win-padding $win-footer-height + $win-padding $win-padding;
         z-index: $wz + 5;
@@ -64,7 +63,7 @@
         }
 	}
   
-	.footer {
+	> .footer {
 		@include box-border;
 		padding: $win-padding;
 		height: $win-footer-height;

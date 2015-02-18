@@ -1,4 +1,23 @@
 #expedition.window {
   top: 20%;
   left: 62%;
+
+  .body {
+    color: rgb(155, 189, 216);
+
+    .expedition_background {
+      width: 95%;
+      height: 160px;
+      background: url(../img/bg2.jpg) no-repeat center;
+      background-size: cover;
+      margin: 10px auto 10px;
+      border: 1px solid #BDC8D4;
+    }
+    span[data-length="expedition"] {
+      color: #00CFFF;
+    }
+    .description {
+      margin: 10px;
+    }
+  }
 }

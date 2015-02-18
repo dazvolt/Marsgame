@@ -33,7 +33,7 @@
                     <button id="population-b" class="button"><i class="fa fa-users"></i></button>
                     <button id="buildings-b" class="button"><i class="fa fa-gavel"></i></button>
                     <button id="research-b" class="button"><i class="fa fa-eyedropper"></i></button>
-                    <button id="tech-b" class="button"><i class="fa fa-cogs"></i></button>
+                    <button id="tech-b" class="button"><i class="fa fa-laptop"></i></button>
                 </div>
             </div>
         </div>
@@ -43,11 +43,13 @@
             <div class="body">
                 <div class="background">
                     <div class="perspective svg-container">
-                        <svg></svg>
+                        <div class="land">
+                            <svg></svg>
+                            <div class="command_center">КЦ</div>
+                        </div>
                         <div class="smoke"></div>
                     </div>
                 </div>
-
             </div>
             <div id="power-bar">
                 <div class="value"></div>
@@ -64,14 +66,14 @@
                 <div class="item" id="childBorn-s"><span data-locale="childBorn"></span><span data-number="child-born">60%</span><button class="button"><i class="fa fa-random"></i></button></div>
                 <div class="item" id="suddenDeath-s"><span data-locale="suddenDeath"></span><span data-number="sudden-death">5%</span><button class="button"><i class="fa fa-random"></i></button></div>
                 <div class="item" id="apocalypse-s"><span data-locale="apocalypse"></span><span data-number="apocalypse">0.125%</span><button class="button"><i class="fa fa-random"></i></button></div>
-                <div class="item" id="expedition-s"><span data-locale="expedition"></span><button class="button"><i class="fa fa-external-link-square"></i></button></div>
+                <div class="item" id="expedition-s"><span data-locale="expedition"></span><button id="expedition-b" class="button"><i class="fa fa-external-link-square"></i></button></div>
                 <div class="item" id="reset-s"><span data-locale="reset"></span><button class="button"><i class="fa fa-refresh allowspin"></i></button></div>
             </div>
         </div>
 
         <div id="log" class="window no-footer">
             <div class="title"><span data-locale="log"></span><i class="fa fa-filter"></i></div>
-            <div class="body">
+            <div class="body no_pad">
                 <div id="log-output" class="scrollable">
 
                 </div>
@@ -106,7 +108,24 @@
         <div id="buildings" class="window no-footer win-free" style="display:none">
             <div class="close"></div>
             <div class="title"><i class="fa fa-gavel"></i><span data-locale="buildings"></span></div>
-            <div class="body">
+            <div class="body no_pad">
+                <div class="buildings-container">
+
+                <div class="item powerplant clearfix">
+                    <div class="image"></div>
+                    <div class="desc">
+                        <div class="title"><span>Электростанция [ЭС]</span></div>
+                        <div class="text">Электростанция вырабатывает +75 Вт за каждое строение.</div>
+                    </div>
+                    <div class="resources">
+                        <div class="power clearfix"><i class="fa fa-bolt"></i> <span data-resource="amount">45</span></div>
+                        <div class="helium clearfix"><i class="fa fa-cloud"></i> <span data-resource="amount">5</span></div>
+                        <div class="uranium clearfix"><i class="fa fa-cubes"></i> <span data-resource="amount">25</span></div>
+                        <div class="titan clearfix"><i class="fa fa-cube"></i> <span data-resource="amount">100</span></div>
+                    </div>
+                </div>
+
+                </div>
             </div>
         </div>
 
@@ -121,23 +140,26 @@
             <div class="close"></div>
             <div class="title"><span data-locale="expedition"></span></div>
             <div class="body">
-                <span data-locale="expedition-text-first-part"></span>
-                <span data-length="expedition"></span>
-                <span data-locale="expedition-text-second-part"></span>
+                <div class="expedition_background"></div>
+                <div class="description">
+                    <span data-locale="expedition-text-first-part"></span>
+                    <span data-length="expedition"> 10 </span>
+                    <span data-locale="expedition-text-second-part"></span>
+                </div>
             </div>
             <div class="footer">
-                <button class="button accept fa fa-check"></button>
-                <button class="button decline fa fa-times"></button>
+                <button class="button accept"><i class="fa fa-check"></i></button>
+                <button class="button decline"><i class="fa fa-times"></i></button>
             </div>
         </div>
 
         <div id="tech" class="window no-footer win-free" style="display:none">
             <div class="close"></div>
-            <div class="title"><i class="fa fa-cogs"></i><span data-locale="tech"></span></div>
+            <div class="title"><i class="fa fa-laptop"></i><span data-locale="tech"></span></div>
             <div class="body"></div>
         </div>
 
-        <div id="chest" class="window win-free">
+        <div id="chest" class="window win-free" style="display:none;">
             <div class="title">Таинственный сундук</div>
             <div class="body">
                 <span class="text"><span class="msg error">Неудача!</span><br /> Ваши колонисты не смогли открыть сундук.</span>

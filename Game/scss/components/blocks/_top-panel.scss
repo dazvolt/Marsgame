@@ -22,19 +22,6 @@
       position: relative;
     }
 
-    #power .fa {
-      color: $c-power;
-    }
-    #uranium .fa {
-      color: $c-uranium;
-    }
-    #titan .fa {
-      color: $c-titan;
-    }
-    #helium .fa {
-      color: $c-helium;
-    }
-
     span[data-resource='amount'] {
       color: #C9E5FC;
     }

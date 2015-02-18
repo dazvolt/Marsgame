@@ -3137,25 +3137,61 @@ span[data-locale="name"] {
   padding-right: 5px;
 }
 
-/* line 114, ../scss/components/_ui.scss */
+/* line 115, ../scss/components/_ui.scss */
 span[data-locale="unit"] {
   padding-left: 5px;
 }
 
-/* line 117, ../scss/components/_ui.scss */
+/* line 119, ../scss/components/_ui.scss */
 .title i.fa {
   padding-right: 9px;
 }
 
-/* line 120, ../scss/components/_ui.scss */
+/* line 123, ../scss/components/_ui.scss */
 #resource i.fa {
   padding-right: 5px;
 }
 
-/* line 123, ../scss/components/_ui.scss */
+/* line 127, ../scss/components/_ui.scss */
 .scrollable {
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+/* line 132, ../scss/components/_ui.scss */
+.fa-cube {
+  color: #FFAE00;
+}
+
+/* line 136, ../scss/components/_ui.scss */
+.fa-cubes {
+  color: #717171;
+}
+
+/* line 140, ../scss/components/_ui.scss */
+.fa-cloud {
+  color: #C7B8FF;
+}
+
+/* line 144, ../scss/components/_ui.scss */
+.fa-bolt {
+  color: #c2ff00;
+}
+
+/* line 148, ../scss/components/_ui.scss */
+.command_center {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: url(../img/building/command_center.png) no-repeat center;
+  width: 37px;
+  height: 33px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 7px 9px;
+  font: 15px 'Play';
+  opacity: 1;
 }
 
 /* line 1, ../scss/components/_window.scss */
@@ -3169,7 +3205,7 @@ span[data-locale="unit"] {
   position: relative;
 }
 /* line 9, ../scss/components/_window.scss */
-.window .title {
+.window > .title {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3185,8 +3221,8 @@ span[data-locale="unit"] {
   top: 0;
   left: 0;
 }
-/* line 26, ../scss/components/_window.scss */
-.window .close {
+/* line 25, ../scss/components/_window.scss */
+.window > .close {
   z-index: 27;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -3201,20 +3237,20 @@ span[data-locale="unit"] {
   opacity: 0.6;
   cursor: pointer;
 }
-/* line 39, ../scss/components/_window.scss */
-.window .close:hover {
+/* line 38, ../scss/components/_window.scss */
+.window > .close:hover {
   opacity: 1;
 }
-/* line 43, ../scss/components/_window.scss */
-.window .close:active {
+/* line 42, ../scss/components/_window.scss */
+.window > .close:active {
   -moz-transition: all 0s;
   -webkit-transition: all 0s;
   -o-transition: all 0s;
   transition: all 0s;
   opacity: 0.4;
 }
-/* line 50, ../scss/components/_window.scss */
-.window .body {
+/* line 49, ../scss/components/_window.scss */
+.window > .body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3227,12 +3263,12 @@ span[data-locale="unit"] {
   color: #fff;
   height: 100%;
 }
-/* line 62, ../scss/components/_window.scss */
-.window .body.no_pad {
+/* line 61, ../scss/components/_window.scss */
+.window > .body.no_pad {
   padding: 25px 0 55px 0;
 }
-/* line 67, ../scss/components/_window.scss */
-.window .footer {
+/* line 66, ../scss/components/_window.scss */
+.window > .footer {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -3248,57 +3284,57 @@ span[data-locale="unit"] {
   bottom: 0;
   left: 0;
 }
-/* line 84, ../scss/components/_window.scss */
+/* line 83, ../scss/components/_window.scss */
 .window.static .close {
   display: none;
 }
-/* line 89, ../scss/components/_window.scss */
+/* line 88, ../scss/components/_window.scss */
 .window.no-footer .footer {
   display: none;
 }
-/* line 92, ../scss/components/_window.scss */
+/* line 91, ../scss/components/_window.scss */
 .window.no-footer .body {
   padding: 35px 10px 10px 10px;
 }
-/* line 95, ../scss/components/_window.scss */
+/* line 94, ../scss/components/_window.scss */
 .window.no-footer .body.no_pad {
   padding: 25px 0 0 0;
 }
-/* line 101, ../scss/components/_window.scss */
+/* line 100, ../scss/components/_window.scss */
 .window.no-title .title {
   display: none;
 }
-/* line 104, ../scss/components/_window.scss */
+/* line 103, ../scss/components/_window.scss */
 .window.no-title .body {
   padding: 10px 10px 65px 10px;
 }
-/* line 107, ../scss/components/_window.scss */
+/* line 106, ../scss/components/_window.scss */
 .window.no-title .body.no_pad {
   padding: 0 0 55px 0;
 }
-/* line 113, ../scss/components/_window.scss */
+/* line 112, ../scss/components/_window.scss */
 .window.no-footer-title .title, .window.no-footer-title .footer {
   display: none;
 }
-/* line 116, ../scss/components/_window.scss */
+/* line 115, ../scss/components/_window.scss */
 .window.no-footer-title .body {
   padding: 10px;
 }
-/* line 119, ../scss/components/_window.scss */
+/* line 118, ../scss/components/_window.scss */
 .window.no-footer-title .body.no_pad {
   padding: 0;
 }
-/* line 125, ../scss/components/_window.scss */
+/* line 124, ../scss/components/_window.scss */
 .window.win-free {
   width: 400px;
   position: absolute;
   height: auto;
 }
-/* line 131, ../scss/components/_window.scss */
+/* line 130, ../scss/components/_window.scss */
 .window.win-free .title {
   cursor: default !important;
 }
-/* line 135, ../scss/components/_window.scss */
+/* line 134, ../scss/components/_window.scss */
 .window:not(.win-free) {
   margin: 6px 0;
 }
@@ -3329,32 +3365,16 @@ span[data-locale="unit"] {
   position: relative;
 }
 /* line 25, ../scss/components/blocks/_top-panel.scss */
-#top-panel #resource #power .fa {
-  color: #c2ff00;
-}
-/* line 28, ../scss/components/blocks/_top-panel.scss */
-#top-panel #resource #uranium .fa {
-  color: #717171;
-}
-/* line 31, ../scss/components/blocks/_top-panel.scss */
-#top-panel #resource #titan .fa {
-  color: #FFAE00;
-}
-/* line 34, ../scss/components/blocks/_top-panel.scss */
-#top-panel #resource #helium .fa {
-  color: #C7B8FF;
-}
-/* line 38, ../scss/components/blocks/_top-panel.scss */
 #top-panel #resource span[data-resource='amount'] {
   color: #C9E5FC;
 }
-/* line 43, ../scss/components/blocks/_top-panel.scss */
+/* line 30, ../scss/components/blocks/_top-panel.scss */
 #top-panel #win-buttons {
   float: right;
   width: auto;
   height: 34px;
 }
-/* line 48, ../scss/components/blocks/_top-panel.scss */
+/* line 35, ../scss/components/blocks/_top-panel.scss */
 #top-panel #win-buttons button {
   float: left;
   margin: 0px 5px 5px 10px;
@@ -3393,26 +3413,26 @@ span[data-locale="unit"] {
 
 @-webkit-keyframes moveclouds {
   0% {
-    background-position: 0 0;
+    background-position: 0 100%;
   }
   100% {
-    background-position: 100% 0;
+    background-position: 0 0;
   }
 }
 @-moz-keyframes moveclouds {
   0% {
-    background-position: 0 0;
+    background-position: 0 100%;
   }
   100% {
-    background-position: 100% 0;
+    background-position: 0 0;
   }
 }
 @-o-keyframes moveclouds {
   0% {
-    background-position: 0 0;
+    background-position: 0 100%;
   }
   100% {
-    background-position: 100% 0;
+    background-position: 0 0;
   }
 }
 /* line 13, ../scss/components/blocks/_map.scss */
@@ -3422,30 +3442,38 @@ span[data-locale="unit"] {
   height: 400px;
 }
 /* line 18, ../scss/components/blocks/_map.scss */
+#map .land {
+  width: 95.5%;
+  height: 260px;
+  bottom: 0px;
+  position: absolute;
+}
+/* line 24, ../scss/components/blocks/_map.scss */
 #map svg {
   width: 100%;
-  height: 160px;
+  height: 100%;
   position: absolute;
-  bottom: 10px;
-  display: none;
+  bottom: 0px;
+  display: block;
 }
-/* line 25, ../scss/components/blocks/_map.scss */
+/* line 31, ../scss/components/blocks/_map.scss */
 #map .smoke {
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
   width: 600px;
-  margin-left: -125px;
-  opacity: 0.3;
-  height: 150px;
-  background-image: url(../img/smoke.png);
-  background-position: 0px 0px;
+  margin-left: -400px;
+  opacity: 0.2;
+  height: 320px;
+  background-image: url(../img/wind.png);
+  background-position: 0px 100%;
   background-repeat: repeat-x;
-  -webkit-animation: moveclouds 5s linear infinite;
-  -moz-animation: moveclouds 5s linear infinite;
-  -o-animation: moveclouds 5s linear infinite;
+  z-index: -1;
+  -webkit-animation: moveclouds 12s linear infinite;
+  -moz-animation: moveclouds 12s linear infinite;
+  -o-animation: moveclouds 12s linear infinite;
 }
-/* line 42, ../scss/components/blocks/_map.scss */
+/* line 49, ../scss/components/blocks/_map.scss */
 #map .background {
   position: relative;
   width: 100%;
@@ -3456,18 +3484,23 @@ span[data-locale="unit"] {
   border: 1px solid #2a313b;
   overflow: hidden;
 }
-/* line 52, ../scss/components/blocks/_map.scss */
+/* line 59, ../scss/components/blocks/_map.scss */
 #map .perspective {
-  transform: perspective(400px) rotateX(45deg);
+  transform: perspective(400px) rotateX(60deg);
   width: 70%;
   height: 100%;
-  left: 15%;
+  left: 17.5%;
   position: relative;
+  bottom: -10%;
 }
-/* line 62, ../scss/components/blocks/_map.scss */
+/* line 70, ../scss/components/blocks/_map.scss */
 #map .svg-container.active svg polygon:hover {
   fill: rgba(184, 255, 0, 0.62);
   cursor: pointer;
+}
+/* line 76, ../scss/components/blocks/_map.scss */
+#map .svg-container.active .smoke {
+  z-index: -1;
 }
 
 /* line 1, ../scss/components/blocks/_log.scss */
@@ -3477,10 +3510,6 @@ span[data-locale="unit"] {
   height: 250px;
 }
 /* line 6, ../scss/components/blocks/_log.scss */
-#log .body {
-  padding: 25px 0 0 0;
-}
-/* line 10, ../scss/components/blocks/_log.scss */
 #log .fa-filter {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -3491,11 +3520,11 @@ span[data-locale="unit"] {
   padding-top: 1px;
   cursor: pointer;
 }
-/* line 18, ../scss/components/blocks/_log.scss */
+/* line 14, ../scss/components/blocks/_log.scss */
 #log .fa-filter:hover:not(:active) {
   color: #fff;
 }
-/* line 21, ../scss/components/blocks/_log.scss */
+/* line 17, ../scss/components/blocks/_log.scss */
 #log .fa-filter:active {
   -moz-transition: all 0s;
   -webkit-transition: all 0s;
@@ -3503,7 +3532,7 @@ span[data-locale="unit"] {
   transition: all 0s;
   opacity: 0.5;
 }
-/* line 27, ../scss/components/blocks/_log.scss */
+/* line 23, ../scss/components/blocks/_log.scss */
 #log #log-output {
   padding: 5px 10px 10px 10px;
   height: 100%;
@@ -3574,8 +3603,88 @@ span[data-locale="unit"] {
 
 /* line 1, ../scss/components/windows/_build.scss */
 #buildings.window {
-  top: 35%;
-  left: 20%;
+  top: 50px;
+  left: 420px;
+  height: 600px;
+}
+/* line 8, ../scss/components/windows/_build.scss */
+#buildings.window .body .buildings-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 15, ../scss/components/windows/_build.scss */
+#buildings.window .body .item {
+  border-bottom: 1px solid #2a313b;
+  position: relative;
+  cursor: pointer;
+}
+/* line 20, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .image {
+  width: 40px;
+  height: 65px;
+  background: #fff;
+  border: 1px solid white;
+  margin: 8px;
+  float: left;
+}
+/* line 29, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .desc {
+  float: left;
+  width: 75%;
+  margin: 8px;
+}
+/* line 34, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .desc .title {
+  font: 14px 'Play';
+  margin-bottom: 10px;
+  color: #fff;
+}
+/* line 40, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .desc .text {
+  font: 12px 'Play';
+  color: #CBCBCB;
+}
+/* line 46, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .resources {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font: 12px 'Play';
+}
+/* line 52, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .resources div {
+  margin-bottom: 5px;
+  float: right;
+  margin-left: 15px;
+}
+/* line 58, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .resources div:last-child {
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+/* line 63, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .resources span[data-resource] {
+  float: right;
+  color: #C9E5FC;
+}
+/* line 68, ../scss/components/windows/_build.scss */
+#buildings.window .body .item .resources .fa {
+  float: left;
+  margin-right: 5px;
+}
+/* line 74, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.powerplant .image {
+  background: #fff url(../img/building/icons/icon_power-plant.png) center top;
+}
+/* line 78, ../scss/components/windows/_build.scss */
+#buildings.window .body .item:hover {
+  background: rgba(22, 58, 97, 0.5);
+}
+/* line 82, ../scss/components/windows/_build.scss */
+#buildings.window .body .item:active {
+  background: rgba(22, 58, 97, 0.8);
 }
 
 /* line 1, ../scss/components/windows/_tech.scss */
@@ -3589,6 +3698,27 @@ span[data-locale="unit"] {
   top: 20%;
   left: 62%;
 }
+/* line 5, ../scss/components/windows/_expedition.scss */
+#expedition.window .body {
+  color: #9bbdd8;
+}
+/* line 8, ../scss/components/windows/_expedition.scss */
+#expedition.window .body .expedition_background {
+  width: 95%;
+  height: 160px;
+  background: url(../img/bg2.jpg) no-repeat center;
+  background-size: cover;
+  margin: 10px auto 10px;
+  border: 1px solid #BDC8D4;
+}
+/* line 16, ../scss/components/windows/_expedition.scss */
+#expedition.window .body span[data-length="expedition"] {
+  color: #00CFFF;
+}
+/* line 19, ../scss/components/windows/_expedition.scss */
+#expedition.window .body .description {
+  margin: 10px;
+}
 
 /* line 1, ../scss/components/windows/_research.scss */
 #research.window {
@@ -3600,7 +3730,7 @@ span[data-locale="unit"] {
 #chest .chest {
   width: 140px;
   height: 140px;
-  background: url(../img/chest.png) center no-repeat;
+  background: url(../img/items/chest.png) center no-repeat;
   background-size: contain;
   position: relative;
   left: 50%;

@@ -1,42 +1,49 @@
 @-webkit-keyframes moveclouds {
-  0% {background-position: 0 0;}
-  100% {background-position: 100% 0;}
+  0% {background-position: 0 100%;}
+  100% {background-position: 0 0;}
 }
 @-moz-keyframes moveclouds {
-  0% {background-position: 0 0;}
-  100% {background-position: 100% 0;}
+  0% {background-position: 0 100%;}
+  100% {background-position: 0 0;}
 }
 @-o-keyframes moveclouds {
-  0% {background-position: 0 0;}
-  100% {background-position: 100% 0;}
+  0% {background-position: 0 100%;}
+  100% {background-position: 0 0;}
 }
 #map {
   width: 63.8%;
   float: right;
   height: 400px;
 
+  .land {
+    width: 95.5%;
+    height: 260px;
+    bottom: 0px;
+    position: absolute;
+  }
   svg {
     width: 100%;
-    height: 160px;
+    height: 100%;
     position: absolute;
-    bottom: 10px;
-    display: none;
+    bottom: 0px;
+    display: block;
   }
   .smoke {
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
     width: 600px;
-    margin-left: -125px;
-    opacity: 0.3;
-    height: 150px;
-    background-image: url(../img/smoke.png);
-    background-position: 0px 0px;
+    margin-left: -400px;
+    opacity: 0.2;
+    height: 320px;
+    background-image: url(../img/wind.png);
+    background-position: 0px 100%;
     background-repeat: repeat-x;
+    z-index: -1;
 
-    -webkit-animation: moveclouds 5s linear infinite;
-    -moz-animation: moveclouds 5s linear infinite;
-    -o-animation: moveclouds 5s linear infinite;
+    -webkit-animation: moveclouds 12s linear infinite;
+    -moz-animation: moveclouds 12s linear infinite;
+    -o-animation: moveclouds 12s linear infinite;
   }
 
   .background {
@@ -50,11 +57,12 @@
     overflow: hidden;
   }
   .perspective {
-    transform: perspective(400px) rotateX(45deg);
+    transform: perspective(400px) rotateX(60deg);
     width: 70%;
     height: 100%;
-    left: 15%;
+    left: 17.5%;
     position: relative;
+    bottom: -10%;
   }
   .svg-container.active {
     svg {
@@ -64,6 +72,9 @@
           cursor: pointer;
         }
       }
+    }
+    .smoke {
+      z-index: -1;
     }
   }
 }

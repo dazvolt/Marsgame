@@ -15,7 +15,7 @@ function roll_array (value) {
         roll_value = parseInt(Math.random() * (max - min) + min);
 
     return value[roll_value];
-};
+}
 
 function roll (value) {
     var master_roll = Math.random().toFixed(5),
@@ -25,11 +25,11 @@ function roll (value) {
     master_roll <= input_roll ? result = true : result = false;
 
     return result;
-};
+}
 
 function roll_specific (min, max) {
     return (Math.random() * (max - min) + min).toFixed(3);
-};
+}
 
 $.fn.bind_window = function(win) {
     this.on('click', function () {
@@ -37,18 +37,54 @@ $.fn.bind_window = function(win) {
             $(win).is(':visible') ? $(win).hide() : $(win).show();
         }
     });
-    $(win).find('.close, .decline').on('click', function(){
-        $(this).parents(win).hide();
-    })
+    init_window(win);
 };
+
 function init_window (win) {
     $(win).find('.close, .decline').on('click', function(){
         $(this).parents(win).hide();
     });
+    $(win).find('> .title').mousedown(function () {
+        $(this).parents(win).draggable().draggable('enable');
+    });
+    $(win).find('> .title').mouseup(function () {
+        $(this).parents(win).draggable().draggable('disable');
+    });
 }
+
+$.fn.init_flicker = function(timer, opacity, smooth) {
+    var switcher = 0,
+        $this = this,
+        _timer = timer / 1000 + 's';
+    if (smooth) {
+        this.css({
+            '-moz-transition': _timer,
+            '-webkit-transition': _timer,
+            '-o-transition': _timer,
+            'transition': _timer
+        });
+    }
+    setInterval(function () {
+        if (switcher == 0) {
+            $this.css('opacity', opacity);
+            switcher = 1;
+        } else {
+            $this.css('opacity', 1);
+            switcher = 0;
+        }
+    }, timer);
+};
+
+$.fn.get_coords = function() {
+    var get_points = this.attr('points').split(','),
+        x = parseInt(get_points[3].split(' ')[1]).toFixed(0),
+        y = parseInt(get_points[4].split(' ')[2]).toFixed(0);
+
+    return [x, y];
+};
 
 //Copyright Commodus Voke
 function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
-};
+}
 

@@ -2,72 +2,50 @@
 
 $.widget("ui.mapGen", {
     options : {
-        scale : 1.5,
-        howMuch : 7,
-        border : {
-            color : 'rgba(255,255,255,0.6)',
-            thick : 1,
-        },
-        fill : {
-            color : 'none',
-        },
-        hover : '',
-    },
-    _init : function() {
-        var thisHeight = parseInt(this.element.css('height'));
-        var thisWidth = parseInt(this.element.css('width'));
-        
-        var xside = (((thisWidth / this.options.howMuch) / 6) * 2);
-        var yside = (xside / this.options.scale);
-        var sidesize = (xside / 2);
-
-        //understand y rows
-        var yRow = (thisHeight / yside).toFixed(0)*2 - 2;
-        var xRow = this.options.howMuch;
-        
-        //understand free space 
-        var freeSpace = (thisWidth - (((this.options.howMuch*4) + ((this.options.howMuch-1)*2))*sidesize)).toFixed(0);
-        var correction = freeSpace/2;
-        
-        for (var iz = 0; iz < yRow; iz++) {
-            if (iz%2 == 0) {//четное число, основные строки 0, 2, 4, 6 и тд
-
-                for (var i = 0; i < this.options.howMuch; i++) {
-                    var pointOne = [sidesize + (sidesize*6*i) + correction, yside + (yside*iz)/2];
-                    var pointTwo = [0 + (sidesize*6*i) + correction, (yside/2) + (yside*iz)/2];
-                    var pointThree = [sidesize + (sidesize*6*i) + correction, 0 + (yside*iz)/2];
-                    var pointFour = [(xside + sidesize) + (sidesize*6*i) + correction, 0 + (yside*iz)/2];
-                    var pointFive = [(xside + (sidesize*2 + (sidesize*6*i))) + correction, yside/2 + (yside*iz)/2];
-                    var pointSix = [(xside + sidesize) + (sidesize*6*i) + correction, yside + (yside*iz)/2];
-                
-                    d3.select('svg')
-                      .append('polygon')
-                      .attr('points', pointOne+' '+pointTwo+' '+pointThree+' '+pointFour+' '+pointFive+' '+pointSix);
-                }
-            } else { //нечетное число, строки 1, 3, 5, которые идут между основными
-                for (var i = 0; i < (this.options.howMuch-1); i++) {
-
-                    var pointOne = [sidesize + (sidesize*6*i) + sidesize*3 + correction, yside + (yside*iz/2)];
-                    var pointTwo = [0 + (sidesize*6*i) + sidesize*3 + correction, (yside/2) + (yside*iz)/2];
-                    var pointThree = [sidesize + (sidesize*6*i) + sidesize*3 + correction, 0 + (yside*iz)/2];
-                    var pointFour = [(xside + sidesize) + (sidesize*6*i) + sidesize*3 + correction, 0 + (yside*iz)/2];
-                    var pointFive = [(xside + (sidesize*2 + (sidesize*6*i))) + sidesize*3 + correction, yside/2 + (yside*iz)/2];
-                    var pointSix = [(xside + sidesize) + (sidesize*6*i) + sidesize*3 + correction, yside + (yside*iz)/2];
-                
-                    d3.select('svg')
-                      .append('polygon')
-                      .attr('points', pointOne+' '+pointTwo+' '+pointThree+' '+pointFour+' '+pointFive+' '+pointSix);
-                }
+        hexagon : {
+            per_row : 7,
+            border : {
+                color : 'rgba(255, 255, 255, 0.3)',
+                thick : 1
+            },
+            fill : {
+                color : 'rgba(0, 0, 0, 0)'
             }
         }
-        if (this.options.fill.color == 'none') {
-            d3.selectAll('polygon')
-                .attr('fill','rgba(0,0,0,0');
+    },
+    _init : function() {
+        var this_height = parseInt(this.element.css('height')),
+            this_width = parseInt(this.element.css('width')),
+            R = (this_width / this.options.hexagon.per_row) / 3,
+            rows = (this_height / (R * 2)) * 2 - 1,
+            pi = Math.PI,
+            step_x = R * 3,
+            step_y = ((Math.sqrt(3) / 2) * R),
+            store_points = '', helper, counter, coordinates,
+            free_space = (this_width - ((this.options.hexagon.per_row * R * 2) + ((this.options.hexagon.per_row - 1) * R))) / 2;
+
+        for (var yi = 0; yi < rows; yi++) { //loop through y rows
+
+            yi%2 == 0 ? helper = 0 : helper = R + R / 2; //is it middle or main row?
+            yi%2 == 0 ? counter = 0 : counter = 1; //is it middle or main row?
+
+            for (var xi = 0; xi < (this.options.hexagon.per_row - counter); xi++) { //loop through x cells
+                for (var i = 0; i < 6; i++) {
+                    var x = parseInt(R * Math.cos(pi * i / 3) + R + step_x*xi + helper + free_space).toFixed(0);
+                    var y = parseInt(R * Math.sin(pi * i / 3) + R + step_y*yi).toFixed(0);
+                    store_points = store_points + x + ' ' + y;
+                    if (i != 5) { store_points +=', ';}
+                }
+                coordinates = [xi + 1, yi + 1];
+                d3.select('svg').append('polygon').attr('points', store_points).attr('data-coordinates', coordinates).text(coordinates);
+                store_points = '';
+            }
         }
+
         d3.selectAll('polygon')
-          .attr('stroke-width', this.options.border.thick)
-          .attr('stroke', this.options.border.color);  
-        
+          .attr('stroke-width', this.options.hexagon.border.thick)
+          .attr('stroke', this.options.hexagon.border.color)
+          .attr('fill', this.options.hexagon.fill.color);
     },
     destroy : function () {
         this.element.remove();

@@ -1,4 +1,87 @@
 #buildings.window {
-  top: 35%;
-  left: 20%;
+  top: 50px;
+  left: 420px;
+  height: 600px;
+
+  .body {
+
+    .buildings-container {
+      height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .item {
+      border-bottom: 1px solid rgb(42, 49, 59);
+      position: relative;
+      cursor: pointer;
+
+      .image {
+        width: 40px;
+        height: 65px;
+        background: #fff;
+        border: 1px solid white;
+        margin: 8px;
+        float: left;
+      }
+
+      .desc {
+        float: left;
+        width: 75%;
+        margin: 8px;
+
+        .title {
+          font: 14px 'Play';
+          margin-bottom: 10px;
+          color: #fff;
+        }
+
+        .text {
+          font: 12px 'Play';
+          color: #CBCBCB;
+        }
+      }
+
+      .resources {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font: 12px 'Play';
+
+        div {
+          margin-bottom: 5px;
+          float: right;
+          margin-left: 15px;
+        }
+
+        div:last-child {
+          margin-bottom: 0px;
+          margin-left: 0px;
+        }
+
+        span[data-resource] {
+          float: right;
+          color: #C9E5FC;
+        }
+
+        .fa {
+          float: left;
+          margin-right: 5px;
+        }
+      }
+
+      &.powerplant .image {
+        background: #fff url(../img/building/icons/icon_power-plant.png) center top;
+      }
+
+      &:hover {
+        background: rgba(22, 58, 97, 0.5);
+      }
+
+      &:active {
+        background: rgba(22, 58, 97, 0.8);
+      }
+    }
+  }
 }
