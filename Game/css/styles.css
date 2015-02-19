@@ -3204,7 +3204,7 @@ span[data-locale="unit"] {
   z-index: 20;
   position: relative;
 }
-/* line 9, ../scss/components/_window.scss */
+/* line 8, ../scss/components/_window.scss */
 .window > .title {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3221,13 +3221,13 @@ span[data-locale="unit"] {
   top: 0;
   left: 0;
 }
-/* line 25, ../scss/components/_window.scss */
+/* line 24, ../scss/components/_window.scss */
 .window > .close {
-  z-index: 27;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  z-index: 27;
   position: absolute;
   right: 5px;
   top: 5px;
@@ -3237,11 +3237,11 @@ span[data-locale="unit"] {
   opacity: 0.6;
   cursor: pointer;
 }
-/* line 38, ../scss/components/_window.scss */
+/* line 37, ../scss/components/_window.scss */
 .window > .close:hover {
   opacity: 1;
 }
-/* line 42, ../scss/components/_window.scss */
+/* line 41, ../scss/components/_window.scss */
 .window > .close:active {
   -moz-transition: all 0s;
   -webkit-transition: all 0s;
@@ -3249,7 +3249,7 @@ span[data-locale="unit"] {
   transition: all 0s;
   opacity: 0.4;
 }
-/* line 49, ../scss/components/_window.scss */
+/* line 48, ../scss/components/_window.scss */
 .window > .body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3263,11 +3263,11 @@ span[data-locale="unit"] {
   color: #fff;
   height: 100%;
 }
-/* line 61, ../scss/components/_window.scss */
+/* line 60, ../scss/components/_window.scss */
 .window > .body.no_pad {
   padding: 25px 0 55px 0;
 }
-/* line 66, ../scss/components/_window.scss */
+/* line 65, ../scss/components/_window.scss */
 .window > .footer {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3284,57 +3284,57 @@ span[data-locale="unit"] {
   bottom: 0;
   left: 0;
 }
-/* line 83, ../scss/components/_window.scss */
+/* line 82, ../scss/components/_window.scss */
 .window.static .close {
   display: none;
 }
-/* line 88, ../scss/components/_window.scss */
+/* line 87, ../scss/components/_window.scss */
 .window.no-footer .footer {
   display: none;
 }
-/* line 91, ../scss/components/_window.scss */
+/* line 90, ../scss/components/_window.scss */
 .window.no-footer .body {
   padding: 35px 10px 10px 10px;
 }
-/* line 94, ../scss/components/_window.scss */
+/* line 93, ../scss/components/_window.scss */
 .window.no-footer .body.no_pad {
   padding: 25px 0 0 0;
 }
-/* line 100, ../scss/components/_window.scss */
+/* line 99, ../scss/components/_window.scss */
 .window.no-title .title {
   display: none;
 }
-/* line 103, ../scss/components/_window.scss */
+/* line 102, ../scss/components/_window.scss */
 .window.no-title .body {
   padding: 10px 10px 65px 10px;
 }
-/* line 106, ../scss/components/_window.scss */
+/* line 105, ../scss/components/_window.scss */
 .window.no-title .body.no_pad {
   padding: 0 0 55px 0;
 }
-/* line 112, ../scss/components/_window.scss */
+/* line 111, ../scss/components/_window.scss */
 .window.no-footer-title .title, .window.no-footer-title .footer {
   display: none;
 }
-/* line 115, ../scss/components/_window.scss */
+/* line 114, ../scss/components/_window.scss */
 .window.no-footer-title .body {
   padding: 10px;
 }
-/* line 118, ../scss/components/_window.scss */
+/* line 117, ../scss/components/_window.scss */
 .window.no-footer-title .body.no_pad {
   padding: 0;
 }
-/* line 124, ../scss/components/_window.scss */
+/* line 123, ../scss/components/_window.scss */
 .window.win-free {
   width: 400px;
   position: absolute;
   height: auto;
 }
-/* line 130, ../scss/components/_window.scss */
+/* line 129, ../scss/components/_window.scss */
 .window.win-free .title {
   cursor: default !important;
 }
-/* line 134, ../scss/components/_window.scss */
+/* line 133, ../scss/components/_window.scss */
 .window:not(.win-free) {
   margin: 6px 0;
 }
@@ -3675,7 +3675,7 @@ span[data-locale="unit"] {
   margin-right: 5px;
 }
 /* line 74, ../scss/components/windows/_build.scss */
-#buildings.window .body .item.powerplant .image {
+#buildings.window .body .item.power_plant .image {
   background: #fff url(../img/building/icons/icon_power-plant.png) center top;
 }
 /* line 78, ../scss/components/windows/_build.scss */
@@ -3722,8 +3722,130 @@ span[data-locale="unit"] {
 
 /* line 1, ../scss/components/windows/_research.scss */
 #research.window {
-  top: 45%;
-  left: 20%;
+  top: 50px;
+  left: 485px;
+  height: 600px;
+}
+/* line 8, ../scss/components/windows/_research.scss */
+#research.window .body .timing-container {
+  height: 100px;
+  border-bottom: 1px solid #2a313b;
+  color: #9DBFDA;
+  padding: 8px;
+  position: relative;
+  background: rgba(21, 26, 32, 0.9);
+}
+/* line 16, ../scss/components/windows/_research.scss */
+#research.window .body .timing-container button.decline {
+  float: right;
+  margin-top: 7px;
+}
+/* line 21, ../scss/components/windows/_research.scss */
+#research.window .body .timing-container .research-progress {
+  height: 16px;
+  border: 1px solid #2a313b;
+  background: rgba(21, 26, 32, 0.9);
+  margin-top: 10px;
+  position: relative;
+}
+/* line 28, ../scss/components/windows/_research.scss */
+#research.window .body .timing-container .research-progress .percent-text {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  width: 30px;
+  margin-left: -15px;
+  color: #fff;
+  font: 12px 'Play';
+}
+/* line 38, ../scss/components/windows/_research.scss */
+#research.window .body .timing-container .research-progress .percent-progress {
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  height: 100%;
+  width: 0%;
+  background: #3F7494;
+}
+/* line 47, ../scss/components/windows/_research.scss */
+#research.window .body .research-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* line 54, ../scss/components/windows/_research.scss */
+#research.window .body .item {
+  border-bottom: 1px solid #2a313b;
+  position: relative;
+  cursor: pointer;
+}
+/* line 59, ../scss/components/windows/_research.scss */
+#research.window .body .item .image {
+  width: 40px;
+  height: 65px;
+  background: #fff;
+  border: 1px solid white;
+  margin: 8px;
+  float: left;
+}
+/* line 68, ../scss/components/windows/_research.scss */
+#research.window .body .item .desc {
+  float: left;
+  width: 75%;
+  margin: 8px;
+}
+/* line 73, ../scss/components/windows/_research.scss */
+#research.window .body .item .desc .title {
+  font: 14px 'Play';
+  margin-bottom: 10px;
+  color: #fff;
+}
+/* line 79, ../scss/components/windows/_research.scss */
+#research.window .body .item .desc .text {
+  font: 12px 'Play';
+  color: #CBCBCB;
+}
+/* line 85, ../scss/components/windows/_research.scss */
+#research.window .body .item .resources {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font: 12px 'Play';
+}
+/* line 91, ../scss/components/windows/_research.scss */
+#research.window .body .item .resources div {
+  margin-bottom: 5px;
+  float: right;
+  margin-left: 15px;
+}
+/* line 97, ../scss/components/windows/_research.scss */
+#research.window .body .item .resources div:last-child {
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+/* line 102, ../scss/components/windows/_research.scss */
+#research.window .body .item .resources span[data-resource] {
+  float: right;
+  color: #C9E5FC;
+}
+/* line 107, ../scss/components/windows/_research.scss */
+#research.window .body .item .resources .fa {
+  float: left;
+  margin-right: 5px;
+}
+/* line 113, ../scss/components/windows/_research.scss */
+#research.window .body .item.powerplant .image {
+  background: #fff url(../img/building/icons/icon_power-plant.png) center top;
+}
+/* line 117, ../scss/components/windows/_research.scss */
+#research.window .body .item:hover {
+  background: rgba(22, 58, 97, 0.5);
+}
+/* line 121, ../scss/components/windows/_research.scss */
+#research.window .body .item:active {
+  background: rgba(22, 58, 97, 0.8);
 }
 
 /* line 2, ../scss/components/windows/_chest.scss */

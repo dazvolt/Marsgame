@@ -11,7 +11,7 @@
     $('#map svg').mapGen();
 
     $('.content').generateUI();
-    DoLocale('ru');
+
 
     $('button').on('mouseover', function (){
         if ($(this).find('.allowspin').length > 0) {
@@ -46,5 +46,8 @@
         top : parseInt($('polygon[data-coordinates="4,5"]').get_coords()[1]),
         left : parseInt($('polygon[data-coordinates="4,5"]').get_coords()[0])
     }).text($('polygon[data-coordinates="4,5"]').attr('data-coordinates'));
+
+    $('.content').game_mars();
+
 });
 

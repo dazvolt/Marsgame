@@ -66,44 +66,44 @@ var locale = {
 		},
 		buildings : {
             title : 'Строения',
-			powerplant : {
-				name : 'Электростанция',
-				desc : 'Электростанция вырабатывает + Вт за каждое строение.',
+			power_plant : {
+				name : 'Электростанция [ЭС]',
+				desc : 'Электростанция вырабатывает энергию, за каждое здание: +',
 			},
-			titanplant : {
-				name : 'Завод по выработке титана',
-				desc : 'Завод по выработке титана позволяет добывать ресурс титан.',
+			titan_plant : {
+				name : 'Завод по выработке титана [ВТ]',
+				desc : 'Завод по выработке титана позволяет добывать ресурс титан. Каждое здание повышает выработку на: +',
 			},
-			uraniumplant : {
-				name : 'Завод по выработке урана',
+			uranium_plant : {
+				name : 'Завод по выработке урана [ВУ]',
 				desc : 'Завод по выработке урана позволяет добывать ресурс уран.',
 			},
-			heliumplant : {
-				name : 'Завод по выработке гелия-3',
+			helium_plant : {
+				name : 'Завод по выработке гелия-3 [ВГ]',
 				desc : 'Завод по выработке гелия-3 позволяет добывать ресурс гелий-3.',
 			},
-			housingplant : {
-				name : 'Жилой корпус',
+			housing_plant : {
+				name : 'Жилой корпус [ЖК]',
 				desc : 'Жилой корпус повышает шанс рождения детей на 5% за каждое строение.',
 			},
-			medicalplant : {
-				name : 'Медицинский блок',
+			medical_plant : {
+				name : 'Медицинский блок [МБ]',
 				desc : 'Медицинский блок повышает шанс рождения детей на 5% и понижает шанс смерти детей на 10%.',
 			},
-			techplant : {
-				name : 'Завод техники',
+			tech_plant : {
+				name : 'Завод техники [ЗТ]',
 				desc : 'Завод техники позволяет строить вспомогательную технику.',
 			},
-			laboratoryplant : {
-				name : 'Лаборатория',
+			laboratory_plant : {
+				name : 'Лаборатория [ЛТ]',
 				desc : 'Лаборатория позволяет проводить исследования и уменьшает шанс конца света на 0.1% за каждое строение.',
 			},
-			starportplant : {
-				name : 'Космопорт',
+			starport_plant : {
+				name : 'Космопорт [КП]',
 				desc : 'Космопорт позволяет принимать корабли от Земли и отправлять их на Землю.',
 			},
-			defendplant : {
-				name : 'Оборонная система',
+			defend_plant : {
+				name : 'Оборонная система [ОС]',
 				desc : 'Оборонная система защищает колонистов от случайных атак других цивилизаций.',
 			},
 		},
@@ -241,6 +241,7 @@ function DoLocale(language){
                 var $getBuildingResources = $('#' + get_key + ' .item.' + get_item + ' span[data-resource-name]');
 
                 $('#' + get_key + ' .item.' + get_item + ' span[data-locale="' + get_item + '"]').text(parent[get_key][get_item].name);
+                $('#' + get_key + ' .item.' + get_item + ' span[data-locale="' + get_item + '-desc"]').text(parent[get_key][get_item].desc);
 
                 for (var gbr=0; gbr < $getBuildingResources.length; gbr++) {
                     var ResourceName = $('#' + get_key + ' .item.' + get_item + ' span[data-resource-name]:eq(' + gbr + ')').attr('data-resource-name');

@@ -10,6 +10,7 @@
   <script type="text/javascript" src="js/jquery-ui-1.11.1.js"></script>
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/names.js"></script>
+  <script type="text/javascript" src="js/main_controller.js"></script>
   <script type="text/javascript" src="js/game.js"></script>
   <script type="text/javascript" src="js/generate-ui.js"></script>
   <script type="text/javascript" src="js/mapgen.js"></script>
@@ -132,7 +133,33 @@
         <div id="research" class="window no-footer win-free" style="display:none">
             <div class="close"></div>
             <div class="title"><i class="fa fa-eyedropper"></i><span data-locale="research"></span></div>
-            <div class="body">
+            <div class="body no_pad">
+                <div class="timing-container">
+                    <span class="name">Текущее исследование: <span data-research="current-research">Нет активных исследований.</span></span>
+                    <div class="research-progress">
+                        <div class="percent-progress" data-research="progress-bar"></div>
+                        <div class="percent-text" data-research="percent-progress">0%</div>
+                    </div>
+                    <button class="button decline not-main disabled"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="research-container">
+
+                    <div class="item energy clearfix">
+                        <div class="image"></div>
+                        <div class="desc">
+                            <div class="title"><span>Энергетика</span></div>
+                            <div class="text">Исследование энергетики позволяет увеличить количество выходной мощности электростанций, +25 Вт за каждый уровень к каждой электростанции.</div>
+                        </div>
+                        <div class="resources">
+                            <div class="power clearfix"><i class="fa fa-bolt"></i> <span data-resource="amount">45</span></div>
+                            <div class="helium clearfix"><i class="fa fa-cloud"></i> <span data-resource="amount">5</span></div>
+                            <div class="uranium clearfix"><i class="fa fa-cubes"></i> <span data-resource="amount">25</span></div>
+                            <div class="titan clearfix"><i class="fa fa-cube"></i> <span data-resource="amount">100</span></div>
+                            <div class="time clearfix"><i class="fa fa-clock-o"></i> <span data-resource="amount">5</span></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 

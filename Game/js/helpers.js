@@ -42,7 +42,9 @@ $.fn.bind_window = function(win) {
 
 function init_window (win) {
     $(win).find('.close, .decline').on('click', function(){
-        $(this).parents(win).hide();
+        if (!$(this).hasClass('disabled') && !$(this).hasClass('not-main')) {
+            $(this).parents(win).hide();
+        }
     });
     $(win).find('> .title').mousedown(function () {
         $(this).parents(win).draggable().draggable('enable');
@@ -81,6 +83,15 @@ $.fn.get_coords = function() {
         y = parseInt(get_points[4].split(' ')[2]).toFixed(0);
 
     return [x, y];
+};
+
+function traverse (obj, keys) {
+    var nodes = keys.split('.');
+    for (var i = 0; i < nodes.length; i++) {
+        obj = obj[nodes[i]];
+    }
+    console.log(obj);
+    return obj;
 };
 
 //Copyright Commodus Voke

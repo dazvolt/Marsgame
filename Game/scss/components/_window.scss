@@ -3,17 +3,16 @@
 	background: $win-bg;
 	border: $win-b;
     z-index: $wz;
-  
 	position: relative;
 
 	> .title {
 		@include box-border;
+
 		height: $win-title-height;
 		background: $win-title-bg;
 		border-bottom: $win-title-b;
         z-index: $wz + 6;
         font: $win-default-font-size - 1 $default-font;
-		
 		color: #9DBFDA;
 		padding: 4px 5px 5px 10px;
 		font-weight: bold;
@@ -23,8 +22,8 @@
 	}
 	
 	> .close {
-        z-index: $wz + 7;
         @include transition($default-transition);
+        z-index: $wz + 7;
 
 		position: absolute;
 		right: 5px;
