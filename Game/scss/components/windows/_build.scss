@@ -75,12 +75,16 @@
         background: #fff url(../img/building/icons/icon_power-plant.png) center top;
       }
 
-      &:hover {
+      &:not(.disabled):hover {
         background: rgba(22, 58, 97, 0.5);
       }
 
-      &:active {
+      &:not(.disabled):active {
         background: rgba(22, 58, 97, 0.8);
+      }
+      &.disabled {
+        opacity: 0.5;
+        cursor: default;
       }
     }
   }

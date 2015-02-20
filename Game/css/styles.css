@@ -3178,20 +3178,49 @@ span[data-locale="unit"] {
   color: #c2ff00;
 }
 
-/* line 148, ../scss/components/_ui.scss */
-.command_center {
+/* line 2, ../scss/components/_buildings.scss */
+#map .land .b-b {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background: url(../img/building/command_center.png) no-repeat center;
   width: 37px;
   height: 33px;
   position: absolute;
-  top: 50%;
-  left: 50%;
   padding: 7px 9px;
   font: 15px 'Play';
   opacity: 1;
+}
+/* line 13, ../scss/components/_buildings.scss */
+#map .land .command_center {
+  background: url(../img/building/command_center.png) no-repeat center;
+}
+/* line 17, ../scss/components/_buildings.scss */
+#map .land .power_plant {
+  background: url(../img/building/power_plant.png) no-repeat center;
+}
+/* line 21, ../scss/components/_buildings.scss */
+#map .land .titan_plant {
+  background: url(../img/building/titan_plant.png) no-repeat center;
+}
+/* line 25, ../scss/components/_buildings.scss */
+#map .land .uranium_plant {
+  background: url(../img/building/uranium_plant.png) no-repeat center;
+}
+/* line 29, ../scss/components/_buildings.scss */
+#map .land .helium_plant {
+  background: url(../img/building/helium_plant.png) no-repeat center;
+}
+/* line 33, ../scss/components/_buildings.scss */
+#map .land .medical_plant {
+  background: url(../img/building/medical_plant.png) no-repeat center;
+}
+/* line 37, ../scss/components/_buildings.scss */
+#map .land .housing_plant {
+  background: url(../img/building/housing_plant.png) no-repeat center;
+}
+/* line 41, ../scss/components/_buildings.scss */
+#map .land .laboratory_plant {
+  background: url(../img/building/laboratory_plant.png) no-repeat center;
 }
 
 /* line 1, ../scss/components/_window.scss */
@@ -3301,7 +3330,7 @@ span[data-locale="unit"] {
   padding: 25px 0 0 0;
 }
 /* line 99, ../scss/components/_window.scss */
-.window.no-title .title {
+.window.no-title > .title {
   display: none;
 }
 /* line 102, ../scss/components/_window.scss */
@@ -3313,7 +3342,7 @@ span[data-locale="unit"] {
   padding: 0 0 55px 0;
 }
 /* line 111, ../scss/components/_window.scss */
-.window.no-footer-title .title, .window.no-footer-title .footer {
+.window.no-footer-title > .title, .window.no-footer-title .footer {
   display: none;
 }
 /* line 114, ../scss/components/_window.scss */
@@ -3331,7 +3360,7 @@ span[data-locale="unit"] {
   height: auto;
 }
 /* line 129, ../scss/components/_window.scss */
-.window.win-free .title {
+.window.win-free > .title {
   cursor: default !important;
 }
 /* line 133, ../scss/components/_window.scss */
@@ -3454,7 +3483,7 @@ span[data-locale="unit"] {
   height: 100%;
   position: absolute;
   bottom: 0px;
-  display: block;
+  display: none;
 }
 /* line 31, ../scss/components/blocks/_map.scss */
 #map .smoke {
@@ -3468,12 +3497,11 @@ span[data-locale="unit"] {
   background-image: url(../img/wind.png);
   background-position: 0px 100%;
   background-repeat: repeat-x;
-  z-index: -1;
   -webkit-animation: moveclouds 12s linear infinite;
   -moz-animation: moveclouds 12s linear infinite;
   -o-animation: moveclouds 12s linear infinite;
 }
-/* line 49, ../scss/components/blocks/_map.scss */
+/* line 48, ../scss/components/blocks/_map.scss */
 #map .background {
   position: relative;
   width: 100%;
@@ -3484,7 +3512,7 @@ span[data-locale="unit"] {
   border: 1px solid #2a313b;
   overflow: hidden;
 }
-/* line 59, ../scss/components/blocks/_map.scss */
+/* line 58, ../scss/components/blocks/_map.scss */
 #map .perspective {
   transform: perspective(400px) rotateX(60deg);
   width: 70%;
@@ -3493,12 +3521,12 @@ span[data-locale="unit"] {
   position: relative;
   bottom: -10%;
 }
-/* line 70, ../scss/components/blocks/_map.scss */
+/* line 69, ../scss/components/blocks/_map.scss */
 #map .svg-container.active svg polygon:hover {
   fill: rgba(184, 255, 0, 0.62);
   cursor: pointer;
 }
-/* line 76, ../scss/components/blocks/_map.scss */
+/* line 75, ../scss/components/blocks/_map.scss */
 #map .svg-container.active .smoke {
   z-index: -1;
 }
@@ -3679,12 +3707,17 @@ span[data-locale="unit"] {
   background: #fff url(../img/building/icons/icon_power-plant.png) center top;
 }
 /* line 78, ../scss/components/windows/_build.scss */
-#buildings.window .body .item:hover {
+#buildings.window .body .item:not(.disabled):hover {
   background: rgba(22, 58, 97, 0.5);
 }
 /* line 82, ../scss/components/windows/_build.scss */
-#buildings.window .body .item:active {
+#buildings.window .body .item:not(.disabled):active {
   background: rgba(22, 58, 97, 0.8);
+}
+/* line 85, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 /* line 1, ../scss/components/windows/_tech.scss */

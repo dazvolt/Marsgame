@@ -1,22 +1,23 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=1040" />
-  <title>Симулятор колонизации Марса v0.8.5</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-  <link rel="stylesheet" type="text/css" href="css/core.css"/>
-  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.11.1.js"></script>
-  <script type="text/javascript" src="js/d3.js"></script>
-  <script type="text/javascript" src="js/names.js"></script>
-  <script type="text/javascript" src="js/main_controller.js"></script>
-  <script type="text/javascript" src="js/game.js"></script>
-  <script type="text/javascript" src="js/generate-ui.js"></script>
-  <script type="text/javascript" src="js/mapgen.js"></script>
-  <script type="text/javascript" src="js/locale.js"></script>
-  <script type="text/javascript" src="js/helpers.js"></script>
-  <script type="text/javascript" src="js/global-handler.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=1040" />
+    <title>Симулятор колонизации Марса v0.8.5</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+    <script type="text/javascript" src="js/framework/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="js/framework/jquery-ui-1.11.1.js"></script>
+    <script type="text/javascript" src="js/framework/d3.js"></script>
+    <script type="text/javascript" src="js/game/data.js"></script>
+    <script type="text/javascript" src="js/game/core/_functions.js"></script>
+    <script type="text/javascript" src="js/game/core/_map-generation.js"></script>
+    <script type="text/javascript" src="js/game/core/_init.js"></script>
+    <script type="text/javascript" src="js/game/core/_resource.js"></script>
+    <script type="text/javascript" src="js/game/core/_build.js"></script>
+    <script type="text/javascript" src="js/game/locale/names.js"></script>
+    <script type="text/javascript" src="js/game/locale/locale.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                     <div class="perspective svg-container">
                         <div class="land">
                             <svg></svg>
-                            <div class="command_center">КЦ</div>
+                            <div class="command_center b-b">КЦ</div>
                         </div>
                         <div class="smoke"></div>
                     </div>
@@ -110,23 +111,7 @@
             <div class="close"></div>
             <div class="title"><i class="fa fa-gavel"></i><span data-locale="buildings"></span></div>
             <div class="body no_pad">
-                <div class="buildings-container">
-
-                <div class="item powerplant clearfix">
-                    <div class="image"></div>
-                    <div class="desc">
-                        <div class="title"><span>Электростанция [ЭС]</span></div>
-                        <div class="text">Электростанция вырабатывает +75 Вт за каждое строение.</div>
-                    </div>
-                    <div class="resources">
-                        <div class="power clearfix"><i class="fa fa-bolt"></i> <span data-resource="amount">45</span></div>
-                        <div class="helium clearfix"><i class="fa fa-cloud"></i> <span data-resource="amount">5</span></div>
-                        <div class="uranium clearfix"><i class="fa fa-cubes"></i> <span data-resource="amount">25</span></div>
-                        <div class="titan clearfix"><i class="fa fa-cube"></i> <span data-resource="amount">100</span></div>
-                    </div>
-                </div>
-
-                </div>
+                <div class="buildings-container"></div>
             </div>
         </div>
 

@@ -1,0 +1,45 @@
+#map .land {
+  .b-b {
+    @include box-border;
+
+    width: 37px;
+    height: 33px;
+    position: absolute;
+    padding: 7px 9px;
+    font: 15px 'Play';
+    opacity: 1;
+  }
+
+  .command_center {
+    background: url(../img/building/command_center.png) no-repeat center;
+  }
+
+  .power_plant {
+    background: url(../img/building/power_plant.png) no-repeat center;
+  }
+
+  .titan_plant {
+    background: url(../img/building/titan_plant.png) no-repeat center;
+  }
+
+  .uranium_plant {
+    background: url(../img/building/uranium_plant.png) no-repeat center;
+  }
+
+  .helium_plant {
+    background: url(../img/building/helium_plant.png) no-repeat center;
+  }
+
+  .medical_plant {
+    background: url(../img/building/medical_plant.png) no-repeat center;
+  }
+
+  .housing_plant {
+    background: url(../img/building/housing_plant.png) no-repeat center;
+  }
+
+  .laboratory_plant {
+    background: url(../img/building/laboratory_plant.png) no-repeat center;
+  }
+
+}
