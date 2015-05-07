@@ -1,0 +1,21 @@
+.error_window {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  left: 50%;
+  margin-left: -20% !important;
+  top: 15%;
+  padding: 10px;
+  text-align: center;
+  color: $c-danger;
+
+  .weed {
+    position: absolute;
+    bottom: 0;
+    right: -14px;
+    width: 28px;
+    height: 65px;
+    background: url(../img/weed.gif);
+    background-size: contain;
+  }
+}

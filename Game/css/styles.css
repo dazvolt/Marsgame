@@ -3,6 +3,7 @@
 /* Default elements section //currently not used// */
 /* Default window section */
 /* resource colors */
+/* colors */
 /* Eric Meyer's CSS Reset */
 @import url(http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic);
 /* line 2, ../scss/components/_reset.scss */
@@ -3601,12 +3602,28 @@ span[data-locale="unit"] {
 #population.window .sidebar.left {
   float: left;
 }
-/* line 16, ../scss/components/windows/_population.scss */
+/* line 15, ../scss/components/windows/_population.scss */
+#population.window .sidebar.left .name {
+  color: #ffc0cb;
+}
+/* line 18, ../scss/components/windows/_population.scss */
+#population.window .sidebar.left .age {
+  color: #c0c0c0;
+}
+/* line 23, ../scss/components/windows/_population.scss */
 #population.window .sidebar.right {
   float: right;
   border-left: 1px solid #2a313b;
 }
-/* line 21, ../scss/components/windows/_population.scss */
+/* line 27, ../scss/components/windows/_population.scss */
+#population.window .sidebar.right .name {
+  color: #add8e6;
+}
+/* line 30, ../scss/components/windows/_population.scss */
+#population.window .sidebar.right .age {
+  color: #c0c0c0;
+}
+/* line 35, ../scss/components/windows/_population.scss */
 #population.window .sidebar .sidebar-title {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3620,7 +3637,7 @@ span[data-locale="unit"] {
   padding: 4px 5px 5px 10px;
   font-weight: bold;
 }
-/* line 34, ../scss/components/windows/_population.scss */
+/* line 48, ../scss/components/windows/_population.scss */
 #population.window .sidebar .sidebar-body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3634,21 +3651,32 @@ span[data-locale="unit"] {
   top: 50px;
   left: 420px;
   height: 600px;
+  width: 600px;
 }
-/* line 8, ../scss/components/windows/_build.scss */
+/* line 7, ../scss/components/windows/_build.scss */
+#buildings.window .button.cancel {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #FF4700;
+  display: none;
+  z-index: 100;
+}
+/* line 18, ../scss/components/windows/_build.scss */
 #buildings.window .body .buildings-container {
   height: 100%;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  position: relative;
 }
-/* line 15, ../scss/components/windows/_build.scss */
+/* line 26, ../scss/components/windows/_build.scss */
 #buildings.window .body .item {
   border-bottom: 1px solid #2a313b;
   position: relative;
   cursor: pointer;
 }
-/* line 20, ../scss/components/windows/_build.scss */
+/* line 31, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .image {
   width: 40px;
   height: 65px;
@@ -3657,64 +3685,65 @@ span[data-locale="unit"] {
   margin: 8px;
   float: left;
 }
-/* line 29, ../scss/components/windows/_build.scss */
+/* line 40, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .desc {
   float: left;
   width: 75%;
   margin: 8px;
 }
-/* line 34, ../scss/components/windows/_build.scss */
+/* line 45, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .desc .title {
   font: 14px 'Play';
   margin-bottom: 10px;
   color: #fff;
 }
-/* line 40, ../scss/components/windows/_build.scss */
+/* line 51, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .desc .text {
   font: 12px 'Play';
   color: #CBCBCB;
+  width: 95%;
 }
-/* line 46, ../scss/components/windows/_build.scss */
+/* line 58, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .resources {
   position: absolute;
   right: 15px;
   top: 10px;
   font: 12px 'Play';
 }
-/* line 52, ../scss/components/windows/_build.scss */
+/* line 64, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .resources div {
   margin-bottom: 5px;
   float: right;
   margin-left: 15px;
 }
-/* line 58, ../scss/components/windows/_build.scss */
+/* line 70, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .resources div:last-child {
   margin-bottom: 0px;
   margin-left: 0px;
 }
-/* line 63, ../scss/components/windows/_build.scss */
+/* line 75, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .resources span[data-resource] {
   float: right;
   color: #C9E5FC;
 }
-/* line 68, ../scss/components/windows/_build.scss */
+/* line 80, ../scss/components/windows/_build.scss */
 #buildings.window .body .item .resources .fa {
   float: left;
   margin-right: 5px;
 }
-/* line 74, ../scss/components/windows/_build.scss */
+/* line 86, ../scss/components/windows/_build.scss */
 #buildings.window .body .item.power_plant .image {
   background: #fff url(../img/building/icons/icon_power-plant.png) center top;
 }
-/* line 78, ../scss/components/windows/_build.scss */
+/* line 90, ../scss/components/windows/_build.scss */
 #buildings.window .body .item:not(.disabled):hover {
   background: rgba(22, 58, 97, 0.5);
 }
-/* line 82, ../scss/components/windows/_build.scss */
+/* line 94, ../scss/components/windows/_build.scss */
 #buildings.window .body .item:not(.disabled):active {
   background: rgba(22, 58, 97, 0.8);
 }
-/* line 85, ../scss/components/windows/_build.scss */
+/* line 97, ../scss/components/windows/_build.scss */
 #buildings.window .body .item.disabled {
   opacity: 0.5;
   cursor: default;
@@ -3757,7 +3786,7 @@ span[data-locale="unit"] {
 #research.window {
   top: 50px;
   left: 485px;
-  height: 600px;
+  height: 700px;
 }
 /* line 8, ../scss/components/windows/_research.scss */
 #research.window .body .timing-container {
@@ -3785,9 +3814,9 @@ span[data-locale="unit"] {
 #research.window .body .timing-container .research-progress .percent-text {
   position: absolute;
   left: 50%;
-  top: 0px;
+  top: 0;
   width: 30px;
-  margin-left: -15px;
+  margin-left: -7px;
   color: #fff;
   font: 12px 'Play';
 }
@@ -3798,7 +3827,7 @@ span[data-locale="unit"] {
   -o-transition: all 1s;
   transition: all 1s;
   height: 100%;
-  width: 0%;
+  width: 0;
   background: #3F7494;
 }
 /* line 47, ../scss/components/windows/_research.scss */
@@ -3855,8 +3884,8 @@ span[data-locale="unit"] {
 }
 /* line 97, ../scss/components/windows/_research.scss */
 #research.window .body .item .resources div:last-child {
-  margin-bottom: 0px;
-  margin-left: 0px;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 /* line 102, ../scss/components/windows/_research.scss */
 #research.window .body .item .resources span[data-resource] {
@@ -3873,12 +3902,17 @@ span[data-locale="unit"] {
   background: #fff url(../img/building/icons/icon_power-plant.png) center top;
 }
 /* line 117, ../scss/components/windows/_research.scss */
-#research.window .body .item:hover {
+#research.window .body .item:not(.disabled):hover {
   background: rgba(22, 58, 97, 0.5);
 }
 /* line 121, ../scss/components/windows/_research.scss */
-#research.window .body .item:active {
+#research.window .body .item:not(.disabled):active {
   background: rgba(22, 58, 97, 0.8);
+}
+/* line 125, ../scss/components/windows/_research.scss */
+#research.window .body .item.disabled {
+  opacity: 0.5;
+  cursor: default;
 }
 
 /* line 2, ../scss/components/windows/_chest.scss */
@@ -3896,4 +3930,27 @@ span[data-locale="unit"] {
   text-align: center;
   display: block;
   color: #BBDBF5;
+}
+
+/* line 1, ../scss/components/windows/_error.scss */
+.error_window {
+  position: absolute;
+  width: 40%;
+  height: auto;
+  left: 50%;
+  margin-left: -20% !important;
+  top: 15%;
+  padding: 10px;
+  text-align: center;
+  color: #FF4700;
+}
+/* line 12, ../scss/components/windows/_error.scss */
+.error_window .weed {
+  position: absolute;
+  bottom: 0;
+  right: -14px;
+  width: 28px;
+  height: 65px;
+  background: url(../img/weed.gif);
+  background-size: contain;
 }

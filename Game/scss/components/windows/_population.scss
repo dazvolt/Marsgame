@@ -11,11 +11,25 @@
 
     &.left {
       float: left;
+
+      .name {
+        color: $c-female;
+      }
+      .age {
+        color: $c-age;
+      }
     }
 
     &.right {
       float: right;
       border-left: $win-b;
+
+      .name {
+        color: $c-male;
+      }
+      .age {
+        color: $c-age;
+      }
     }
 
     .sidebar-title {

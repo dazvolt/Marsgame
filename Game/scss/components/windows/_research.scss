@@ -1,7 +1,7 @@
 #research.window {
   top: 50px;
   left: 485px;
-  height: 600px;
+  height: 700px;
 
   .body {
 
@@ -28,9 +28,9 @@
         .percent-text {
           position: absolute;
           left: 50%;
-          top: 0px;
+          top: 0;
           width: 30px;
-          margin-left: -15px;
+          margin-left: -7px;
           color: #fff;
           font: 12px 'Play';
         }
@@ -39,7 +39,7 @@
           @include transition(1s);
 
           height: 100%;
-          width: 0%;
+          width: 0;
           background: #3F7494;
         }
       }
@@ -95,8 +95,8 @@
         }
 
         div:last-child {
-          margin-bottom: 0px;
-          margin-left: 0px;
+          margin-bottom: 0;
+          margin-left: 0;
         }
 
         span[data-resource] {
@@ -114,12 +114,17 @@
         background: #fff url(../img/building/icons/icon_power-plant.png) center top;
       }
 
-      &:hover {
+      &:not(.disabled):hover {
         background: rgba(22, 58, 97, 0.5);
       }
 
-      &:active {
+      &:not(.disabled):active {
         background: rgba(22, 58, 97, 0.8);
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: default;
       }
     }
   }
