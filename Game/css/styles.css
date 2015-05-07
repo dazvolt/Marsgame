@@ -3407,7 +3407,7 @@ span[data-locale="unit"] {
 /* line 35, ../scss/components/blocks/_top-panel.scss */
 #top-panel #win-buttons button {
   float: left;
-  margin: 0px 5px 5px 10px;
+  margin: 0 5px 5px 5px;
 }
 
 /* line 1, ../scss/components/blocks/_graphs.scss */
