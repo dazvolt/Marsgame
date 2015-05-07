@@ -27,7 +27,7 @@ var _build = { //controls everything related to buildings
   },
 
   place: function (building, polygon, abbr) { //place building on a map
-    var coordinates = $('#map svg polygon[data-coordinates="' + polygon + '"').get_coords();
+    var coordinates = $('#map svg polygon[data-coordinates="' + polygon + '"]').get_coords();
 
     for (var i = 0; i < _buildings[building].affect.who.length; i++ ) {
       _resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]] += _buildings[building].affect.amount[i];
@@ -39,7 +39,7 @@ var _build = { //controls everything related to buildings
       top: parseInt(coordinates[1])
     }).init_flicker(2000, 0.5, true);
     $('#map .land .temporary').removeClass('temporary');
-    $('#map svg polygon[data-coordinates="' + polygon + '"').remove();
+    $('#map svg polygon[data-coordinates="' + polygon + '"]').remove();
     $(_buildings.window).find('.button.cancel').hide();
     _build.building_state = false;
     _buildings[building].count = parseInt(_buildings[building].count) + 1;

@@ -24,6 +24,8 @@ $.widget("ui.mapGen", {
       store_points = '', helper, counter, coordinates,
       free_space = (this_width - ((this.options.hexagon.per_row * R * 2) + ((this.options.hexagon.per_row - 1) * R))) / 2;
 
+    $(this.element).hide();
+
     for (var yi = 0; yi < rows; yi++) { //loop through y rows
 
       yi % 2 == 0 ? helper = 0 : helper = R + R / 2; //is it middle or main row?
