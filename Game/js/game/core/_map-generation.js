@@ -1,6 +1,6 @@
 //This widget generates hexagon grid
 
-$.widget("ui.mapGen", {
+$.widget("ui.gen_map", {
   options: {
     hexagon: {
       per_row: 7,

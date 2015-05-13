@@ -3,9 +3,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=1040"/>
-  <title>Симулятор колонизации Марса v0.8.5</title>
+  <title>Симулятор колонизации Марса v0.9</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-  <link rel="stylesheet" type="text/css" href="css/core.css"/>
   <script type="text/javascript" src="js/framework/jquery-2.1.1.js"></script>
   <script type="text/javascript" src="js/framework/jquery-ui-1.11.1.js"></script>
   <script type="text/javascript" src="js/framework/d3.js"></script>
@@ -19,6 +18,8 @@
   <script type="text/javascript" src="js/game/core/_chances.js"></script>
   <script type="text/javascript" src="js/game/core/_build.js"></script>
   <script type="text/javascript" src="js/game/core/_buttons.js"></script>
+  <script type="text/javascript" src="js/game/core/_log.js"></script>
+  <script type="text/javascript" src="js/game/core/_hints.js"></script>
   <script type="text/javascript" src="js/game/locale/names.js"></script>
   <script type="text/javascript" src="js/game/locale/locale.js"></script>
   <script type="text/javascript" src="js/init.js"></script>
@@ -66,26 +67,26 @@
     <div id="graphs" class="window no-footer">
       <div class="title"><span data-locale="graphs"></span></div>
       <div class="body">
-        <div class="item" id="winPopulation-s"><span data-locale="winPopulation"></span><span data-number="win-population">1000</span></div>
-        <div class="item" id="year-s"><span data-locale="year"></span><span data-number="cur-year">0</span>
+        <div class="item" id="winPopulation"><span data-locale="winPopulation"></span><span data-number="win-population">1000</span></div>
+        <div class="item" id="year"><span data-locale="year"></span><span data-number="cur-year">0</span>
           <button class="button"><i class="fa fa-long-arrow-right"></i></button>
         </div>
-        <div class="item" id="childDie-s"><span data-locale="childDie"></span><span data-number="child-die">0</span>
+        <div class="item" id="die"><span data-locale="die"></span><span data-number="child-die">0</span>
           <button class="button"><i class="fa fa-random"></i></button>
         </div>
-        <div class="item" id="childBorn-s"><span data-locale="childBorn"></span><span data-number="child-born">0</span>
+        <div class="item" id="born"><span data-locale="born"></span><span data-number="child-born">0</span>
           <button class="button"><i class="fa fa-random"></i></button>
         </div>
-        <div class="item" id="suddenDeath-s"><span data-locale="suddenDeath"></span><span data-number="sudden-death">0</span>
+        <div class="item" id="death"><span data-locale="death"></span><span data-number="sudden-death">0</span>
           <button class="button"><i class="fa fa-random"></i></button>
         </div>
-        <div class="item" id="apocalypse-s"><span data-locale="apocalypse"></span><span data-number="apocalypse">0</span>
+        <div class="item" id="apocalypse"><span data-locale="apocalypse"></span><span data-number="apocalypse">0</span>
           <button class="button"><i class="fa fa-random"></i></button>
         </div>
-        <div class="item" id="expedition-s" style="display:none;"><span data-locale="expedition"></span>
+        <div class="item" id="expedition" style="display:none;"><span data-locale="expedition"></span>
           <button id="expedition-b" class="button disabled"><i class="fa fa-external-link-square"></i></button>
         </div>
-        <div class="item" id="reset-s"><span data-locale="reset"></span>
+        <div class="item" id="reset"><span data-locale="reset"></span>
           <button class="button"><i class="fa fa-refresh allowspin"></i></button>
         </div>
       </div>
@@ -152,7 +153,7 @@
       </div>
     </div>
 
-    <div id="expedition" class="window win-free" style="display:none">
+    <div id="expedition-w" class="window win-free" style="display:none">
       <div class="close"></div>
       <div class="title"><span data-locale="expedition"></span></div>
       <div class="body">
@@ -195,6 +196,9 @@
   </main>
 </div>
 <div class="j-diag">
+  <div class="text"></div>
+</div>
+<div class="j-diag-free">
   <div class="text"></div>
 </div>
 <footer><span data-locale="copyrights"></span></footer>

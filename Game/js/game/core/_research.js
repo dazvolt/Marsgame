@@ -111,7 +111,7 @@ var _research = {
   apply_bonuses : function (research_name) {
     if (research_name == 'capacity') { //special options for capacity research
       var $power = $(_buildings.window + ' [data-building="power_plant"] [data-locale="power_plant-desc"]'),
-      power_text = $power.text();
+      power_text = $power.text(), target_object;
 
       $power.text(power_text.replace(_buildings.power_plant.affect.amount[0], _buildings.power_plant.affect.amount[0] + _researches.capacity.affect.amount[0]));
 
@@ -119,15 +119,19 @@ var _research = {
       _buildings.power_plant.affect.amount[0] += _researches.capacity.affect.amount[0];
     } else
     if (research_name == 'expedition') { //special options for expedition research
-      $('#expedition-s').show();
-      $('#expedition-b').removeClass('disabled').bind_window('#expedition');
+      $('#expedition').show();
+      $('#expedition-b').removeClass('disabled').bind_window('#expedition-w');
       _researches.expedition.runtime -= _research.research_level;
       $('[data-length="expedition"]').text(_researches.expedition.runtime);
     } else { //other template-like researches
       for (var i = 0; i < _researches[research_name].affect.who.length; i++ ) {
-        _resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]] += _researches[research_name].affect.amount[i];
+        target_object = _resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]];
+        target_object += _researches[research_name].affect.amount[i];
+        if (_chances.check_appliers(target_object, _researches[research_name].affect.who[i][0]) == 'to_full') target_object = 1;
+        if (_chances.check_appliers(target_object, _researches[research_name].affect.who[i][0]) == 'to_null') target_object = 0;
       }
     }
+    call_hint(locale[data.language].hint.research_end[0] + locale[data.language].research[research_name].name + locale[data.language].hint.research_end[1] + _research.research_level + ']');
   },
 
   reset : function (research_object) {

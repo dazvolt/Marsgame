@@ -27,10 +27,14 @@ var _build = { //controls everything related to buildings
   },
 
   place: function (building, polygon, abbr) { //place building on a map
-    var coordinates = $('#map svg polygon[data-coordinates="' + polygon + '"]').get_coords();
+    var coordinates = $('#map svg polygon[data-coordinates="' + polygon + '"]').get_coords(),
+      target_object;
 
     for (var i = 0; i < _buildings[building].affect.who.length; i++ ) {
-      _resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]] += _buildings[building].affect.amount[i];
+      target_object = _resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]];
+      target_object += _buildings[building].affect.amount[i];
+      if (_chances.check_appliers(target_object, _buildings[building].affect.who[i][0]) == 'to_full') target_object = 1;
+      if (_chances.check_appliers(target_object, _buildings[building].affect.who[i][0]) == 'to_null') target_object = 0;
     }
 
     $('#map .land').append('<div class="' + building + ' temporary b-b">' + abbr + '</div>');

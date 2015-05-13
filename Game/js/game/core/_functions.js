@@ -6,6 +6,10 @@
  * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
  * MIT License.
  */
+$.fn.add_corners = function () {
+  this.append('<div class="corners"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div></div>');
+};
+
 $.fn.addText = function (text, newrow) {
   if (newrow) {
     this.html(this.html() + '<br />' + text);
@@ -23,8 +27,8 @@ function roll_array(value) {
 }
 
 function roll(value) {
-  var master_roll = Math.random().toFixed(5),
-    input_roll = (value / 100).toFixed(5),
+  var master_roll = Math.random(),
+    input_roll = (value),
     result = true;
 
   master_roll <= input_roll ? result = true : result = false;
@@ -135,6 +139,34 @@ function float_to_percent (value, isText, fixed_size) {
   if (!isText) return result;
 }
 
+function call_hint (text) {
+  $('.j-diag .text').text(text);
+  $('.j-diag').css({
+    left: '10px',
+    opacity: 1
+  });
+  setTimeout( function() {
+    $('.j-diag').css({
+      left: '-200px',
+      opacity: 0
+    });
+  }, 3000);
+}
+
+$.fn.hook_hint = function (text) {
+  var $this = this;
+  $this.css('cursor', 'default');
+  $this.on('mouseover', function () {
+    $('.j-diag-free').show().css({
+      top: $this.offset().top + $this.height(),
+      left: $this.offset().left
+    });
+    $('.j-diag-free .text').text(text);
+  });
+  $this.on('mouseout', function () {
+    $('.j-diag-free').hide();
+  });
+};
 
 //usage: ob.setValue('level1.level2.level3', 25);
 

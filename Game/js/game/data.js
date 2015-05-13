@@ -44,7 +44,6 @@ var _resources = {
       number: 0.001
     },
     population : 0
-
   },
   defined: { //defined resources which is used as primary object for resource store
     titan: {
@@ -73,7 +72,7 @@ var _resources = {
     die: {
       number: 0.4
     },
-    sdeath: {
+    death: {
       number: 0.02
     },
     apocalypse: {

@@ -34,15 +34,15 @@ var locale = {
         title: 'Год:',
         button: 'след. год'
       },
-      childDie: {
+      die: {
         title: 'Шанс смерти ребенка:',
         button: 'случайный'
       },
-      childBorn: {
+      born: {
         title: 'Шанс рождения ребенка:',
         button: 'случайный',
       },
-      suddenDeath: {
+      death: {
         title: 'Шанс внезапной смерти:',
         button: 'случайный'
       },
@@ -182,6 +182,15 @@ var locale = {
     copyright: {
       label : 'Игра "Колонизация Марса", версия 0.9; создатель игры - Dazvolt.'
     },
+    hint : {
+      research_end : ['Закончено исследование "','" на уровень: ['],
+      bonus : 'Бонус: ',
+      die : 'Шанс смерти детей не может быть больше чем 100% шанс минус шанс рождения детей (при нажатии на кнопку "случайный").',
+      born : 'Шанс родждения детей не может быть больше чем 100% шанс минус шанс смерти детей (при нажатии на кнопку "случайный").',
+      death : 'Шанс внезапной смерти зависит от соотношения шанса рождения и шанса смерти детей (при нажатии на кнопку "случайный").',
+      apocalypse : 'Шанс конца света зависит от соотношения всех трех других шансов (при нажатии на кнопку "случайный").',
+      population : ['Мужчин: ', 'Женщин: ']
+    },
     bornbaby: ['Родился новый ребенок.'],
     babydied: ['Новый ребенок родился недоношенным и <span class="gray">умер</span>.', 'Рожденный ребенок обладал необъяснимой мутацией и <span class="gray">умер</span> из-за неё.', 'Родился новый ребенок, но он <span class="gray">умер</span> по необъяснимым причинам!', 'Новый ребенок пришел на этот свет, но поскольку мать рожала в антисанитарных условиях, он <span class="gray">умер</span>.'],
     colonistdied: ['вышел погулять и наткнулся на камень, после чего больно ударился носом оземь, разбил стекло скафандра и <span class="gray">умер</span>. Нелегко быть старым!', 'забыл свой скафандр и вышел наружу, после чего <span class="gray">умер</span>. Ох уж этот альцгеймер!', 'забыл принять свои таблетки и быстро, решительно <span class="gray">умер</span>.', '<span class="gray">умер</span> из-за своей старости. Вечная память!'],
@@ -198,7 +207,7 @@ var locale = {
   en: {}
 };
 
-function DoLocale(language) {
+function locale_start(language) {
   var parent = locale[language];
 
   for (var get_key in parent) {
@@ -212,15 +221,16 @@ function DoLocale(language) {
     //set graphs block buttons and titles
     if (get_key == 'graphs') {
       for (var get_item in parent[get_key]) {
-        $('#' + get_key + ' #' + get_item + '-s span[data-locale=' + get_item + ']').text(parent[get_key][get_item].title);
-        $('#' + get_key + ' #' + get_item + '-s span[data-locale=' + get_item + '-b]').text(parent[get_key][get_item].button);
+        $('#' + get_key + ' #' + get_item + ' span[data-locale=' + get_item + ']').text(parent[get_key][get_item].title);
+        $('#' + get_key + ' #' + get_item + ' span[data-locale=' + get_item + '-b]').text(parent[get_key][get_item].button);
       }
     }
 
     //set expedition block description
     if (get_key == 'expedition') {
-      $('#' + get_key + ' span[data-locale="expedition-text-first-part"]').text(parent[get_key].desc.partone);
-      $('#' + get_key + ' span[data-locale="expedition-text-second-part"]').text(parent[get_key].desc.parttwo);
+      $('#' + get_key + '-w .title span[data-locale=' + get_key + ']').text(parent[get_key].title);
+      $('#' + get_key + '-w span[data-locale="expedition-text-first-part"]').text(parent[get_key].desc.partone);
+      $('#' + get_key + '-w span[data-locale="expedition-text-second-part"]').text(parent[get_key].desc.parttwo);
     }
 
     //set population window gender
