@@ -1,0 +1,4 @@
+# Ignore configuration files that may contain sensitive information.
+.idea
+Game/.sass-cache
+Game/.idea
