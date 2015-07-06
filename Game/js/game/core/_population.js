@@ -16,7 +16,7 @@ var _population = {
   },
 
   generate : function (sex, age) {
-    var random_handler;
+    var random_handler, name;
     if (sex == 'man') {
       _population.list_man_string += '<p class="man"><span class="name">' + roll_array(malename) + '</span> : <span class="age">' + age + '</span> лет</p>';
     } else
@@ -26,12 +26,19 @@ var _population = {
     if (sex == 'random') {
       random_handler = Math.random();
       if (random_handler <= 0.4) { //40% chance for male to born
-        _population.list_man_string += '<p class="man"><span class="name">' + roll_array(malename) + '</span> : <span class="age">' + age + '</span> лет</p>';
+        name = roll_array(malename);
+        _population.list_man_string += '<p class="man"><span class="name">' + name + '</span> : <span class="age">' + age + '</span> лет</p>';
+        _log.report.children.born(name, 'male');
       } else { //60% chance for female to born
-        _population.list_woman_string += '<p class="woman"><span class="name">' + roll_array(femalename) + '</span> : <span class="age">' + age + '</span> лет</p>';
+        name = roll_array(femalename);
+        _population.list_woman_string += '<p class="woman"><span class="name">' + name + '</span> : <span class="age">' + age + '</span> лет</p>';
+        _log.report.children.born(name, 'female');
       }
+      _game.score += 2;
     }
     _population.amount += 1;
+    _buttons.population_each_year += 1;
+    _game.children_born += 1;
   },
 
   tick : function () {
@@ -56,8 +63,8 @@ var _population = {
             _population.generate('random', 0);
             //<LOG NOTIFY>
           } else {
-            //baby born, but died
-            //<LOG NOTIFY>
+            _game.children_die += 1;
+            _log.report.children.die();
           }
         } else {
           //baby not born
@@ -80,9 +87,14 @@ var _population = {
     sudden : function () {
       $('#population p').each(function () {
         if (roll(_resources.defined.death.number)) {
-          console.log('SUDDEN DEATH AFFECTS: ' + $(this).find('.name').text() + '! NOW, DIE!');
+          var get_sex = _population.get_sex($(this).parents('.sidebar-body'));
+          _log.report.death.sudden($(this).find('.name').text(), get_sex);
           $(this).remove();
-          //<LOG NOTIFY>
+          _population.amount -= 1;
+          _buttons.population_each_year -= 1;
+          _population.redraw();
+          _game.sudden_death_died += 1;
+          _game.score -= 1;
         }
       });
       _population.check.future();
@@ -93,8 +105,14 @@ var _population = {
         var get_age = $(this).text();
         if (get_age > 50) { //from age 50 starting chance to die per year is ~16%
           if (roll(get_age/300)) {
+            var get_sex = _population.get_sex($(this).parents('.sidebar-body'));
+            _log.report.death.oldness($(this).parents('p').find('.name').text(), get_sex);
             $(this).parents('p').remove();
-            //<LOG NOTIFY>
+            _population.amount -= 1;
+            _buttons.population_each_year -=1;
+            _population.redraw();
+            _game.oldness_died += 1;
+            _game.score -= 1;
           }
         }
       });
@@ -130,10 +148,10 @@ var _population = {
 
     future : function () {
       if ( $('#population #woman-container p').length < 1 ) { //no woman left
-        //<GAME END>
+        _game.end('no_humans', 'female');
       }
       if ( $('#population #man-container p').length < 1 ) { //no man left
-        //<GAME END>
+        _game.end('no_humans', 'male');
       }
     }
   },
@@ -152,6 +170,15 @@ var _population = {
     reset : function () {
       _population.list_man_string = '';
       _population.list_woman_string = '';
+    }
+  },
+
+  get_sex : function ($this) {
+    if ($this.attr('id') == 'woman-container' ) {
+      return 'female';
+    } else
+    if ($this.attr('id') == 'man-container' ) {
+      return 'male';
     }
   }
 };

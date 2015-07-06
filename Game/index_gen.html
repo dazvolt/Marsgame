@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
   <script type="text/javascript" src="js/framework/jquery-2.1.1.js"></script>
   <script type="text/javascript" src="js/framework/jquery-ui-1.11.1.js"></script>
+  <script type="text/javascript" src="js/framework/jquery.sparkline.min.js"></script>
   <script type="text/javascript" src="js/framework/d3.js"></script>
   <script type="text/javascript" src="js/game/data.js"></script>
   <script type="text/javascript" src="js/game/core/_functions.js"></script>
@@ -20,6 +21,7 @@
   <script type="text/javascript" src="js/game/core/_buttons.js"></script>
   <script type="text/javascript" src="js/game/core/_log.js"></script>
   <script type="text/javascript" src="js/game/core/_hints.js"></script>
+  <script type="text/javascript" src="js/game/core/_game.js"></script>
   <script type="text/javascript" src="js/game/locale/names.js"></script>
   <script type="text/javascript" src="js/game/locale/locale.js"></script>
   <script type="text/javascript" src="js/init.js"></script>
@@ -174,6 +176,17 @@
       <div class="close"></div>
       <div class="title"><i class="fa fa-laptop"></i><span data-locale="tech"></span></div>
       <div class="body"></div>
+    </div>
+
+    <div id="end_game_stat" class="window no-footer win-free" style="display:none">
+      <div class="close"></div>
+      <div class="title"><i class="fa fa-bar-chart"></i><span data-locale="end_game_stat"></span></div>
+      <div class="body">
+        <div class="stat clearfix"><div id="graph-die" class="graph"></div><div class="title">Шанс смерти детей</div></div>
+        <div class="stat clearfix"><div id="graph-born" class="graph"></div><div class="title">Шанс рождения детей</div></div>
+        <div class="stat clearfix"><div id="graph-death" class="graph"></div><div class="title">Шанс внезапной смерти</div></div>
+        <div class="stat clearfix"><div id="graph-apocalypse" class="graph"></div><div class="title">Шанс апокалипсиса</div></div>
+      </div>
     </div>
 
     <div id="chest" class="window win-free" style="display:none;">

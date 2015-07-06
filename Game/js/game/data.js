@@ -41,7 +41,7 @@ var _resources = {
       number: 0.02
     },
     apocalypse: {
-      number: 0.001
+      number: 0.00125
     },
     population : 0
   },
@@ -76,7 +76,7 @@ var _resources = {
       number: 0.02
     },
     apocalypse: {
-      number: 0.001
+      number: 0.00125
     },
     population : 0
   }

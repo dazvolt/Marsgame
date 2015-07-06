@@ -1,0 +1,24 @@
+#end_game_stat.window {
+  width: 600px;
+
+  .stat {
+    width: 100%;
+    margin: 20px 0;
+
+    .graph {
+      width: 40%;
+      float: left;
+      height: 60px;
+      margin-left: 5%;
+    }
+
+    .title {
+      width: 50%;
+      margin-left: 5%;
+      float: left;
+      padding-top: 20px;
+      text-align: left;
+      padding-left: 8%;
+    }
+  }
+}

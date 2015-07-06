@@ -5,6 +5,7 @@ var _buttons = {
     death : false,
     apocalypse : false
   },
+  population_each_year : 0,
 
   init : function () {
     this.controller();
@@ -16,17 +17,25 @@ var _buttons = {
 
     next_year : function () {
       $('#year button').on('click', function() {
-        _resource.tick();
-        _research.tick(_researches);
-        _population.tick();
-        $('[data-number="cur-year"]').text(parseInt($('[data-number="cur-year"]').text()) + 1);
-        $('#die button, #born button, #death button, #apocalypse button').removeClass('disabled');
-        _buttons.restricted.die = false;
-        _buttons.restricted.born = false;
-        _buttons.restricted.death = false;
-        _buttons.restricted.apocalypse = false;
-        _chances.apocalypse();
+        _buttons.onclick.next_year_do();
       });
+    },
+
+    next_year_do : function () {
+      _resource.tick();
+      _research.tick(_researches);
+      _population.tick();
+      $('[data-number="cur-year"]').text(parseInt($('[data-number="cur-year"]').text()) + 1);
+      $('#die button, #born button, #death button, #apocalypse button').removeClass('disabled');
+      _buttons.restricted.die = false;
+      _buttons.restricted.born = false;
+      _buttons.restricted.death = false;
+      _buttons.restricted.apocalypse = false;
+      _chances.apocalypse();
+      _game.population.push(_buttons.population_each_year);
+      _game.population_growth.push(_population.amount);
+      _buttons.population_each_year = 0;
+      _log.report.perform();
     },
 
     chances : function () {

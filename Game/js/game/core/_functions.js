@@ -40,6 +40,10 @@ function roll_specific(min, max, fixed) {
   return (Math.random() * (max - min) + min).toFixed(fixed);
 }
 
+function random_color() {
+  return 'rgb(' + roll_specific(0, 256, 0) + ', ' + roll_specific(0, 256, 0) + ', ' + roll_specific(0, 256, 0) + ')';
+}
+
 $.fn.bind_window = function (win) {
   this.on('click', function () {
     if (!$(this).hasClass('disabled')) {
@@ -167,9 +171,6 @@ $.fn.hook_hint = function (text) {
     $('.j-diag-free').hide();
   });
 };
-
-//usage: ob.setValue('level1.level2.level3', 25);
-
 
 //Copyright Commodus Voke
 function isNumber(n) {

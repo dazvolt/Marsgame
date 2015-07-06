@@ -23,5 +23,56 @@
   #log-output {
     padding: 5px 10px 10px 10px;
     height: 100%;
+
+    .report-block {
+      padding-bottom: 15px;
+      .report-block-year {
+        width: 10%;
+        float: left;
+        height: auto;
+        color: $c-year;
+      }
+      .report-block-data {
+        width: 90%;
+        float: left;
+        height: auto;
+        color: $c-log;
+      }
+    }
+    .endgame {
+      width: 100%;
+      text-align: center;
+      color: $c-log;
+      padding: 0 50px;
+    }
+    table {
+      width: 80%;
+      margin-left: 10%;
+
+      thead {
+        background: $win-title-bg;
+        border: $win-title-b;
+        font: $win-default-font-size - 1 $default-font;
+        color: #9DBFDA;
+        tr {
+          th {
+            padding: 5px 10px;
+            text-align: left;
+          }
+        }
+      }
+      tbody {
+        border-left: $win-title-b;
+        border-right: $win-title-b;
+        tr {
+          td {
+            width: 50%;
+            height: 50px;
+            vertical-align: middle;
+            border-bottom: $win-title-b;
+          }
+        }
+      }
+    }
   }
 }

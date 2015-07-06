@@ -31,28 +31,32 @@ var _chances = {
       min = 0;
       max = 1 - parseFloat(_resources.defined.born.number);
       _resources.defined.die.number = roll_specific( min, max, 2 );
+      _game.die_chance.push((_resources.defined.die.number * 100).toFixed(0));
     } else
     if (which_to == 'born') {
       min = 0;
       max = 1 - parseFloat(_resources.defined.die.number);
       _resources.defined.born.number = roll_specific( min, max, 2 );
+      _game.born_chance.push((_resources.defined.born.number * 100).toFixed(0));
     } else
     if (which_to == 'death') {
       min = (parseFloat(_resources.defined.die.number)) / 10;
       max = (1 - parseFloat(_resources.defined.born.number)) / 10;
       _resources.defined.death.number = roll_specific( min, max, 2 );
+      _game.sudden_death_chance.push((_resources.defined.death.number * 100).toFixed(0));
     } else
     if (which_to == 'apocalypse') {
       min = (((parseFloat(_resources.defined.die.number)) / 10) + parseFloat(_resources.defined.death.number)) / 15;
       max = (1 - parseFloat(_resources.defined.born.number)) / (150 - parseFloat(_resources.defined.die.number));
       _resources.defined.apocalypse.number = roll_specific( min, max, 5);
+      _game.apocalypse_chance.push((_resources.defined.apocalypse.number * 100).toFixed(3));
     }
 
     _chances.redraw();
   },
   apocalypse : function () { //Apocalypse check
     if (roll(_resources.defined.apocalypse.number)) {
-      //<GAME END>
+      _game.end('apocalypse');
     }
   }
 };

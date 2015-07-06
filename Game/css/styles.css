@@ -3265,6 +3265,26 @@ span[data-locale="unit"] {
   color: #c2ff00;
 }
 
+/* line 148, ../scss/components/_ui.scss */
+.gray {
+  color: #919191;
+}
+
+/* line 151, ../scss/components/_ui.scss */
+.male {
+  color: #add8e6;
+}
+
+/* line 154, ../scss/components/_ui.scss */
+.female {
+  color: #ffc0cb;
+}
+
+/* line 157, ../scss/components/_ui.scss */
+.red {
+  color: #FF4700;
+}
+
 /* line 2, ../scss/components/_buildings.scss */
 #map .land .b-b {
   box-sizing: border-box;
@@ -3455,6 +3475,12 @@ span[data-locale="unit"] {
 /* line 135, ../scss/components/_window.scss */
 .window:not(.win-free) {
   margin: 6px 0;
+}
+
+/* line 140, ../scss/components/_window.scss */
+#jqstooltip {
+  height: 25px !important;
+  width: 45px !important;
 }
 
 /* line 1, ../scss/components/blocks/_top-panel.scss */
@@ -3653,6 +3679,60 @@ span[data-locale="unit"] {
 #log #log-output {
   padding: 5px 10px 10px 10px;
   height: 100%;
+}
+/* line 27, ../scss/components/blocks/_log.scss */
+#log #log-output .report-block {
+  padding-bottom: 15px;
+}
+/* line 29, ../scss/components/blocks/_log.scss */
+#log #log-output .report-block .report-block-year {
+  width: 10%;
+  float: left;
+  height: auto;
+  color: #FAD08A;
+}
+/* line 35, ../scss/components/blocks/_log.scss */
+#log #log-output .report-block .report-block-data {
+  width: 90%;
+  float: left;
+  height: auto;
+  color: #EAEAEA;
+}
+/* line 42, ../scss/components/blocks/_log.scss */
+#log #log-output .endgame {
+  width: 100%;
+  text-align: center;
+  color: #EAEAEA;
+  padding: 0 50px;
+}
+/* line 48, ../scss/components/blocks/_log.scss */
+#log #log-output table {
+  width: 80%;
+  margin-left: 10%;
+}
+/* line 52, ../scss/components/blocks/_log.scss */
+#log #log-output table thead {
+  background: rgba(12, 17, 23, 0.9);
+  border: 1px solid #2a313b;
+  font: 13px "Play";
+  color: #9DBFDA;
+}
+/* line 58, ../scss/components/blocks/_log.scss */
+#log #log-output table thead tr th {
+  padding: 5px 10px;
+  text-align: left;
+}
+/* line 64, ../scss/components/blocks/_log.scss */
+#log #log-output table tbody {
+  border-left: 1px solid #2a313b;
+  border-right: 1px solid #2a313b;
+}
+/* line 68, ../scss/components/blocks/_log.scss */
+#log #log-output table tbody tr td {
+  width: 50%;
+  height: 50px;
+  vertical-align: middle;
+  border-bottom: 1px solid #2a313b;
 }
 
 /* line 1, ../scss/components/blocks/_filters.scss */
@@ -4041,4 +4121,30 @@ span[data-locale="unit"] {
   height: 65px;
   background: url(../img/weed.gif);
   background-size: contain;
+}
+
+/* line 1, ../scss/components/windows/_end_game_stat.scss */
+#end_game_stat.window {
+  width: 600px;
+}
+/* line 4, ../scss/components/windows/_end_game_stat.scss */
+#end_game_stat.window .stat {
+  width: 100%;
+  margin: 20px 0;
+}
+/* line 8, ../scss/components/windows/_end_game_stat.scss */
+#end_game_stat.window .stat .graph {
+  width: 40%;
+  float: left;
+  height: 60px;
+  margin-left: 5%;
+}
+/* line 15, ../scss/components/windows/_end_game_stat.scss */
+#end_game_stat.window .stat .title {
+  width: 50%;
+  margin-left: 5%;
+  float: left;
+  padding-top: 20px;
+  text-align: left;
+  padding-left: 8%;
 }
