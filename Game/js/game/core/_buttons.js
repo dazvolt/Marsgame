@@ -31,10 +31,17 @@ var _buttons = {
       _buttons.restricted.born = false;
       _buttons.restricted.death = false;
       _buttons.restricted.apocalypse = false;
+      _events.tick();
       _chances.apocalypse();
       _game.population.push(_buttons.population_each_year);
       _game.population_growth.push(_population.amount);
       _buttons.population_each_year = 0;
+
+      _game.born_chance.push(parseInt((_resources.defined.born.number * 100)));
+      _game.die_chance.push(parseInt((_resources.defined.die.number * 100)));
+      _game.sudden_death_chance.push(parseInt((_resources.defined.death.number * 100)));
+      _game.apocalypse_chance.push(parseFloat((_resources.defined.apocalypse.number * 100)).toFixed(3));
+
       _log.report.perform();
     },
 

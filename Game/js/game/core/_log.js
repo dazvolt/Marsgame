@@ -74,6 +74,33 @@ var _log = {
     clear : function () {
       _log.collection.report.data = '';
     },
+    event : function (type, align, name, amount) {
+      //_log.collection.report.data locale.events[type][align][name]
+      if (type == 'resource') {
+        if (align == 'good') {
+          _log.collection.report.data += locale[data.language].events.title + ' ' + locale[data.language].events.good.resources[name][0] + '<span class="msg power">+' + amount + ' ' + locale[data.language].resource[name].unit + '</span>';
+        }
+        if (align == 'bad') {
+          _log.collection.report.data += locale[data.language].events.title + ' ' + locale[data.language].events.bad.resources[name][0] + '<span class="msg error">-' + amount + ' ' + locale[data.language].resource[name].unit + '</span>';
+        }
+      }
+      if (type == 'chances') {
+        if (align == 'good') {
+          if (name == 'apocalypse') {
+            _log.collection.report.data += locale[data.language].events.title + ' ' + locale[data.language].events.good.chances[name].texts[0] + locale[data.language].events.good.chances[name].end + ' <span class="msg bonus">' + parseFloat(amount).toFixed(3) + '%</span>';
+          } else {
+            _log.collection.report.data += locale[data.language].events.title + ' ' + locale[data.language].events.good.chances[name].texts[0] + locale[data.language].events.good.chances[name].end + ' <span class="msg bonus">' + parseInt(amount) + '%</span>';
+          }
+        }
+        if (align == 'bad') {
+          if (name == 'apocalypse') {
+            _log.collection.report.data += locale[data.language].events.title + ' ' + locale[data.language].events.bad.chances[name].texts[0] + locale[data.language].events.bad.chances[name].end + ' <span class="msg bonus">' + parseFloat(amount).toFixed(3) + '%</span>';
+          } else {
+            _log.collection.report.data += locale[data.language].events.title + ' ' + locale[data.language].events.bad.chances[name].texts[0] + locale[data.language].events.bad.chances[name].end + ' <span class="msg bonus">' + parseInt(amount) + '%</span>';
+          }
+        }
+      }
+    },
     special : function () {
       _log.report.clear();
 
@@ -100,13 +127,13 @@ var _log = {
 
       var get_last_digit_of_year = parseInt($('[data-number="cur-year"]').text()) % 10;
 
-      if (get_last_digit_of_year > 1 &&  get_last_digit_of_year < 5) {
+      if (get_last_digit_of_year > 1 && get_last_digit_of_year < 5 && $('[data-number="cur-year"]').text() < 10) {
         year_end_text = locale[data.language].game_end.start[0] + $('[data-number="cur-year"]').text() + locale[data.language].game_end.start[2] + locale[data.language].game_end.start[4];
       }
-      if (get_last_digit_of_year == 1) {
+      if (get_last_digit_of_year == 1 && $('[data-number="cur-year"]').text() != 11) {
         year_end_text = locale[data.language].game_end.start[0] + $('[data-number="cur-year"]').text() + locale[data.language].game_end.start[3] + locale[data.language].game_end.start[4];
       }
-      if (get_last_digit_of_year >= 5 && get_last_digit_of_year <= 9 || get_last_digit_of_year == 0) {
+      if (get_last_digit_of_year >= 5 && get_last_digit_of_year <= 9 || get_last_digit_of_year == 0 || $('[data-number="cur-year"]').text() == 11) {
         year_end_text = locale[data.language].game_end.start[0] + $('[data-number="cur-year"]').text() + locale[data.language].game_end.start[1] + locale[data.language].game_end.start[4];
       }
 

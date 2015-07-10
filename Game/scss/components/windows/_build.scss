@@ -87,6 +87,42 @@
         background: #fff url(../img/building/icons/icon_power-plant.png) center top;
       }
 
+      &.titan_plant .image {
+        background: #fff url(../img/building/icons/icon_titan-plant.png) center top;
+      }
+
+      &.uranium_plant .image {
+        background: #fff url(../img/building/icons/icon_uranium-plant.png) center top;
+      }
+
+      &.helium_plant .image {
+        background: #fff url(../img/building/icons/icon_helium-plant.png) center top;
+      }
+
+      &.housing_plant .image {
+        background: #fff url(../img/building/icons/icon_housing-plant.png) center top;
+      }
+
+      &.medical_plant .image {
+        background: #fff url(../img/building/icons/icon_medical-plant.png) center top;
+      }
+
+      &.tech_plant .image {
+        background: #fff url(../img/building/icons/icon_tech-plant.png) center top;
+      }
+
+      &.laboratory_plant .image {
+        background: #fff url(../img/building/icons/icon_lab-plant.png) center top;
+      }
+
+      &.starport_plant .image {
+        background: #fff url(../img/building/icons/icon_starport-plant.png) center top;
+      }
+
+      &.defend_plant .image {
+        background: #fff url(../img/building/icons/icon_defend-plant.png) center top;
+      }
+
       &:not(.disabled):hover {
         background: rgba(22, 58, 97, 0.5);
       }

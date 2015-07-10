@@ -110,8 +110,28 @@
         }
       }
 
-      &.powerplant .image {
-        background: #fff url(../img/building/icons/icon_power-plant.png) center top;
+      &.capacity .image {
+        background: #fff url(../img/research/icons/icon_power.png) center top;
+      }
+
+      &.medicine .image {
+        background: #fff url(../img/research/icons/icon_medicine.png) center top;
+      }
+
+      &.extraction .image {
+        background: #fff url(../img/research/icons/icon_extraction.png) center top;
+      }
+
+      &.expedition .image {
+        background: #fff url(../img/research/icons/icon_expedition.png) center top;
+      }
+
+      &.tech .image {
+        background: #fff url(../img/research/icons/icon_tech.png) center top;
+      }
+
+      &.life .image {
+        background: #fff url(../img/research/icons/icon_life.png) center top;
       }
 
       &:not(.disabled):hover {

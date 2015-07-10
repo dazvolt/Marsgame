@@ -3127,10 +3127,26 @@ footer {
 }
 /* line 29, ../scss/components/_ui.scss */
 .msg.power {
-  color: #8EFF00;
+  color: #c2ff00;
+}
+/* line 32, ../scss/components/_ui.scss */
+.msg.titan {
+  color: #FFAE00;
+}
+/* line 35, ../scss/components/_ui.scss */
+.msg.uranium {
+  color: #717171;
+}
+/* line 38, ../scss/components/_ui.scss */
+.msg.helium {
+  color: #C7B8FF;
+}
+/* line 41, ../scss/components/_ui.scss */
+.msg.chance {
+  color: #9DBFDA;
 }
 
-/* line 34, ../scss/components/_ui.scss */
+/* line 46, ../scss/components/_ui.scss */
 .button {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -3145,7 +3161,7 @@ footer {
   position: relative;
   cursor: pointer;
 }
-/* line 46, ../scss/components/_ui.scss */
+/* line 58, ../scss/components/_ui.scss */
 .button:not(.disabled):after {
   width: 100%;
   height: 1px;
@@ -3156,13 +3172,13 @@ footer {
   bottom: -3px;
   left: 0px;
 }
-/* line 57, ../scss/components/_ui.scss */
+/* line 69, ../scss/components/_ui.scss */
 .button:not(.disabled):hover {
   border: 1px solid #1f395f;
   background: rgba(22, 58, 97, 0.8);
   color: rgba(248, 247, 255, 0.8);
 }
-/* line 63, ../scss/components/_ui.scss */
+/* line 75, ../scss/components/_ui.scss */
 .button:not(.disabled):active {
   -moz-transition: all 0s;
   -webkit-transition: all 0s;
@@ -3172,18 +3188,18 @@ footer {
   background: rgba(25, 45, 66, 0.5);
   color: rgba(236, 245, 255, 0.5);
 }
-/* line 71, ../scss/components/_ui.scss */
+/* line 83, ../scss/components/_ui.scss */
 .button.accept {
   float: right;
   color: #8EFF00;
 }
-/* line 75, ../scss/components/_ui.scss */
+/* line 87, ../scss/components/_ui.scss */
 .button.accept:not(.disabled):hover {
   background: #549c00;
   color: rgba(248, 247, 255, 0.8);
   border: 1px solid #6aba00;
 }
-/* line 81, ../scss/components/_ui.scss */
+/* line 93, ../scss/components/_ui.scss */
 .button.accept:not(.disabled):active {
   -moz-transition: all 0s;
   -webkit-transition: all 0s;
@@ -3191,18 +3207,18 @@ footer {
   transition: all 0s;
   background: #418200;
 }
-/* line 87, ../scss/components/_ui.scss */
+/* line 99, ../scss/components/_ui.scss */
 .button.decline {
   float: left;
   color: #FF4700;
 }
-/* line 91, ../scss/components/_ui.scss */
+/* line 103, ../scss/components/_ui.scss */
 .button.decline:not(.disabled):hover {
   background: #ae3000;
   color: rgba(248, 247, 255, 0.8);
   border: 1px solid #c63900;
 }
-/* line 97, ../scss/components/_ui.scss */
+/* line 109, ../scss/components/_ui.scss */
 .button.decline:not(.disabled):active {
   -moz-transition: all 0s;
   -webkit-transition: all 0s;
@@ -3210,79 +3226,84 @@ footer {
   transition: all 0s;
   background: #862e00;
 }
-/* line 103, ../scss/components/_ui.scss */
+/* line 115, ../scss/components/_ui.scss */
 .button.disabled {
   opacity: 0.5;
 }
-/* line 105, ../scss/components/_ui.scss */
+/* line 117, ../scss/components/_ui.scss */
 .button.disabled:hover {
   cursor: default;
 }
 
-/* line 111, ../scss/components/_ui.scss */
+/* line 123, ../scss/components/_ui.scss */
 span[data-locale="name"] {
   padding-right: 5px;
 }
 
-/* line 115, ../scss/components/_ui.scss */
+/* line 127, ../scss/components/_ui.scss */
 span[data-locale="unit"] {
   padding-left: 5px;
 }
 
-/* line 119, ../scss/components/_ui.scss */
+/* line 131, ../scss/components/_ui.scss */
 .title i.fa {
   padding-right: 9px;
 }
 
-/* line 123, ../scss/components/_ui.scss */
+/* line 135, ../scss/components/_ui.scss */
 #resource i.fa {
   padding-right: 5px;
 }
 
-/* line 127, ../scss/components/_ui.scss */
+/* line 139, ../scss/components/_ui.scss */
 .scrollable {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* line 132, ../scss/components/_ui.scss */
+/* line 144, ../scss/components/_ui.scss */
 .fa-cube {
   color: #FFAE00;
 }
 
-/* line 136, ../scss/components/_ui.scss */
+/* line 148, ../scss/components/_ui.scss */
 .fa-cubes {
   color: #717171;
 }
 
-/* line 140, ../scss/components/_ui.scss */
+/* line 152, ../scss/components/_ui.scss */
 .fa-cloud {
   color: #C7B8FF;
 }
 
-/* line 144, ../scss/components/_ui.scss */
+/* line 156, ../scss/components/_ui.scss */
 .fa-bolt {
   color: #c2ff00;
 }
 
-/* line 148, ../scss/components/_ui.scss */
+/* line 160, ../scss/components/_ui.scss */
 .gray {
   color: #919191;
 }
 
-/* line 151, ../scss/components/_ui.scss */
+/* line 163, ../scss/components/_ui.scss */
 .male {
   color: #add8e6;
 }
 
-/* line 154, ../scss/components/_ui.scss */
+/* line 166, ../scss/components/_ui.scss */
 .female {
   color: #ffc0cb;
 }
 
-/* line 157, ../scss/components/_ui.scss */
+/* line 169, ../scss/components/_ui.scss */
 .red {
   color: #FF4700;
+}
+
+/* line 172, ../scss/components/_ui.scss */
+.event {
+  color: #b22feb;
 }
 
 /* line 2, ../scss/components/_buildings.scss */
@@ -3904,14 +3925,50 @@ span[data-locale="unit"] {
   background: #fff url(../img/building/icons/icon_power-plant.png) center top;
 }
 /* line 90, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.titan_plant .image {
+  background: #fff url(../img/building/icons/icon_titan-plant.png) center top;
+}
+/* line 94, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.uranium_plant .image {
+  background: #fff url(../img/building/icons/icon_uranium-plant.png) center top;
+}
+/* line 98, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.helium_plant .image {
+  background: #fff url(../img/building/icons/icon_helium-plant.png) center top;
+}
+/* line 102, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.housing_plant .image {
+  background: #fff url(../img/building/icons/icon_housing-plant.png) center top;
+}
+/* line 106, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.medical_plant .image {
+  background: #fff url(../img/building/icons/icon_medical-plant.png) center top;
+}
+/* line 110, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.tech_plant .image {
+  background: #fff url(../img/building/icons/icon_tech-plant.png) center top;
+}
+/* line 114, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.laboratory_plant .image {
+  background: #fff url(../img/building/icons/icon_lab-plant.png) center top;
+}
+/* line 118, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.starport_plant .image {
+  background: #fff url(../img/building/icons/icon_starport-plant.png) center top;
+}
+/* line 122, ../scss/components/windows/_build.scss */
+#buildings.window .body .item.defend_plant .image {
+  background: #fff url(../img/building/icons/icon_defend-plant.png) center top;
+}
+/* line 126, ../scss/components/windows/_build.scss */
 #buildings.window .body .item:not(.disabled):hover {
   background: rgba(22, 58, 97, 0.5);
 }
-/* line 94, ../scss/components/windows/_build.scss */
+/* line 130, ../scss/components/windows/_build.scss */
 #buildings.window .body .item:not(.disabled):active {
   background: rgba(22, 58, 97, 0.8);
 }
-/* line 97, ../scss/components/windows/_build.scss */
+/* line 133, ../scss/components/windows/_build.scss */
 #buildings.window .body .item.disabled {
   opacity: 0.5;
   cursor: default;
@@ -4066,18 +4123,38 @@ span[data-locale="unit"] {
   margin-right: 5px;
 }
 /* line 113, ../scss/components/windows/_research.scss */
-#research.window .body .item.powerplant .image {
-  background: #fff url(../img/building/icons/icon_power-plant.png) center top;
+#research.window .body .item.capacity .image {
+  background: #fff url(../img/research/icons/icon_power.png) center top;
 }
 /* line 117, ../scss/components/windows/_research.scss */
+#research.window .body .item.medicine .image {
+  background: #fff url(../img/research/icons/icon_medicine.png) center top;
+}
+/* line 121, ../scss/components/windows/_research.scss */
+#research.window .body .item.extraction .image {
+  background: #fff url(../img/research/icons/icon_extraction.png) center top;
+}
+/* line 125, ../scss/components/windows/_research.scss */
+#research.window .body .item.expedition .image {
+  background: #fff url(../img/research/icons/icon_expedition.png) center top;
+}
+/* line 129, ../scss/components/windows/_research.scss */
+#research.window .body .item.tech .image {
+  background: #fff url(../img/research/icons/icon_tech.png) center top;
+}
+/* line 133, ../scss/components/windows/_research.scss */
+#research.window .body .item.life .image {
+  background: #fff url(../img/research/icons/icon_life.png) center top;
+}
+/* line 137, ../scss/components/windows/_research.scss */
 #research.window .body .item:not(.disabled):hover {
   background: rgba(22, 58, 97, 0.5);
 }
-/* line 121, ../scss/components/windows/_research.scss */
+/* line 141, ../scss/components/windows/_research.scss */
 #research.window .body .item:not(.disabled):active {
   background: rgba(22, 58, 97, 0.8);
 }
-/* line 125, ../scss/components/windows/_research.scss */
+/* line 145, ../scss/components/windows/_research.scss */
 #research.window .body .item.disabled {
   opacity: 0.5;
   cursor: default;

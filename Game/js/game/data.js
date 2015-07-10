@@ -305,4 +305,9 @@ var _researches = {
   }
 };
 
+var _event = {
+  main_chance: 0.85,
+  bad : 0.1,
+  good: 0.9,
+};
 

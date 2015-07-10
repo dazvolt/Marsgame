@@ -27,7 +27,19 @@
     color: #FFAE00;
   }
   &.power {
-    color: #8EFF00;
+    color: $c-power;
+  }
+  &.titan {
+    color: $c-titan;
+  }
+  &.uranium {
+    color: $c-uranium;
+  }
+  &.helium {
+    color: $c-helium;
+  }
+  &.chance {
+    color: #9DBFDA;
   }
 }
 
@@ -156,4 +168,7 @@ span[data-locale="unit"] {
 }
 .red {
   color: $c-danger;
+}
+.event {
+  color: $c-event;
 }
