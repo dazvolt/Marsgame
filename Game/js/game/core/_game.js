@@ -13,12 +13,14 @@ var _game = {
   end : function (ending, who) {
     if (ending == 'apocalypse') {
       _log.report.apocalypse();
-      $('#reset button').addClass('accept');
     } else
     if (ending == 'no_humans') {
       _log.report.no_humans(who);
     }
-
+    if (ending == 'win') {
+      _log.report.win();
+    }
+    $('#reset button').addClass('accept');
     $('#graphs button').hide();
     $('#graphs #reset button').show();
     $('#win-buttons button').hide();

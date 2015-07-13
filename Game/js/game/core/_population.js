@@ -37,6 +37,7 @@ var _population = {
       _game.score += 2;
     }
     _population.amount += 1;
+    data.population += 1;
     _buttons.population_each_year += 1;
     _game.children_born += 1;
   },
@@ -91,6 +92,7 @@ var _population = {
           _log.report.death.sudden($(this).find('.name').text(), get_sex);
           $(this).remove();
           _population.amount -= 1;
+          data.population -= 1;
           _buttons.population_each_year -= 1;
           _population.redraw();
           _game.sudden_death_died += 1;
@@ -109,6 +111,7 @@ var _population = {
             _log.report.death.oldness($(this).parents('p').find('.name').text(), get_sex);
             $(this).parents('p').remove();
             _population.amount -= 1;
+            data.population -= 1;
             _buttons.population_each_year -=1;
             _population.redraw();
             _game.oldness_died += 1;

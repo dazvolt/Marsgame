@@ -1,9 +1,10 @@
 //percentage values must be defined according to float value, as 1 = 100% and 0 = 0%
 var data = {
   language: 'ru',
-  win_target: 1000,
+  win_target: 10000,
   allow_research : false,
-  allow_expedition : false
+  allow_expedition : false,
+  population : 0
 };
 
 var _resources = {
@@ -52,17 +53,17 @@ var _resources = {
       buildings: 0
     },
     uranium: {
-      amount: 100000,
+      amount: 50000,
       rate: 0,
       buildings: 0
     },
     helium: {
-      amount: 90000,
+      amount: 10000,
       rate: 0,
       buildings: 0
     },
     power: {
-      amount: 90000,
+      amount: 10000,
       rate: 1,
       buildings: 0
     },
@@ -94,6 +95,7 @@ var _buildings = { //buildings defined object
       who: [['power','amount']],
       amount: [75]
     },
+    allow : true,
     count : 0 //how much plants existing
   },
 
@@ -107,6 +109,7 @@ var _buildings = { //buildings defined object
       who: [['titan','rate']],
       amount: [0.15]
     },
+    dependency : ['power_plant'],
     count : 0 //how much plants existing
   },
 
@@ -120,6 +123,7 @@ var _buildings = { //buildings defined object
       who: [['uranium','rate']],
       amount: [0.1]
     },
+    dependency : ['power_plant', 'titan_plant'],
     count : 0 //how much plants existing
   },
 
@@ -133,6 +137,7 @@ var _buildings = { //buildings defined object
       who: [['helium','rate']],
       amount: [0.05]
     },
+    dependency : ['power_plant', 'titan_plant', 'uranium_plant'],
     count : 0 //how much plants existing
   },
 
@@ -147,6 +152,7 @@ var _buildings = { //buildings defined object
       who: [['born','number']],
       amount: [0.05]
     },
+    dependency : ['power_plant', 'titan_plant', 'uranium_plant', 'helium_plant'],
     count : 0 //how much plants existing
   },
 
@@ -161,6 +167,7 @@ var _buildings = { //buildings defined object
       who: [['born','number'], ['die','number']],
       amount: [0.2, -0.1]
     },
+    dependency : ['power_plant', 'housing_plant', 'helium_plant'],
     count : 0 //how much plants existing
   },
 
@@ -175,6 +182,7 @@ var _buildings = { //buildings defined object
       who: [],
       amount: []
     },
+    dependency : ['power_plant', 'housing_plant', 'medical_plant'],
     count : 0 //how much plants existing
   },
 
@@ -189,6 +197,7 @@ var _buildings = { //buildings defined object
       who: [['apocalypse','number']],
       amount: [-0.0003]
     },
+    dependency : ['power_plant', 'housing_plant', 'medical_plant'],
     count : 0 //how much plants existing
   },
 
@@ -203,6 +212,7 @@ var _buildings = { //buildings defined object
       who: [],
       amount: []
     },
+    dependency : ['power_plant', 'laboratory_plant', 'medical_plant'],
     count : 0 //how much plants existing
   },
 
@@ -217,6 +227,7 @@ var _buildings = { //buildings defined object
       who: [],
       amount: []
     },
+    dependency : ['power_plant', 'laboratory_plant', 'starport_plant'],
     count : 0 //how much plants existing
   }
 };
@@ -235,7 +246,9 @@ var _researches = {
     affect: {
       who: [['power','building']],
       amount: [25]
-    }
+    },
+    level : 0,
+    allow : true
   },
 
   medicine : {
@@ -248,7 +261,9 @@ var _researches = {
     affect: {
       who: [['die','number']],
       amount: [-0.02]
-    }
+    },
+    level : 0,
+    dependency : ['capacity']
   },
 
   extraction : {
@@ -261,7 +276,9 @@ var _researches = {
     affect: {
       who: [['titan','rate'], ['helium','rate'], ['uranium','rate']],
       amount: [0.05, 0.01, 0.03]
-    }
+    },
+    level : 0,
+    dependency : ['capacity']
   },
 
   expedition : {
@@ -275,7 +292,9 @@ var _researches = {
       who: [['titan','rate'], ['helium','rate'], ['uranium','rate']],
       amount: [0.05, 0.01, 0.03]
     },
-    runtime: 11 //how much time expedition lasts until end (-1 will be applied after first research)
+    level : 0,
+    runtime: 11, //how much time expedition lasts until end (-1 will be applied after first research)
+    dependency : ['capacity','medicine']
   },
 
   tech : {
@@ -288,7 +307,9 @@ var _researches = {
     affect: {
       who: [['titan','rate'], ['helium','rate'], ['uranium','rate']],
       amount: [0.05, 0.01, 0.03]
-    }
+    },
+    level : 0,
+    dependency : ['capacity','medicine','extraction']
   },
 
   life : {
@@ -301,13 +322,15 @@ var _researches = {
     affect: {
       who: [['titan','rate'], ['helium','rate'], ['uranium','rate']],
       amount: [0.05, 0.01, 0.03]
-    }
+    },
+    level : 0,
+    dependency : ['medicine']
   }
 };
 
 var _event = {
-  main_chance: 0.85,
-  bad : 0.1,
-  good: 0.9,
+  main_chance: 0.2,
+  bad : 0.65,
+  good: 0.35
 };
 

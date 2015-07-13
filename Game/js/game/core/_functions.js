@@ -41,7 +41,7 @@ function roll_specific(min, max, fixed) {
 }
 
 function random_color() {
-  return 'rgb(' + roll_specific(0, 256, 0) + ', ' + roll_specific(0, 256, 0) + ', ' + roll_specific(0, 256, 0) + ')';
+  return 'rgb(' + roll_specific(100, 256, 0) + ', ' + roll_specific(100, 256, 0) + ', ' + roll_specific(100, 256, 0) + ')';
 }
 
 $.fn.bind_window = function (win) {
@@ -155,6 +155,27 @@ function call_hint (text) {
       opacity: 0
     });
   }, 3000);
+}
+
+function call_window_hint (text, title, buttons, callback) {
+  var $this = $('.big-hint');
+  $this.fadeIn(1000);
+  $this.find('.title').text(title);
+  $this.find('.body').html(text).css('text-align','center').css('color','rgb(210, 219, 226)');
+  if (buttons[0] == true) {
+    $(this).find('.button.accept').show();
+  }
+  if (buttons[1] == true) {
+    $(this).find('.button.decline').show();
+  }
+  $('.blackener').fadeIn(500);
+  $this.find('.button.accept').on('click', function () {
+    $this.hide();
+    $('.blackener').hide();
+    if (callback) callback();
+    console.log('callback');
+  });
+  console.log('call hint');
 }
 
 $.fn.hook_hint = function (text) {

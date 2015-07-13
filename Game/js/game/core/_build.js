@@ -57,6 +57,7 @@ var _build = { //controls everything related to buildings
 
     _resource.redraw();
     _chances.redraw();
+    _dependency.check.buildings();
   },
 
   controller: function (building_object, resource_defined) { //controls click on building in window list and click on map
@@ -75,7 +76,7 @@ var _build = { //controls everything related to buildings
     });
 
     $(building_object.window + ' div[data-building]').on('click', function () { //on building list click
-      if (!$(this).hasClass('disabled')) {
+      if (!$(this).hasClass('disabled') && _buildings[$(this).attr('data-building')].allow) {
         building = $(this).attr('data-building');
         global_check = true;
 

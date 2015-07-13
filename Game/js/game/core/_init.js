@@ -26,7 +26,8 @@ function _init_game() {
   _research.init(_researches, _resources.default, _resources.defined);
   _log.init();
   _hints.init();
-
-
-  locale_start(data.language);
+  _dependency.init();
+  _start.init();
+  _settingsw.init();
+  //call_window_hint(locale[data.language].tutorial.desc, locale[data.language].tutorial.title, [true, false]);
 };

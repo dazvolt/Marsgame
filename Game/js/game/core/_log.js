@@ -63,6 +63,11 @@ var _log = {
 
       _log.report.perform();
     },
+    win : function () {
+      _log.report.clear();
+      _log.collection.report.data += locale[data.language].win_end;
+      _log.report.perform();
+    },
     perform : function () {
       if (_log.collection.report.data != '') {
         var report_collection = _log.collection.open + _log.collection.year + locale[data.language].labels.year + ' ' + $('[data-number="cur-year"]').text() + ': ' +  _log.collection.close +

@@ -4,6 +4,7 @@ var _research = {
   defined_time : 0, //how much time research MUST go at all
   global_research_name : '', //current research name
   research_level : 0, //current research level
+  new_research : false, //is new research appeared?
 
   init : function (research_object, resource_object, resource_defined) {
     this.generate(research_object, resource_object); //generate researches DOM
@@ -58,7 +59,7 @@ var _research = {
             _research.global_time = research_object[research].resource[get_resource];
             _research.defined_time = research_object[research].resource[get_resource];
             _research.global_research_name = research;
-            _research.research_level = $(this).find('[data-level]').text();
+            _research.research_level = _researches[_research.global_research_name].level;
             _research.research_state = true;
             level_for_text = parseInt(_research.research_level) + 1;
             $(research_object.window + ' [data-research="current-research"]').text('"' + locale[data.language].research[research].name + '" на уровень: [' + level_for_text + ']');
@@ -130,7 +131,12 @@ var _research = {
         if (_chances.check_appliers(_resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]], _researches[research_name].affect.who[i][0]) == 'to_null') _resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]] = 0;
       }
     }
-    call_hint(locale[data.language].hint.research_end[0] + locale[data.language].research[research_name].name + locale[data.language].hint.research_end[1] + _research.research_level + ']');
+    if (_research.new_research) {
+      call_hint(locale[data.language].hint.research_end[0] + locale[data.language].research[research_name].name + locale[data.language].hint.research_end[1] + _research.research_level + '] ' + locale[data.language].hint.new_research);
+    } else {
+      call_hint(locale[data.language].hint.research_end[0] + locale[data.language].research[research_name].name + locale[data.language].hint.research_end[1] + _research.research_level + ']');
+    }
+
   },
 
   reset : function (research_object) {
@@ -148,7 +154,8 @@ var _research = {
   },
 
   cost_update : function () {
-    _research.research_level = parseInt(_research.research_level) + 1; //update research level
+    _researches[_research.global_research_name].level +=1;
+    _research.research_level = parseInt(_researches[_research.global_research_name].level); //update research level
 
     for (var resource_research in _researches[_research.global_research_name].resource) { //assign new resource values according to resource type and level_resource_scale
       if (resource_research == 'time') {
@@ -169,6 +176,7 @@ var _research = {
 
   end : function (research_object) {
     _research.cost_update();
+    _dependency.check.researches();
     _research.apply_bonuses(_research.global_research_name);
     _chances.redraw();
     _research.reset(research_object);

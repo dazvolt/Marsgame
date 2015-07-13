@@ -41,7 +41,7 @@ var _buttons = {
       _game.die_chance.push(parseInt((_resources.defined.die.number * 100)));
       _game.sudden_death_chance.push(parseInt((_resources.defined.death.number * 100)));
       _game.apocalypse_chance.push(parseFloat((_resources.defined.apocalypse.number * 100)).toFixed(3));
-
+      _win.check();
       _log.report.perform();
     },
 
