@@ -1,3 +1,11 @@
+/**
+ * ==================================================
+ *    MARS GAME FILES
+ * ==================================================
+ *
+ * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
+ * MIT License.
+ */
 var _build = { //controls everything related to buildings
   building_state : false, //helps to control whether building construction is ready to begin or not
 
@@ -30,11 +38,17 @@ var _build = { //controls everything related to buildings
     var coordinates = $('#map svg polygon[data-coordinates="' + polygon + '"]').get_coords();
 
     for (var i = 0; i < _buildings[building].affect.who.length; i++ ) {
-      _resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]] += _buildings[building].affect.amount[i];
+      if (_buildings[building].affect.who[i][0] == 'die' || _buildings[building].affect.who[i][0] == 'born' || _buildings[building].affect.who[i][0] == 'death' || _buildings[building].affect.who[i][0] == 'apocalypse') {
+        if (_resources.defined[_buildings[building].affect.who[i][0]].bonus === 0) {
+          $('#'+_buildings[building].affect.who[i][0] + ' span[data-number]').addClass('msg').addClass('bonus');
+        }
+        _resources.defined[_buildings[building].affect.who[i][0]].bonus = parseFloat(_resources.defined[_buildings[building].affect.who[i][0]].bonus) + parseFloat(_buildings[building].affect.amount[i]);
+        $('#'+_buildings[building].affect.who[i][0] + ' span[data-number]').hook_hint_update(locale[data.language].hint[_buildings[building].affect.who[i][0]] + '<br/><br/>' + locale[data.language].hint.bonus + '<span class="msg bonus">' + (_resources.defined[_buildings[building].affect.who[i][0]].bonus * 100) + '%</span>');
+      }
+      _resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]] = parseFloat(_resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]]) + parseFloat(_buildings[building].affect.amount[i]);
       if (_chances.check_appliers(_resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]], _buildings[building].affect.who[i][0]) == 'to_full') _resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]] = 1;
       if (_chances.check_appliers(_resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]], _buildings[building].affect.who[i][0]) == 'to_null') _resources.defined[_buildings[building].affect.who[i][0]][_buildings[building].affect.who[i][1]] = 0;
     }
-
     $('#map .land').append('<div class="' + building + ' temporary b-b">' + abbr + '</div>');
     $('#map .land .temporary').css({
       left: parseInt(coordinates[0]),

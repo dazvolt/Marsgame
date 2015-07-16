@@ -1,3 +1,11 @@
+/**
+ * ==================================================
+ *    MARS GAME FILES
+ * ==================================================
+ *
+ * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
+ * MIT License.
+ */
 var _research = {
   research_state : false, //is research going currently?
   global_time : 0, //how much time left for research.tick()
@@ -126,7 +134,13 @@ var _research = {
       $('[data-length="expedition"]').text(_researches.expedition.runtime);
     } else { //other template-like researches
       for (var i = 0; i < _researches[research_name].affect.who.length; i++ ) {
-        _resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]] += _researches[research_name].affect.amount[i];
+        if (_researches[research_name].affect.who[i][0] == 'born' || _researches[research_name].affect.who[i][0] == 'die' || _researches[research_name].affect.who[i][0] == 'death' || _researches[research_name].affect.who[i][0] == 'apocalypse') {
+          if(_resources.defined[_researches[research_name].affect.who[i][0]].bonus == 0) {
+            $('#'+_researches[research_name].affect.who[i][0] + ' span[data-number]').addClass('msg').addClass('bonus');
+          }
+          _resources.defined[_researches[research_name].affect.who[i][0]].bonus = parseFloat(_resources.defined[_researches[research_name].affect.who[i][0]].bonus) + parseFloat(_researches[research_name].affect.amount[i]);
+        }
+        _resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]] = parseFloat(_resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]]) + parseFloat(_researches[research_name].affect.amount[i]);
         if (_chances.check_appliers(_resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]], _researches[research_name].affect.who[i][0]) == 'to_full') _resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]] = 1;
         if (_chances.check_appliers(_resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]], _researches[research_name].affect.who[i][0]) == 'to_null') _resources.defined[_researches[research_name].affect.who[i][0]][_researches[research_name].affect.who[i][1]] = 0;
       }

@@ -1,3 +1,11 @@
+/**
+ * ==================================================
+ *    MARS GAME FILES
+ * ==================================================
+ *
+ * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
+ * MIT License.
+ */
 var _chances = {
   init : function (chances_default, chances_defined) {
     _chances.redraw(chances_default, chances_defined);
@@ -29,22 +37,22 @@ var _chances = {
 
     if (which_to == 'die') {
       min = 0;
-      max = 1 - parseFloat(_resources.defined.born.number);
+      max = 1 - parseFloat(_resources.defined.born.number) + parseFloat(_resources.defined.die.bonus);
       _resources.defined.die.number = roll_specific( min, max, 2 );
     } else
     if (which_to == 'born') {
-      min = 0;
+      min = parseFloat(_resources.defined.born.bonus);
       max = 1 - parseFloat(_resources.defined.die.number);
       _resources.defined.born.number = roll_specific( min, max, 2 );
     } else
     if (which_to == 'death') {
       min = (parseFloat(_resources.defined.die.number)) / 10;
-      max = (1 - parseFloat(_resources.defined.born.number)) / 10;
+      max = ((1 - parseFloat(_resources.defined.born.number)) / 10) + parseFloat(_resources.defined.death.bonus);
       _resources.defined.death.number = roll_specific( min, max, 2 );
     } else
     if (which_to == 'apocalypse') {
       min = (((parseFloat(_resources.defined.die.number)) / 10) + parseFloat(_resources.defined.death.number)) / 15;
-      max = (1 - parseFloat(_resources.defined.born.number)) / (150 - parseFloat(_resources.defined.die.number));
+      max = ((1 - parseFloat(_resources.defined.born.number)) / (150 - parseFloat(_resources.defined.die.number))) + parseFloat(_resources.defined.apocalypse.bonus);
       _resources.defined.apocalypse.number = roll_specific( min, max, 5);
     }
     _chances.redraw();

@@ -1,3 +1,11 @@
+/**
+ * ==================================================
+ *    MARS GAME FILES
+ * ==================================================
+ *
+ * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
+ * MIT License.
+ */
 var _start = {
   windows : ['#top-panel', '#map', '#graphs', '#log'],
   height : [],
@@ -18,7 +26,11 @@ var _start = {
       $(_start.windows[i]).animate({
         height : _start.height[i],
         opacity : 1
-      }, 1500);
+      }, 1500, function(){
+        $('.window').css({
+          overflow : 'visible'
+        });
+      });
     }
     setTimeout(function(){
       call_window_hint(locale[data.language].tutorial.desc, locale[data.language].tutorial.title, [true, false], function() {

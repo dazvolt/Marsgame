@@ -1,3 +1,11 @@
+/**
+ * ==================================================
+ *    MARS GAME FILES
+ * ==================================================
+ *
+ * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
+ * MIT License.
+ */
 function _init_game() {
 
   $('button').on('mouseover', function () {
@@ -11,7 +19,6 @@ function _init_game() {
   });
 
   $('.window, .j-diag, .j-diag-free').add_corners();
-
   $('#map svg').gen_map();
   $('.command_center').css({
     top: parseInt($('polygon[data-coordinates="4,5"]').get_coords()[1]),

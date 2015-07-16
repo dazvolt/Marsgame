@@ -1,15 +1,23 @@
+/**
+ * ==================================================
+ *    MARS GAME FILES
+ * ==================================================
+ *
+ * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
+ * MIT License.
+ */
 var _game = {
-  children_born : 0,
-  children_die : 0,
-  sudden_death_died : 0,
-  oldness_died : 0,
-  born_chance : [60],
-  die_chance : [40],
-  sudden_death_chance : [2],
-  apocalypse_chance : [0.125],
-  population : [2],
-  population_growth : [2],
-  score : 0,
+  children_born : 0, //how much children born  [STATISTICS USE]
+  children_die : 0, //how much children died  [STATISTICS USE]
+  sudden_death_died : 0, //how much died from sudden death  [STATISTICS USE]
+  oldness_died : 0, //how much died from oldness  [STATISTICS USE]
+  born_chance : [60], //born chance every year  [STATISTICS USE]
+  die_chance : [40], //die chance every year  [STATISTICS USE]
+  sudden_death_chance : [2], //sudden death chance every year  [STATISTICS USE]
+  apocalypse_chance : [0.125], //apocalypse chance every year  [STATISTICS USE]
+  population : [2], //population every year  [STATISTICS USE]
+  population_growth : [2], //population growth every year  [STATISTICS USE]
+  score : 0, //end game score
   end : function (ending, who) {
     if (ending == 'apocalypse') {
       _log.report.apocalypse();

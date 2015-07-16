@@ -173,9 +173,7 @@ function call_window_hint (text, title, buttons, callback) {
     $this.hide();
     $('.blackener').hide();
     if (callback) callback();
-    console.log('callback');
   });
-  console.log('call hint');
 }
 
 $.fn.hook_hint = function (text) {
@@ -186,12 +184,29 @@ $.fn.hook_hint = function (text) {
       top: $this.offset().top + $this.height(),
       left: $this.offset().left
     });
-    $('.j-diag-free .text').text(text);
+    $('.j-diag-free .text').html(text);
   });
   $this.on('mouseout', function () {
     $('.j-diag-free').hide();
   });
 };
+$.fn.extend({
+  hook_hint_update : function (text) {
+    var $this = this;
+
+    $this.css('cursor', 'default');
+    $this.on('mouseover', function () {
+      $('.j-diag-free').show().css({
+        top: $this.offset().top + $this.height(),
+        left: $this.offset().left
+      });
+      $('.j-diag-free .text').html(text);
+    });
+    $this.on('mouseout', function () {
+      $('.j-diag-free').hide();
+    });
+  }
+});
 
 //Copyright Commodus Voke
 function isNumber(n) {

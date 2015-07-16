@@ -3119,7 +3119,7 @@ footer {
 }
 /* line 23, ../scss/components/_ui.scss */
 .msg.bonus {
-  color: #00CFFF;
+  color: #00CFFF !important;
 }
 /* line 26, ../scss/components/_ui.scss */
 .msg.resource {
@@ -3176,7 +3176,7 @@ footer {
 .button:not(.disabled):hover {
   border: 1px solid #1f395f;
   background: rgba(22, 58, 97, 0.8);
-  color: rgba(248, 247, 255, 0.8);
+  color: white;
 }
 /* line 75, ../scss/components/_ui.scss */
 .button:not(.disabled):active {

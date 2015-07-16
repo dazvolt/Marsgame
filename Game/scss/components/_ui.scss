@@ -21,7 +21,7 @@
     color: #F2B8FF;
   }
   &.bonus {
-    color: #00CFFF;
+    color: #00CFFF !important;
   }
   &.resource {
     color: #FFAE00;
@@ -69,7 +69,7 @@
   &:not(.disabled):hover {
     border: 1px solid rgb(31, 57, 95);
     background: rgba(22, 58, 97, 0.8);
-    color: rgba(248, 247, 255, 0.80);
+    color: rgba(255, 255, 255, 1);
   }
 
   &:not(.disabled):active {

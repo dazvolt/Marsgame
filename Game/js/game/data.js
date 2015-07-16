@@ -1,3 +1,11 @@
+/**
+ * ==================================================
+ *    MARS GAME FILES
+ * ==================================================
+ *
+ * Copyright by Dazvolt (dazvolt@gmail.com) 2014-2015.
+ * MIT License.
+ */
 //percentage values must be defined according to float value, as 1 = 100% and 0 = 0%
 var data = {
   language: 'ru',
@@ -33,16 +41,20 @@ var _resources = {
       icon: '<i class="fa fa-clock-o"></i>'
     },
     born: {
-      number: 0.6
+      number: 0.6,
+      bonus : 0
     },
     die: {
-      number: 0.4
+      number: 0.4,
+      bonus : 0
     },
     death: {
-      number: 0.02
+      number: 0.02,
+      bonus : 0
     },
     apocalypse: {
-      number: 0.00125
+      number: 0.00125,
+      bonus : 0
     },
     population : 0
   },
@@ -68,16 +80,20 @@ var _resources = {
       buildings: 0
     },
     born: {
-      number: 0.6
+      number: 0.6,
+      bonus : 0
     },
     die: {
-      number: 0.4
+      number: 0.4,
+      bonus : 0
     },
     death: {
-      number: 0.02
+      number: 0.02,
+      bonus : 0
     },
     apocalypse: {
-      number: 0.00125
+      number: 0.00125,
+      bonus : 0
     },
     population : 0
   }
