@@ -2,27 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="726e7145-b4e1-4343-bf46-f94b9f37cf59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/scss/components/windows/_end_game_stat.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.sass-cache/43e3360b256fbc1398daa0ee9acf86b69caf3e12/_log.scssc" afterPath="$PROJECT_DIR$/Game/.sass-cache/43e3360b256fbc1398daa0ee9acf86b69caf3e12/_log.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/scss/components/blocks/_start.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/index_start.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game/js/game/locale/text.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.sass-cache/43e3360b256fbc1398daa0ee9acf86b69caf3e12/_blocks.scssc" afterPath="$PROJECT_DIR$/Game/.sass-cache/43e3360b256fbc1398daa0ee9acf86b69caf3e12/_blocks.scssc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.sass-cache/43e3360b256fbc1398daa0ee9acf86b69caf3e12/_map.scssc" afterPath="$PROJECT_DIR$/Game/.sass-cache/43e3360b256fbc1398daa0ee9acf86b69caf3e12/_map.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.sass-cache/45403dd9a9276dd44014b003964eb570c16d39bf/_ui.scssc" afterPath="$PROJECT_DIR$/Game/.sass-cache/45403dd9a9276dd44014b003964eb570c16d39bf/_ui.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.sass-cache/45403dd9a9276dd44014b003964eb570c16d39bf/_var.scssc" afterPath="$PROJECT_DIR$/Game/.sass-cache/45403dd9a9276dd44014b003964eb570c16d39bf/_var.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.sass-cache/45403dd9a9276dd44014b003964eb570c16d39bf/_window.scssc" afterPath="$PROJECT_DIR$/Game/.sass-cache/45403dd9a9276dd44014b003964eb570c16d39bf/_window.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.sass-cache/73620c66d49cc5da8724bdda036097f66853284d/_windows.scssc" afterPath="$PROJECT_DIR$/Game/.sass-cache/73620c66d49cc5da8724bdda036097f66853284d/_windows.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_build.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_buttons.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_buttons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_chances.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_chances.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/windows/_big_hint.scss" afterPath="$PROJECT_DIR$/Game/scss/components/windows/_big_hint.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/blocks/_blocks.scss" afterPath="$PROJECT_DIR$/Game/scss/components/blocks/_blocks.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_events.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_events.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_functions.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_log.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_log.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/blocks/_log.scss" afterPath="$PROJECT_DIR$/Game/scss/components/blocks/_log.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_population.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_population.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_research.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_research.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_init.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/blocks/_map.scss" afterPath="$PROJECT_DIR$/Game/scss/components/blocks/_map.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_resource.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_tutorial.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_tutorial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/core/_ui.js" afterPath="$PROJECT_DIR$/Game/js/game/core/_ui.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/_ui.scss" afterPath="$PROJECT_DIR$/Game/scss/components/_ui.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/_var.scss" afterPath="$PROJECT_DIR$/Game/scss/components/_var.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/_window.scss" afterPath="$PROJECT_DIR$/Game/scss/components/_window.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/scss/components/windows/_windows.scss" afterPath="$PROJECT_DIR$/Game/scss/components/windows/_windows.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/data.js" afterPath="$PROJECT_DIR$/Game/js/game/data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/index_gen.html" afterPath="$PROJECT_DIR$/Game/index_gen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/init.js" afterPath="$PROJECT_DIR$/Game/js/init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/locale/locale.js" afterPath="$PROJECT_DIR$/Game/js/game/locale/locale.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/js/game/locale/names.js" afterPath="$PROJECT_DIR$/Game/js/game/locale/names.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/css/styles.css" afterPath="$PROJECT_DIR$/Game/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Game/.idea/workspace.xml" />
@@ -50,44 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/js/game/data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="5338">
-              <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index_gen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/index_gen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.384615" vertical-offset="2540" max-vertical-offset="3825">
-              <caret line="176" column="62" selection-start-line="176" selection-start-column="62" selection-end-line="176" selection-end-column="62" />
-              <folding>
-                <element signature="n#style#0;n#div#4;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#10;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_game.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/js/game/core/_game.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="595">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_windows.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_windows.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="221">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state vertical-scroll-proportion="-136.0" vertical-offset="816" max-vertical-offset="4539">
+              <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="261" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -96,64 +63,94 @@
       <file leaf-file-name="locale.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game/js/game/locale/locale.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="5236">
-              <caret line="155" column="44" selection-start-line="155" selection-start-column="14" selection-end-line="155" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_window.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/scss/components/_window.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="255" max-vertical-offset="2516">
-              <caret line="15" column="19" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_log.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/js/game/core/_log.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2346">
-              <caret line="124" column="58" selection-start-line="124" selection-start-column="58" selection-end-line="124" selection-end-column="58" />
+            <state vertical-scroll-proportion="-9.827586" vertical-offset="3370" max-vertical-offset="7191">
+              <caret line="215" column="86" selection-start-line="215" selection-start-column="86" selection-end-line="215" selection-end-column="86" />
               <folding>
-                <marker date="1432822411264" expanded="true" signature="5475:5481" placeholder="..." />
-                <marker date="1432822411264" expanded="true" signature="5796:5813" placeholder="..." />
+                <marker date="1446212886945" expanded="true" signature="16911:16923" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_end_game_stat.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_end_game_stat.scss">
+      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/js/game/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25373134" vertical-offset="0" max-vertical-offset="871">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5240" max-vertical-offset="6137">
+              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_build.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_build.scss">
+      <file leaf-file-name="names.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/js/game/locale/names.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="1836">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_functions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game/js/game/core/_functions.js">
+      <file leaf-file-name="init.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/js/init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="3196">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/js/start.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/js/game/locale/text.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+              <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_start.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Game/index_start.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4293915" vertical-offset="0" max-vertical-offset="871">
+              <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
               <folding>
-                <marker date="1432810648634" expanded="true" signature="2806:2819" placeholder="..." />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_map.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/scss/components/blocks/_map.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1683">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_start.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game/scss/components/blocks/_start.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1241">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,30 +170,42 @@
       <list>
         <option value="$PROJECT_DIR$/Game/js/game/core/_map-generation.js" />
         <option value="$PROJECT_DIR$/Game/scss/components/windows/_error.scss" />
-        <option value="$PROJECT_DIR$/Game/js/init.js" />
         <option value="$PROJECT_DIR$/Game/scss/components/windows/_build.scss" />
-        <option value="$PROJECT_DIR$/Game/js/game/core/_resource.js" />
-        <option value="$PROJECT_DIR$/Game/js/game/core/_init.js" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_testing.js" />
         <option value="$PROJECT_DIR$/Game/scss/components/_var.scss" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_build.js" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_research.js" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_end.js" />
-        <option value="$PROJECT_DIR$/Game/scss/components/_ui.scss" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_buttons.js" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_population.js" />
         <option value="$PROJECT_DIR$/Game/js/framework/jquery.sparkline.min.js" />
         <option value="$PROJECT_DIR$/Game/scss/components/_window.scss" />
         <option value="$PROJECT_DIR$/Game/scss/components/blocks/_log.scss" />
-        <option value="$PROJECT_DIR$/Game/js/game/core/_functions.js" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_game.js" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_chances.js" />
         <option value="$PROJECT_DIR$/Game/scss/components/windows/_windows.scss" />
-        <option value="$PROJECT_DIR$/Game/js/game/data.js" />
-        <option value="$PROJECT_DIR$/Game/js/game/locale/locale.js" />
-        <option value="$PROJECT_DIR$/Game/index_gen.html" />
         <option value="$PROJECT_DIR$/Game/js/game/core/_log.js" />
         <option value="$PROJECT_DIR$/Game/scss/components/windows/_end_game_stat.scss" />
+        <option value="$PROJECT_DIR$/Game/scss/components/blocks/_map.scss" />
+        <option value="$PROJECT_DIR$/Game/js/game/data.js" />
+        <option value="$PROJECT_DIR$/Game/index_gen.html" />
+        <option value="$PROJECT_DIR$/Game/scss/components/_ui.scss" />
+        <option value="$PROJECT_DIR$/Game/js/game/core/_ui.js" />
+        <option value="$PROJECT_DIR$/Game/js/game/core/_functions.js" />
+        <option value="$PROJECT_DIR$/Game/scss/components/windows/_big_hint.scss" />
+        <option value="$PROJECT_DIR$/Game/js/game/core/_events.js" />
+        <option value="$PROJECT_DIR$/Game/js/game/core/_resource.js" />
+        <option value="$PROJECT_DIR$/Game/js/game/core/_tutorial.js" />
+        <option value="$PROJECT_DIR$/Game/js/game/core/_init.js" />
+        <option value="$PROJECT_DIR$/Game/js/game/locale/names.js" />
+        <option value="$PROJECT_DIR$/Game/scss/components/blocks/_blocks.scss" />
+        <option value="$PROJECT_DIR$/Game/js/game/locale/text.js" />
+        <option value="$PROJECT_DIR$/Game/js/game/start.js" />
+        <option value="$PROJECT_DIR$/Game/scss/components/blocks/_start.scss" />
+        <option value="$PROJECT_DIR$/Game/js/init.js" />
+        <option value="$PROJECT_DIR$/Game/js/game/locale/locale.js" />
+        <option value="$PROJECT_DIR$/Game/js/start.js" />
+        <option value="$PROJECT_DIR$/Game/index_start.html" />
       </list>
     </option>
   </component>
@@ -236,6 +245,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -500,9 +510,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mars" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mars" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,14 +592,14 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26332623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26865673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -601,94 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Game/index_gen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="3451">
-          <caret line="122" column="26" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_stacked.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_rotated-flipped.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/_ui.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/_var.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="680">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_path.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="6" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/blocks/_top-panel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.666667" vertical-offset="0" max-vertical-offset="1241">
-          <caret line="41" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_animated.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_core.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="125.0" vertical-offset="6579" max-vertical-offset="10404">
-          <caret line="12" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game/scss/components/font-awesome/_stacked.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="922">
@@ -752,24 +691,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/blocks/_blocks.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game/scss/components/_buildings.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -787,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_resource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="442">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game/js/game/core/_testing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
@@ -805,13 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/_fonts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="119">
-          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -829,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/_ui.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.76923" vertical-offset="1843" max-vertical-offset="2788">
-          <caret line="157" column="19" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game/js/game/core/_research.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3077">
@@ -843,18 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/_var.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.115385" vertical-offset="0" max-vertical-offset="833">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game/js/game/core/_population.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="3162">
           <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,17 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1696832" vertical-offset="5675" max-vertical-offset="14909">
           <caret line="273" column="38" selection-start-line="273" selection-start-column="38" selection-end-line="273" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
           <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,7 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1428">
           <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,7 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="1139">
           <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -904,87 +786,233 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_build.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="1836">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2448">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/_window.scss">
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_end_game_stat.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2516">
-          <caret line="15" column="19" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="19" />
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="493">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3026">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_windows.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="221">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="238">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/js/game/data.js">
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/_var.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="5338">
-          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+        <state vertical-scroll-proportion="-12.0" vertical-offset="283" max-vertical-offset="850">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/img/dogtag.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_big_hint.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.653846" vertical-offset="624" max-vertical-offset="2329">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2091">
+          <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_tutorial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="592" max-vertical-offset="1207">
+          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="763" max-vertical-offset="1768">
+          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="748">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game/js/game/core/_functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="3196">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4321" max-vertical-offset="4964">
+          <caret line="271" column="17" selection-start-line="271" selection-start-column="17" selection-end-line="271" selection-end-column="17" />
           <folding>
-            <marker date="1432810648634" expanded="true" signature="2806:2819" placeholder="..." />
+            <marker date="1445957972831" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game/js/game/locale/locale.js">
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/blocks/_blocks.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2414" max-vertical-offset="5236">
-          <caret line="155" column="44" selection-start-line="155" selection-start-column="14" selection-end-line="155" selection-end-column="44" />
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="187">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019517796" vertical-offset="0" max-vertical-offset="871">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/_window.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="2516">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/_mixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="374">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/_ui.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.192307" vertical-offset="387" max-vertical-offset="3094">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/locale/names.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="9" column="71" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/locale/text.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/blocks/_map.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1683">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/scss/components/blocks/_start.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1241">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game/index_gen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.384615" vertical-offset="2540" max-vertical-offset="3825">
-          <caret line="176" column="62" selection-start-line="176" selection-start-column="62" selection-end-line="176" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#10;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/js/game/core/_log.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2346">
-          <caret line="124" column="58" selection-start-line="124" selection-start-column="58" selection-end-line="124" selection-end-column="58" />
-          <folding>
-            <marker date="1432822411264" expanded="true" signature="5475:5481" placeholder="..." />
-            <marker date="1432822411264" expanded="true" signature="5796:5813" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game/scss/components/windows/_end_game_stat.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25373134" vertical-offset="0" max-vertical-offset="871">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state vertical-scroll-proportion="-136.0" vertical-offset="816" max-vertical-offset="4539">
+          <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="261" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6137">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/game/locale/locale.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.827586" vertical-offset="3370" max-vertical-offset="7191">
+          <caret line="215" column="86" selection-start-line="215" selection-start-column="86" selection-end-line="215" selection-end-column="86" />
+          <folding>
+            <marker date="1446212886945" expanded="true" signature="16911:16923" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/js/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game/index_start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4293915" vertical-offset="0" max-vertical-offset="871">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

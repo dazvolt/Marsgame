@@ -3306,6 +3306,11 @@ span[data-locale="unit"] {
   color: #b22feb;
 }
 
+/* line 175, ../scss/components/_ui.scss */
+.typed-cursor {
+  display: none;
+}
+
 /* line 2, ../scss/components/_buildings.scss */
 #map .land .b-b {
   box-sizing: border-box;
@@ -3601,19 +3606,28 @@ span[data-locale="unit"] {
   }
 }
 /* line 13, ../scss/components/blocks/_map.scss */
+.commander-title {
+  float: right;
+}
+/* line 15, ../scss/components/blocks/_map.scss */
+.commander-title .name {
+  color: #c2ff00;
+}
+
+/* line 19, ../scss/components/blocks/_map.scss */
 #map {
   width: 63.8%;
   float: right;
   height: 400px;
 }
-/* line 18, ../scss/components/blocks/_map.scss */
+/* line 24, ../scss/components/blocks/_map.scss */
 #map .land {
   width: 95.5%;
   height: 260px;
   bottom: 0px;
   position: absolute;
 }
-/* line 24, ../scss/components/blocks/_map.scss */
+/* line 30, ../scss/components/blocks/_map.scss */
 #map svg {
   width: 100%;
   height: 100%;
@@ -3621,7 +3635,7 @@ span[data-locale="unit"] {
   bottom: 0px;
   display: block;
 }
-/* line 31, ../scss/components/blocks/_map.scss */
+/* line 37, ../scss/components/blocks/_map.scss */
 #map .smoke {
   position: absolute;
   left: 50%;
@@ -3637,7 +3651,7 @@ span[data-locale="unit"] {
   -moz-animation: moveclouds 12s linear infinite;
   -o-animation: moveclouds 12s linear infinite;
 }
-/* line 48, ../scss/components/blocks/_map.scss */
+/* line 54, ../scss/components/blocks/_map.scss */
 #map .background {
   position: relative;
   width: 100%;
@@ -3654,7 +3668,7 @@ span[data-locale="unit"] {
   -o-transition: all 5s;
   transition: all 5s;
 }
-/* line 61, ../scss/components/blocks/_map.scss */
+/* line 67, ../scss/components/blocks/_map.scss */
 #map .background.grayscale {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 10+, Firefox on Android */
@@ -3663,7 +3677,7 @@ span[data-locale="unit"] {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
-/* line 67, ../scss/components/blocks/_map.scss */
+/* line 73, ../scss/components/blocks/_map.scss */
 #map .perspective {
   transform: perspective(400px) rotateX(60deg);
   width: 70%;
@@ -3672,12 +3686,12 @@ span[data-locale="unit"] {
   position: relative;
   bottom: -10%;
 }
-/* line 78, ../scss/components/blocks/_map.scss */
+/* line 84, ../scss/components/blocks/_map.scss */
 #map .svg-container.active svg polygon:hover {
   fill: rgba(184, 255, 0, 0.62);
   cursor: pointer;
 }
-/* line 84, ../scss/components/blocks/_map.scss */
+/* line 90, ../scss/components/blocks/_map.scss */
 #map .svg-container.active .smoke {
   z-index: -1;
 }
@@ -3788,6 +3802,86 @@ span[data-locale="unit"] {
 #filter .item input {
   position: relative;
   top: 2px;
+}
+
+/* line 1, ../scss/components/blocks/_start.scss */
+.fader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: white;
+  display: none;
+  top: 0;
+  left: 0;
+}
+/* line 10, ../scss/components/blocks/_start.scss */
+.fader.active {
+  display: block;
+}
+
+/* line 14, ../scss/components/blocks/_start.scss */
+.start {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(../img/map_mars.jpg);
+  background-position-x: 0;
+  background-position-y: 100px;
+}
+/* line 22, ../scss/components/blocks/_start.scss */
+.start .start-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(../img/mstart_bg_no_planet.png);
+  background-size: cover;
+}
+/* line 30, ../scss/components/blocks/_start.scss */
+.start .start-menu-container {
+  perspective: 1200px;
+  width: 600px;
+  height: 420px;
+  position: absolute;
+  bottom: 220px;
+  left: 100px;
+}
+/* line 38, ../scss/components/blocks/_start.scss */
+.start .start-menu-container .start-game-name {
+  transform: rotateY(26deg);
+  color: white;
+  font: 85px "Play";
+  text-align: left;
+  width: 1200px;
+  margin-bottom: 30px;
+  margin-left: -66px;
+}
+/* line 47, ../scss/components/blocks/_start.scss */
+.start .start-menu-container .start-menu-items {
+  transform: rotateY(26deg);
+}
+/* line 49, ../scss/components/blocks/_start.scss */
+.start .start-menu-container .start-menu-items .start-menu-item {
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 2px solid white;
+  border-left: 15px solid white;
+  color: white;
+  font: 65px "Play";
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+/* line 58, ../scss/components/blocks/_start.scss */
+.start .start-menu-container .start-menu-items .start-menu-item:hover {
+  border-left: 55px solid white;
+  color: rgba(255, 186, 162, 0.71);
+}
+/* line 62, ../scss/components/blocks/_start.scss */
+.start .start-menu-container .start-menu-items .start-menu-item span {
+  padding-left: 20px;
 }
 
 /* line 2, ../scss/components/windows/_population.scss */
@@ -4242,7 +4336,7 @@ span[data-locale="unit"] {
 }
 
 /* line 1, ../scss/components/windows/_big_hint.scss */
-.big-hint {
+.big-hint, .big-hint-form {
   top: 0;
   left: 0;
   bottom: 0;
@@ -4251,11 +4345,60 @@ span[data-locale="unit"] {
   z-index: 9999;
 }
 /* line 7, ../scss/components/windows/_big_hint.scss */
-.big-hint.window.win-free {
-  height: 290px;
+.big-hint.window.win-free, .big-hint-form.window.win-free {
+  height: 330px;
+}
+/* line 12, ../scss/components/windows/_big_hint.scss */
+.big-hint .form-input, .big-hint-form .form-input {
+  background: #7a96ac;
+  border: 1px solid #C8D0D6;
+  height: 26px;
+  margin-top: 15px;
+  width: 70%;
+  margin-left: 15%;
+  padding: 10px;
+  color: #18293A;
+  text-align: center;
+  box-shadow: 0px 2px 0px #0E1317;
+}
+/* line 25, ../scss/components/windows/_big_hint.scss */
+.big-hint .message, .big-hint-form .message {
+  color: #FF4700;
+  text-align: center;
+  margin-top: 20px;
+}
+/* line 30, ../scss/components/windows/_big_hint.scss */
+.big-hint .message .s-mess-s, .big-hint-form .message .s-mess-s {
+  color: #FFAE00;
+}
+/* line 34, ../scss/components/windows/_big_hint.scss */
+.big-hint .message .s-mess, .big-hint-form .message .s-mess {
+  color: #c2ff00;
+}
+/* line 39, ../scss/components/windows/_big_hint.scss */
+.big-hint .dogtag, .big-hint-form .dogtag {
+  background: url("../img/dogtag.png");
+  width: 300px;
+  height: 150px;
+  padding-top: 38px;
+  transform: rotate(-37deg);
+  position: absolute;
+  top: 242px;
+  z-index: 100;
+  left: -190px;
+  cursor: pointer;
+}
+/* line 51, ../scss/components/windows/_big_hint.scss */
+.big-hint .dogtag span, .big-hint-form .dogtag span {
+  display: block;
+  padding-left: 67px;
+  font-size: 18px;
+  padding-bottom: 9px;
+  color: white;
+  text-shadow: 0px 2px 1px black;
 }
 
-/* line 12, ../scss/components/windows/_big_hint.scss */
+/* line 61, ../scss/components/windows/_big_hint.scss */
 .blackener {
   top: 0;
   left: 0;
@@ -4268,7 +4411,7 @@ span[data-locale="unit"] {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* line 23, ../scss/components/windows/_big_hint.scss */
+/* line 72, ../scss/components/windows/_big_hint.scss */
 .initial_settings {
   top: 0;
   left: 0;
@@ -4277,28 +4420,28 @@ span[data-locale="unit"] {
   margin: auto;
   z-index: 9999;
 }
-/* line 29, ../scss/components/windows/_big_hint.scss */
+/* line 78, ../scss/components/windows/_big_hint.scss */
 .initial_settings.window.win-free {
   height: 230px;
   width: 290px;
 }
-/* line 35, ../scss/components/windows/_big_hint.scss */
+/* line 84, ../scss/components/windows/_big_hint.scss */
 .initial_settings .tutorial {
   margin-top: 15px;
   text-align: center;
 }
-/* line 38, ../scss/components/windows/_big_hint.scss */
+/* line 87, ../scss/components/windows/_big_hint.scss */
 .initial_settings .tutorial input {
   position: relative;
   top: 3px;
   left: 5px;
 }
-/* line 46, ../scss/components/windows/_big_hint.scss */
+/* line 95, ../scss/components/windows/_big_hint.scss */
 .initial_settings .language .choose {
   text-align: center;
   margin-top: 5px;
 }
-/* line 50, ../scss/components/windows/_big_hint.scss */
+/* line 99, ../scss/components/windows/_big_hint.scss */
 .initial_settings .language .lang {
   width: 60px;
   height: 40px;
@@ -4313,22 +4456,22 @@ span[data-locale="unit"] {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 61, ../scss/components/windows/_big_hint.scss */
+/* line 110, ../scss/components/windows/_big_hint.scss */
 .initial_settings .language .lang:hover, .initial_settings .language .lang.selected {
   outline: 3px solid #c2ff00;
   opacity: 1;
 }
-/* line 66, ../scss/components/windows/_big_hint.scss */
+/* line 115, ../scss/components/windows/_big_hint.scss */
 .initial_settings .language .eng {
   background: url(../img/uk_icon.png) no-repeat center;
 }
-/* line 69, ../scss/components/windows/_big_hint.scss */
+/* line 118, ../scss/components/windows/_big_hint.scss */
 .initial_settings .language .rus {
   background: url(../img/rus_icon.png) no-repeat center;
   margin: 18px 25px 0 63px;
 }
 
-/* line 75, ../scss/components/windows/_big_hint.scss */
+/* line 124, ../scss/components/windows/_big_hint.scss */
 .noise {
   width: 100%;
   height: 100%;

@@ -1,0 +1,68 @@
+.fader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: white;
+  display: none;
+  top: 0;
+  left: 0;
+  &.active {
+    display: block;
+  }
+}
+.start {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(../img/map_mars.jpg);
+  background-position-x: 0;
+  background-position-y: 100px;
+
+  .start-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(../img/mstart_bg_no_planet.png);
+    background-size: cover;
+  }
+
+  .start-menu-container {
+    perspective: 1200px;
+    width: 600px;
+    height: 420px;
+    position: absolute;
+    bottom: 220px;
+    left: 100px;
+
+    .start-game-name {
+      transform: rotateY(26deg);
+      color: white;
+      font: 85px "Play";
+      text-align: left;
+      width: 1200px;
+      margin-bottom: 30px;
+      margin-left: -66px;
+    }
+    .start-menu-items {
+      transform: rotateY(26deg);
+      .start-menu-item {
+        @include transition($default-transition);
+        border: 2px solid white;
+        border-left: 15px solid white;
+        color: white;
+        font: 65px $default-font;
+        cursor: pointer;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        &:hover {
+          border-left: 55px solid white;
+          color: rgba(255, 186, 162, 0.71);
+        }
+        span {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}

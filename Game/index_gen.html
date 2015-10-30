@@ -8,6 +8,7 @@
   <script type="text/javascript" src="js/framework/jquery-2.1.1.js"></script>
   <script type="text/javascript" src="js/framework/jquery-ui-1.11.1.js"></script>
   <script type="text/javascript" src="js/framework/jquery.sparkline.min.js"></script>
+  <script type="text/javascript" src="js/framework/typed.js"></script>
   <script type="text/javascript" src="js/framework/d3.js"></script>
   <script type="text/javascript" src="js/game/data.js"></script>
   <script type="text/javascript" src="js/game/core/_functions.js"></script>
@@ -53,7 +54,7 @@
     </div>
 
     <div id="map" class="window no-footer">
-      <div class="title"><span data-locale="map"></span></div>
+      <div class="title"><span data-locale="map"></span><span class="commander-title"></span></div>
       <div class="body">
         <div class="background">
           <div class="perspective svg-container">
@@ -221,7 +222,20 @@
 </div>
 <div class="big-hint window win-free" style="display:none">
   <div class="title"></div>
-  <div class="body"></div>
+  <div class="body">
+  </div>
+  <div class="footer">
+    <button class="button accept"><i class="fa fa-check"></i></button>
+    <button class="button decline" style="display:none"><i class="fa fa-times"></i></button>
+  </div>
+</div>
+<div class="big-hint-form window win-free" style="display:none">
+  <div class="title"></div>
+  <div class="body">
+    <div class="text"></div>
+    <input class="form-input" />
+    <div class="message"></div>
+  </div>
   <div class="footer">
     <button class="button accept"><i class="fa fa-check"></i></button>
     <button class="button decline" style="display:none"><i class="fa fa-times"></i></button>

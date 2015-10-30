@@ -1,13 +1,62 @@
-.big-hint {
+.big-hint, .big-hint-form {
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
   &.window.win-free {
-    height: 290px;
+    height: 330px;
   }
   z-index: 9999;
+
+  .form-input {
+    background: rgb(122, 150, 172);
+    border: 1px solid #C8D0D6;
+    height: 26px;
+    margin-top: 15px;
+    width: 70%;
+    margin-left: 15%;
+    padding: 10px;
+    color: #18293A;
+    text-align: center;
+    box-shadow: 0px 2px 0px #0E1317;
+  }
+
+  .message {
+    color: $c-danger;
+    text-align: center;
+    margin-top: 20px;
+
+    .s-mess-s {
+      color: $c-titan;
+    }
+
+    .s-mess {
+      color: $c-power;
+    }
+  }
+
+  .dogtag {
+    background: url('../img/dogtag.png');
+    width: 300px;
+    height: 150px;
+    padding-top: 38px;
+    transform: rotate(-37deg);
+    position: absolute;
+    top: 242px;
+    z-index: 100;
+    left: -190px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      padding-left: 67px;
+      font-size: 18px;
+      padding-bottom: 9px;
+      color: white;
+      text-shadow: 0px 2px 1px black;
+    }
+  }
 }
 .blackener {
   top: 0;

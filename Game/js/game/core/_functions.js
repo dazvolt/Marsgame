@@ -176,6 +176,30 @@ function call_window_hint (text, title, buttons, callback) {
   });
 }
 
+function call_window_hint_form (text, title, buttons, custom, callback) {
+    var $this = $('.big-hint-form');
+    setTimeout(function(){
+        $this.find('.form-input').focus();
+    }, 1200);
+    $this.fadeIn(1000);
+    $this.find('.title').text(title);
+    $this.find('.body .text').typed({
+        strings: [text],
+        typeSpeed: 0
+    }).css('text-align','center').css('color','rgb(210, 219, 226)');
+    if (buttons[0] == true) {
+        $(this).find('.button.accept').show();
+    }
+    if (buttons[1] == true) {
+        $(this).find('.button.decline').show();
+    }
+    $('.blackener').fadeIn(500);
+    $this.find('.button.accept').on('click', function () {
+        if (custom) custom($this);
+        if (callback) callback();
+    });
+}
+
 $.fn.hook_hint = function (text) {
   var $this = this;
   $this.css('cursor', 'default');
@@ -213,3 +237,50 @@ function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
+//Copyright Matt Huggins http://stackoverflow.com/users/107277/matt-huggins
+(function($) {
+    $.fn.countTo = function(options) {
+        // merge the default plugin settings with the custom options
+        options = $.extend({}, $.fn.countTo.defaults, options || {});
+
+        // how many times to update the value, and how much to increment the value on each update
+        var loops = Math.ceil(options.speed / options.refreshInterval),
+            increment = (options.to - options.from) / loops;
+
+        return $(this).each(function() {
+            var _this = this,
+                loopCount = 0,
+                value = options.from,
+                interval = setInterval(updateTimer, options.refreshInterval);
+
+            function updateTimer() {
+                value += increment;
+                loopCount++;
+                $(_this).html(value.toFixed(options.decimals));
+
+                if (typeof(options.onUpdate) == 'function') {
+                    options.onUpdate.call(_this, value);
+                }
+
+                if (loopCount >= loops) {
+                    clearInterval(interval);
+                    value = options.to;
+
+                    if (typeof(options.onComplete) == 'function') {
+                        options.onComplete.call(_this, value);
+                    }
+                }
+            }
+        });
+    };
+
+    $.fn.countTo.defaults = {
+        from: 0,  // the number the element should start at
+        to: 100,  // the number the element should end at
+        speed: 2000,  // how long it should take to count between the target numbers
+        refreshInterval: 10,  // how often the element should be updated
+        decimals: 0,  // the number of decimal places to show
+        onUpdate: null,  // callback method for every time the element is updated,
+        onComplete: null  // callback method for when the element finishes updating
+    };
+})(jQuery);
